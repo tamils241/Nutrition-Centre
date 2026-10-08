@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Appointments | Stackly Nutrition Centre</title>
+<meta name="description" content="Stackly Nutrition admin appointments - calendar, agenda and booking schedule." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body class="dash-body">
+
+<div class="dash">
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside class="dash-side">
+
+    <div class="dash-side__brand">
+      <a href="index.html" class="dash-side__logo" aria-label="Stackly Nutrition Centre">
+        <img src="images/logo.webp" alt="Stackly Nutrition Centre" class="dash-side__logo-img" />
+      </a>
+    </div>
+
+    <nav class="dash-nav" aria-label="Admin navigation">
+      <span class="dash-nav__label">Main</span>
+
+      <a href="admin-dashboard.html" class="dash-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>
+        Dashboard
+      </a>
+
+      <a href="admin-clients.html" class="dash-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="4"/><path d="M3 21v-1a6 6 0 0 1 6-6h0a6 6 0 0 1 6 6v1"/><path d="M16 3.1a4 4 0 0 1 0 7.8M19 21v-1a6 6 0 0 0-4-5.7"/></svg>
+        Clients
+        <span class="dash-nav__badge">128</span>
+      </a>
+
+      <a href="admin-appointments.html" class="dash-nav__link active" aria-current="page">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        Appointments
+      </a>
+
+      <span class="dash-nav__label">Management</span>
+
+      <a href="admin-meal-plans.html" class="dash-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4"/><path d="M12 3a5 5 0 0 1 5 5c0 2-1 3-1 5H8c0-2-1-3-1-5a5 5 0 0 1 5-5Z"/></svg>
+        Meal Plans
+      </a>
+
+      <a href="admin-reports.html" class="dash-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10M18 20V4M6 20v-4"/></svg>
+        Reports &amp; Analytics
+      </a>
+
+      <a href="admin-settings.html" class="dash-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3h0a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5h0a1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9v0a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1Z"/></svg>
+        Settings
+      </a>
+
+      <span class="dash-nav__label">Team</span>
+
+      <a href="admin-dietitians.html" class="dash-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg>
+        Dietitians
+      </a>
+    </nav>
+
+    <div class="dash-side__foot">
+      <div class="dash-side__user">
+        <span class="dash-avatar">AM</span>
+        <div>
+          <b>Admin Manager</b>
+          <span>Super Admin</span>
+        </div>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- ================= MOBILE OVERLAY ================= -->
+  <div class="dash-overlay" aria-hidden="true"></div>
+
+  <!-- ================= MAIN ================= -->
+  <div class="dash-main">
+
+    <header class="dash-top">
+      <button class="dash-top__burger" type="button" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="dash-top__search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="search" id="dashSearch" placeholder="Search clients, bookings, plans…" aria-label="Search dashboard" />
+      </div>
+
+      <div class="dash-top__action">
+        <button class="dash-icon-btn" type="button" aria-label="Notifications">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+          <span class="dot"></span>
+        </button>
+
+        <div class="dash-notif">
+          <div class="dash-notif__head">
+            <b>Notifications</b>
+            <button type="button" class="dash-notif__clear">Mark all read</button>
+          </div>
+          <div class="dash-notif__list">
+            <a href="#" class="dash-notif__item unread">
+              <span class="dash-notif__ico">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M9 12h6M9 16h4"/></svg>
+              </span>
+              <div>
+                <b>New booking received</b>
+                <span>Anita Desai booked a consultation for tomorrow 5:00 PM.</span>
+                <time>10 min ago</time>
+              </div>
+            </a>
+            <a href="#" class="dash-notif__item unread">
+              <span class="dash-notif__ico">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18M5 6h14M7 3h10"/><path d="M6 11v10h12V11M9 15h.01M15 15h.01M12 18h.01"/></svg>
+              </span>
+              <div>
+                <b>Check-in pending review</b>
+                <span>Priya Sharma uploaded her weekly log — awaiting review.</span>
+                <time>1 hr ago</time>
+              </div>
+            </a>
+            <a href="404.html" class="dash-notif__item">
+              <span class="dash-notif__ico">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.1V12a10 10 0 1 1-5.9-9.1"/><path d="M22 4 12 14l-3-3"/></svg>
+              </span>
+              <div>
+                <b>Monthly report ready</b>
+                <span>September bookings hit 128 — 18% growth.</span>
+                <time>Yesterday</time>
+              </div>
+            </a>
+          </div>
+          <a href="404.html" class="dash-notif__foot">View all notifications</a>
+        </div>
+
+        <a href="login.html" class="dash-top__profile">
+          <span class="dash-avatar">AM</span>
+          <div>
+            <b>Admin Manager</b>
+            <span>admin@stackly.in</span>
+          </div>
+        </a>
+      </div>
+    </header>
+
+    <main class="dash-content">
+
+      <!-- ================= PAGE HEAD ================= -->
+      <div class="dash-head">
+        <div>
+          <h1 class="dash-head__title">Appointments</h1>
+          <p class="dash-head__sub">Manage bookings, schedules and follow-up sessions.</p>
+        </div>
+        <a href="404.html" class="btn btn--primary btn--sm">+ Book Appointment</a>
+      </div>
+
+      <!-- ================= STAT CARDS ================= -->
+      <div class="dash-grid--stats">
+
+        <div class="dstat">
+          <div class="dstat__ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          </div>
+          <p class="dstat__label">Today</p>
+          <p class="dstat__value">14</p>
+          <span class="dstat__delta up">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m7 10 5-5 5 5M12 5v14"/></svg>
+            2 <span>more than yesterday</span>
+          </span>
+        </div>
+
+        <div class="dstat dstat--lime">
+          <div class="dstat__ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <p class="dstat__label">Confirmed</p>
+          <p class="dstat__value">11</p>
+          <span class="dstat__delta up">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m7 10 5-5 5 5M12 5v14"/></svg>
+            on-time <span>this week</span>
+          </span>
+        </div>
+
+        <div class="dstat dstat--orange">
+          <div class="dstat__ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5M12 16h.01"/></svg>
+          </div>
+          <p class="dstat__label">Pending</p>
+          <p class="dstat__value">3</p>
+          <span class="dstat__delta down">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m17 14-5 5-5-5M12 19V5"/></svg>
+            awaiting <span>confirmations</span>
+          </span>
+        </div>
+
+        <div class="dstat dstat--blue">
+          <div class="dstat__ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.1V12a10 10 0 1 1-5.9-9.1"/><path d="M22 4 12 14l-3-3"/></svg>
+          </div>
+          <p class="dstat__label">Completed Today</p>
+          <p class="dstat__value">9</p>
+          <span class="dstat__delta up">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m7 10 5-5 5 5M12 5v14"/></svg>
+            on schedule
+          </span>
+        </div>
+
+      </div>
+
+      <!-- ================= CALENDAR + AGENDA ================= -->
+      <div class="dash-grid--32">
+
+        <div class="dash-card">
+          <div class="dash-card__head">
+            <div>
+              <h3 class="dash-card__title">Calendar</h3>
+              <p class="dash-card__sub">October 2026</p>
+            </div>
+            <span class="dash-card__more" id="calLabel">Today</span>
+          </div>
+
+          <div class="dcal" id="calBody" data-checkins="2,3,6,7,10,11,14,15,18,19" data-label="Oct 2026" aria-label="Appointment calendar"></div>
+
+          <div class="dchart__legend" style="margin-top:16px">
+            <span><span style="display:inline-block;width:11px;height:11px;border-radius:4px;background:var(--line)"></span> Free</span>
+            <span><span class="dcal__dot" style="background:var(--green);width:8px;height:8px;border-radius:50%"></span> Booked</span>
+            <span><span class="dcal__dot" style="background:#4d7c0f;width:8px;height:8px;border-radius:50%"></span> Check-ins due</span>
+          </div>
+        </div>
+
+        <div class="dash-card">
+          <div class="dash-card__head">
+            <div>
+              <h3 class="dash-card__title">Today's Agenda</h3>
+              <p class="dash-card__sub">14 appointments · 3 dietitians</p>
+            </div>
+            <span class="dash-card__more">Schedule</span>
+          </div>
+
+          <div class="dlist">
+            <div class="dlist__item">
+              <span class="dlist__time">9:00 AM</span>
+              <div class="dlist__body">
+                <b>Meera Iyer → Priya Sharma</b>
+                <span>Weekly check-in · Video call</span>
+              </div>
+              <span class="dpill dpill--active">Confirmed</span>
+            </div>
+            <div class="dlist__item">
+              <span class="dlist__time">10:30 AM</span>
+              <div class="dlist__body">
+                <b>Arjun Nair → Rahul Verma</b>
+                <span>New client intro · In-person</span>
+              </div>
+              <span class="dpill dpill--pending">Pending</span>
+            </div>
+            <div class="dlist__item">
+              <span class="dlist__time">12:00 PM</span>
+              <div class="dlist__body">
+                <b>Kavya Rao → Sana Khan</b>
+                <span>Clinical review · Video call</span>
+              </div>
+              <span class="dpill dpill--active">Confirmed</span>
+            </div>
+            <div class="dlist__item">
+              <span class="dlist__time">3:30 PM</span>
+              <div class="dlist__body">
+                <b>Rohit Malhotra → Asha Devi</b>
+                <span>Sports nutrition consult</span>
+              </div>
+              <span class="dpill dpill--pending">Pending</span>
+            </div>
+            <div class="dlist__item">
+              <span class="dlist__time">5:00 PM</span>
+              <div class="dlist__body">
+                <b>Meera Iyer → Nikhil Jain</b>
+                <span>Monthly review · In-person</span>
+              </div>
+              <span class="dpill dpill--active">Confirmed</span>
+            </div>
+          </div>
+
+          <a href="404.html" class="btn btn--outline btn--sm" style="margin-top:16px;width:100%">Add appointment</a>
+        </div>
+
+      </div>
+
+      <!-- ================= BOOKINGS TABLE ================= -->
+      <div class="dash-card dash-card--pad0">
+
+        <div class="dtoolbar" style="padding:20px 22px 12px">
+          <div>
+            <h3 class="dash-card__title">Upcoming Bookings</h3>
+            <p class="dash-card__sub">Next 7 days · all dietitians</p>
+          </div>
+          <span class="dash-card__more">Export list</span>
+        </div>
+
+        <div class="dtoolbar" style="padding:6px 22px 14px">
+          <button class="dfilter on" type="button" data-filter="all">All</button>
+          <button class="dfilter" type="button" data-filter="confirmed">Confirmed</button>
+          <button class="dfilter" type="button" data-filter="pending">Pending</button>
+          <button class="dfilter" type="button" data-filter="done">Completed</button>
+        </div>
+
+        <div class="dash-table-wrap">
+          <table class="dash-table" id="apptsTable">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Client</th>
+                <th>Dietitian</th>
+                <th>Type</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-status="confirmed">
+                <td>Oct 07, 2026</td>
+                <td>9:00 AM</td>
+                <td>
+                  <div class="dash-cell-user">
+                    <span class="dash-avatar" style="background:linear-gradient(135deg,#f97316,#fbbf24)">PS</span>
+                    <div><b>Priya Sharma</b><span>Weekly check-in</span></div>
+                  </div>
+                </td>
+                <td>Meera Iyer</td>
+                <td>Video call</td>
+                <td><span class="dpill dpill--active">Confirmed</span></td>
+                <td>
+                  <div class="dash-table__actions">
+                    <a href="404.html" class="btn btn--sm btn--outline">Reschedule</a>
+                    <a href="404.html" class="btn--icon" aria-label="Cancel appointment">
+                      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              <tr data-status="pending">
+                <td>Oct 07, 2026</td>
+                <td>10:30 AM</td>
+                <td>
+                  <div class="dash-cell-user">
+                    <span class="dash-avatar" style="background:linear-gradient(135deg,#16a34a,#a3e635)">RV</span>
+                    <div><b>Rahul Verma</b><span>New client intro</span></div>
+                  </div>
+                </td>
+                <td>Arjun Nair</td>
+                <td>In-person</td>
+                <td><span class="dpill dpill--pending">Pending</span></td>
+                <td>
+                  <div class="dash-table__actions">
+                    <a href="404.html" class="btn btn--sm btn--outline">Reschedule</a>
+                    <a href="404.html" class="btn--icon" aria-label="Cancel appointment">
+                      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              <tr data-status="confirmed">
+                <td>Oct 07, 2026</td>
+                <td>12:00 PM</td>
+                <td>
+                  <div class="dash-cell-user">
+                    <span class="dash-avatar" style="background:linear-gradient(135deg,#2563eb,#60a5fa)">SK</span>
+                    <div><b>Sana Khan</b><span>Clinical review</span></div>
+                  </div>
+                </td>
+                <td>Kavya Rao</td>
+                <td>Video call</td>
+                <td><span class="dpill dpill--active">Confirmed</span></td>
+                <td>
+                  <div class="dash-table__actions">
+                    <a href="404.html" class="btn btn--sm btn--outline">Reschedule</a>
+                    <a href="404.html" class="btn--icon" aria-label="Cancel appointment">
+                      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              <tr data-status="pending">
+                <td>Oct 07, 2026</td>
+                <td>3:30 PM</td>
+                <td>
+                  <div class="dash-cell-user">
+                    <span class="dash-avatar" style="background:linear-gradient(135deg,#8b5cf6,#a78bfa)">AD</span>
+                    <div><b>Asha Devi</b><span>Sports consult</span></div>
+                  </div>
+                </td>
+                <td>Rohit Malhotra</td>
+                <td>In-person</td>
+                <td><span class="dpill dpill--pending">Pending</span></td>
+                <td>
+                  <div class="dash-table__actions">
+                    <a href="404.html" class="btn btn--sm btn--outline">Reschedule</a>
+                    <a href="404.html" class="btn--icon" aria-label="Cancel appointment">
+                      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              <tr data-status="confirmed">
+                <td>Oct 08, 2026</td>
+                <td>11:00 AM</td>
+                <td>
+                  <div class="dash-cell-user">
+                    <span class="dash-avatar" style="background:linear-gradient(135deg,#0ea5e9,#22d3ee)">NJ</span>
+                    <div><b>Nikhil Jain</b><span>Family plan review</span></div>
+                  </div>
+                </td>
+                <td>Meera Iyer</td>
+                <td>In-person</td>
+                <td><span class="dpill dpill--active">Confirmed</span></td>
+                <td>
+                  <div class="dash-table__actions">
+                    <a href="404.html" class="btn btn--sm btn--outline">Reschedule</a>
+                    <a href="404.html" class="btn--icon" aria-label="Cancel appointment">
+                      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              <tr data-status="pending">
+                <td>Oct 09, 2026</td>
+                <td>2:00 PM</td>
+                <td>
+                  <div class="dash-cell-user">
+                    <span class="dash-avatar" style="background:linear-gradient(135deg,#db2777,#f9a8d4)">KR</span>
+                    <div><b>Kavya Rao</b><span>Skin &amp; hair consult</span></div>
+                  </div>
+                </td>
+                <td>Asha Devi</td>
+                <td>Video call</td>
+                <td><span class="dpill dpill--pending">Pending</span></td>
+                <td>
+                  <div class="dash-table__actions">
+                    <a href="404.html" class="btn btn--sm btn--outline">Reschedule</a>
+                    <a href="404.html" class="btn--icon" aria-label="Cancel appointment">
+                      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              <tr data-status="done">
+                <td>Oct 06, 2026</td>
+                <td>9:00 AM</td>
+                <td>
+                  <div class="dash-cell-user">
+                    <span class="dash-avatar" style="background:linear-gradient(135deg,#9333ea,#c4b5fd)">RM</span>
+                    <div><b>Rohit Malhotra</b><span>Monthly review</span></div>
+                  </div>
+                </td>
+                <td>Arjun Nair</td>
+                <td>Video call</td>
+                <td><span class="dpill dpill--lime">Completed</span></td>
+                <td>
+                  <div class="dash-table__actions">
+                    <a href="404.html" class="btn btn--sm btn--outline">Notes</a>
+                    <a href="404.html" class="btn--icon" aria-label="Delete appointment">
+                      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/></svg>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="dpage">
+          <span class="dpage__info">Showing 7 of 214 bookings</span>
+          <a class="on" href="404.html">1</a>
+          <a href="404.html">2</a>
+          <a href="404.html">3</a>
+          <a href="404.html" aria-label="Next page">&rsaquo;</a>
+        </div>
+
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

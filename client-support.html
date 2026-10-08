@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Support | Stackly Nutrition Centre</title>
+<meta name="description" content="Chat with your Stackly Nutrition dietitian - get answers and help, anytime." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body class="dash-body">
+
+<div class="dash">
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside class="dash-side">
+
+    <div class="dash-side__brand">
+      <a href="index.html" class="dash-side__logo" aria-label="Stackly Nutrition Centre">
+        <img src="images/logo.webp" alt="Stackly Nutrition Centre" class="dash-side__logo-img" />
+      </a>
+    </div>
+
+    <nav class="dash-nav" aria-label="Client navigation">
+      <span class="dash-nav__label">Main</span>
+
+      <a href="clients-dashboard.html" class="dash-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>
+        Dashboard
+      </a>
+
+      <a href="client-plan.html" class="dash-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M9 12h6M9 16h4"/></svg>
+        My Plan
+      </a>
+
+      <a href="client-meals.html" class="dash-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18M5 6h14M7 3h10"/><path d="M6 11v10h12V11M9 15h.01M15 15h.01M12 18h.01"/></svg>
+        My Meals
+      </a>
+
+      <span class="dash-nav__label">Track</span>
+
+      <a href="client-check-ins.html" class="dash-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M9 16l2 2 4-4"/></svg>
+        Check-ins
+        <span class="dash-nav__badge">1</span>
+      </a>
+
+      <a href="client-progress.html" class="dash-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m22 7-8.5 8.5-5-5L2 17"/><path d="M16 7h6v6"/></svg>
+        Progress
+      </a>
+
+      <span class="dash-nav__label">Support</span>
+
+      <a href="client-support.html" class="dash-nav__link active" aria-current="page">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Chat with Dietitian
+        <span class="dash-nav__badge">2</span>
+      </a>
+
+      <a href="client-settings.html" class="dash-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+        Settings
+      </a>
+    </nav>
+
+    <div class="dash-side__foot">
+      <div class="dash-side__user">
+        <span class="dash-avatar">PS</span>
+        <div>
+          <b>Priya Sharma</b>
+          <span>Client · Plan: Weight Loss</span>
+        </div>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- ================= MOBILE OVERLAY ================= -->
+  <div class="dash-overlay" aria-hidden="true"></div>
+
+  <!-- ================= MAIN ================= -->
+  <div class="dash-main">
+
+    <header class="dash-top">
+      <button class="dash-top__burger" type="button" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="dash-top__search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="search" id="dashSearch" placeholder="Search my meals, plans, reports…" aria-label="Search dashboard" />
+      </div>
+
+      <div class="dash-top__action">
+        <button class="dash-icon-btn" type="button" aria-label="Notifications">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+          <span class="dot"></span>
+        </button>
+
+        <div class="dash-notif">
+          <div class="dash-notif__head">
+            <b>Notifications</b>
+            <button type="button" class="dash-notif__clear">Mark all read</button>
+          </div>
+          <div class="dash-notif__list">
+            <a href="#" class="dash-notif__item unread">
+              <span class="dash-notif__ico">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M9 12h6M9 16h4"/></svg>
+              </span>
+              <div>
+                <b>Check-in reminder</b>
+                <span>Your check-in with Dr. Meera Iyer is this Saturday at 9:00 AM.</span>
+                <time>10 min ago</time>
+              </div>
+            </a>
+            <a href="#" class="dash-notif__item unread">
+              <span class="dash-notif__ico">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18M5 6h14M7 3h10"/><path d="M6 11v10h12V11M9 15h.01M15 15h.01M12 18h.01"/></svg>
+              </span>
+              <div>
+                <b>Meal plan updated</b>
+                <span>Your Week 12 meal plan is ready with new recipes.</span>
+                <time>1 hr ago</time>
+              </div>
+            </a>
+            <a href="#" class="dash-notif__item">
+              <span class="dash-notif__ico">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.1V12a10 10 0 1 1-5.9-9.1"/><path d="M22 4 12 14l-3-3"/></svg>
+              </span>
+              <div>
+                <b>Goal reached</b>
+                <span>You logged your meals 7 days in a row. Keep it up!</span>
+                <time>Yesterday</time>
+              </div>
+            </a>
+          </div>
+          <a href="#" class="dash-notif__foot">View all notifications</a>
+        </div>
+
+        <a href="#" class="dash-top__profile">
+          <span class="dash-avatar">PS</span>
+          <div>
+            <b>Priya Sharma</b>
+            <span>priya@example.com</span>
+          </div>
+        </a>
+      </div>
+    </header>
+
+    <main class="dash-content">
+
+      <!-- ================= PAGE HEAD ================= -->
+      <div class="dash-head">
+        <div>
+          <h1 class="dash-head__title">Chat with your <span>Dietitian</span></h1>
+          <p class="dash-head__sub">Dr. Meera Iyer replies within a few hours, Mon–Sat.</p>
+        </div>
+        <a href="#" class="btn btn--primary btn--sm">Book Call</a>
+      </div>
+
+      <!-- ================= CHAT + DIETITIAN CARD ================= -->
+      <div class="dash-grid--chatenv">
+
+        <div class="dash-card dash-card--chat">
+          <div class="dchat__bar">
+            <span class="dash-avatar"><img src="images/doctore.webp" alt="Dr. Meera Iyer" /></span>
+            <div>
+              <b>Dr. Meera Iyer</b>
+              <span class="dchkon">
+                <i class="dchkon__dot"></i> Online now
+              </span>
+            </div>
+            <button type="button" class="dash-icon-btn" aria-label="More options">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="12" r="1" fill="currentColor"/><circle cx="12" cy="12" r="1" fill="currentColor"/><circle cx="19" cy="12" r="1" fill="currentColor"/></svg>
+            </button>
+          </div>
+
+          <div class="dchat" role="log" aria-label="Chat with Dr. Meera Iyer">
+            <span class="dchat__day">Today</span>
+
+            <div class="dchat__row">
+              <span class="dchat__avatar" style="background-image:url('images/doctore.webp')"></span>
+              <div class="dchat__msg">
+                Good morning Priya! Great job on the check-in yesterday — 72.6 kg is on track 😊
+                <span class="dchat__msg-time">9:02 AM</span>
+              </div>
+            </div>
+
+            <div class="dchat__row dchat__row--out">
+              <div class="dchat__msg">
+                Thank you doctor! I tried the new tofu stir-fry from this week's menu — it was great.
+                <span class="dchat__msg-time">9:14 AM</span>
+              </div>
+            </div>
+
+            <div class="dchat__row">
+              <span class="dchat__avatar" style="background-image:url('images/doctore.webp')"></span>
+              <div class="dchat__msg">
+                Love to hear that! 🌿 Keep the morning 30 min walk too. Let's aim for 72 kg by next check-in.
+                <span class="dchat__msg-time">9:20 AM</span>
+              </div>
+            </div>
+
+            <div class="dchat__row dchat__row--out">
+              <div class="dchat__msg">
+                Will do. Could you share the grocery list for the week again?
+                <span class="dchat__msg-time">9:26 AM</span>
+              </div>
+            </div>
+
+            <div class="dchat__row">
+              <span class="dchat__avatar" style="background-image:url('images/doctore.webp')"></span>
+              <div class="dchat__msg">
+                Sure — attached it here. Don't forget the green moong dal and pear for snacks 🙂
+                <span class="dchat__msg-time">9:31 AM</span>
+              </div>
+            </div>
+
+            <div class="dchat__row dchat__row--out">
+              <div class="dchat__msg">
+                Got them. Thanks!
+                <span class="dchat__msg-time">9:35 AM</span>
+              </div>
+            </div>
+
+            <span class="dchat__day">Yesterday</span>
+
+            <div class="dchat__row">
+              <span class="dchat__avatar" style="background-image:url('images/doctore.webp')"></span>
+              <div class="dchat__msg">
+                Hi Priya, reminder to log your evening snack before 8 PM 🌙
+                <span class="dchat__msg-time">7:42 PM</span>
+              </div>
+            </div>
+
+            <div class="dchat__row dchat__row--out">
+              <div class="dchat__msg">
+                Logged — kacha mango salad + chaas. ✅
+                <span class="dchat__msg-time">8:05 PM</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="dchat__input">
+            <button type="button" class="dash-icon-btn" aria-label="Attach file">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m21.4 11.05-7.9 7.9a5 5 0 0 1-7.07-7.07l7.9-7.9a3.3 3.3 0 0 1 4.7 4.7l-7.6 7.6a1.7 1.7 0 0 1-2.4-2.4l6.9-6.9"/></svg>
+            </button>
+            <input type="text" placeholder="Type a message…" aria-label="Type a message" />
+            <button type="button" class="btn btn--primary" aria-label="Send message">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4Z"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div>
+          <div class="dash-card">
+            <div class="dash-card__head">
+              <div>
+                <h3 class="dash-card__title">Dr. Meera Iyer</h3>
+                <p class="dash-card__sub">Senior Dietitian · 12 yrs</p>
+              </div>
+              <span class="dash-card__more">
+                <span class="dchkon"><i class="dchkon__dot"></i> Online</span>
+              </span>
+            </div>
+
+            <div class="dstaff__row" style="margin-bottom:16px">
+              <img src="images/doctore.webp" alt="Dr. Meera Iyer" />
+              <div>
+                <b>BSc, MSc Nutrition &amp; Dietetics</b>
+                <span>Specialist in weight management &amp; PCOS</span>
+              </div>
+            </div>
+
+            <div class="dlist">
+              <div class="dlist__item">
+                <span class="dlist__time">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+                </span>
+                <div class="dlist__body">
+                  <b>Response time</b>
+                  <span>Averages under 2 hours</span>
+                </div>
+              </div>
+              <div class="dlist__item">
+                <span class="dlist__time">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                </span>
+                <div class="dlist__body">
+                  <b>Languages</b>
+                  <span>English, Hindi, Tamil</span>
+                </div>
+              </div>
+              <div class="dlist__item">
+                <span class="dlist__time">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                </span>
+                <div class="dlist__body">
+                  <b>Last message</b>
+                  <span>9:31 AM · shared grocery list</span>
+                </div>
+              </div>
+            </div>
+
+            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:18px">
+              <a href="#" class="btn btn--primary btn--sm">Schedule Call</a>
+              <a href="#" class="btn btn--ghost btn--sm">View Profile</a>
+            </div>
+          </div>
+
+          <div class="dash-card" style="margin-top:20px">
+            <div class="dash-card__head">
+              <div>
+                <h3 class="dash-card__title">Shared Files</h3>
+                <p class="dash-card__sub">From Dr. Meera Iyer</p>
+              </div>
+              <span class="dash-card__more">PDF</span>
+            </div>
+
+            <a href="#" class="dfile">
+              <span class="dfile__ico">PDF</span>
+              <div>
+                <b>Week 12 Grocery List</b>
+                <span>Oct 07 · 240 KB</span>
+              </div>
+            </a>
+            <a href="#" class="dfile">
+              <span class="dfile__ico" style="background:linear-gradient(135deg,var(--orange),#c2410c);color:#fff">PDF</span>
+              <div>
+                <b>Snack Ideas — 45 recipes</b>
+                <span>Oct 01 · 1.1 MB</span>
+              </div>
+            </a>
+            <a href="#" class="dfile">
+              <span class="dfile__ico" style="background:linear-gradient(135deg,var(--blue),#1d4ed8);color:#fff">PDF</span>
+              <div>
+                <b>Morning Walk Plan</b>
+                <span>Sep 20 · 320 KB</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>BMI Calculator | Stackly Nutrition Centre</title>
+<meta name="description" content="Check your BMI in seconds with our free tool." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ================= PRELOADER ================= -->
+<div class="preloader" id="preloader">
+  <div class="preloader__ring"></div>
+  <span class="preloader__text">STACKLY</span>
+</div>
+
+<!-- ================= CURSOR ================= -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+
+<!-- ================= HEADER ================= -->
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="index.html" class="logo">
+      <img src="images/logo.webp" alt="Stackly Nutrition Centre" class="logo__img" />
+    </a>
+
+<nav class="nav" id="mainNavigation" aria-hidden="true">
+      <button class="nav-close" type="button" aria-label="Close navigation" title="Close menu">&times;</button>
+
+      <ul class="nav__list">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="about.html" class="nav__link">About</a></li>
+        <li><a href="services.html" class="nav__link">Services</a></li>
+        <li><a href="plans.html" class="nav__link">Plans</a></li>
+        <li><a href="bmi.html" class="nav__link active">BMI</a></li>
+        <li><a href="experts.html" class="nav__link">Experts</a></li>
+        <li><a href="tips.html" class="nav__link">Tips</a></li>
+        <li><a href="reviews.html" class="nav__link">Reviews</a></li>
+        <li><a href="contact.html" class="nav__link">Contact</a></li>
+      </ul>
+
+      <!-- MOBILE LOGIN -->
+      <div class="mobile-nav-login">
+        <a href="login.html" class="btn btn--primary mobile-login-btn">
+          <span>Login</span>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </nav>
+
+    <div class="header__actions">
+      <a href="login.html" class="btn btn--ghost btn--sm login-btn">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        Log In
+      </a>
+
+      <button class="hamburger" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mainNavigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ================= BMI HERO ================= -->
+<section class="hero bmi-hero">
+
+  <div class="hero__bg">
+    <div class="hero__blob hero__blob--1"></div>
+    <div class="hero__blob hero__blob--2"></div>
+    <div class="hero__grid"></div>
+  </div>
+
+  <div class="container hero__inner">
+
+    <div class="hero__content" data-anim="fade-right">
+
+      <span class="tag">Free BMI Calculator</span>
+
+      <h1 class="hero__title">
+        Understand Your
+        <span class="gradient-text">Body Mass Index</span>
+      </h1>
+
+      <p class="hero__desc">
+        Calculate your BMI in seconds and use the result as one
+        simple starting point for understanding your current
+        weight-to-height relationship.
+      </p>
+
+      <div class="hero__btns">
+
+        <a href="#bmi" class="btn btn--primary">
+          Calculate BMI
+        </a>
+
+        <a href="contact.html" class="btn btn--outline">
+          Talk To An Expert
+        </a>
+
+      </div>
+
+      <div class="hero__stats">
+
+        <div class="stat">
+          <strong>01</strong>
+          <span>Enter Details</span>
+        </div>
+
+        <div class="stat">
+          <strong>02</strong>
+          <span>Calculate</span>
+        </div>
+
+        <div class="stat">
+          <strong>03</strong>
+          <span>Understand</span>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="hero__visual" data-anim="fade-left">
+
+      <div class="hero__shape">
+        <img
+          src="images/hero.webp"
+          alt="BMI and healthy nutrition"
+        />
+      </div>
+
+      <div class="hero__card hero__card--float1">
+
+        <span class="ico">&#9878;&#65039;</span>
+
+        <div class="hero__card-info">
+          <h4>Simple Check</h4>
+          <p>Quick BMI calculation</p>
+        </div>
+
+      </div>
+
+
+      <div class="hero__card hero__card--float2">
+
+        <span class="ico">&#128202;</span>
+
+        <div class="hero__card-info">
+          <b>Know Your Range</b>
+          <small>Use BMI as a starting point</small>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= BMI CALCULATOR ================= -->
+<section class="section bmi" id="bmi">
+
+  <div class="container bmi__wrap">
+
+    <div class="bmi__intro" data-anim="fade-right">
+
+      <span class="tag">BMI Categories</span>
+
+      <h3 class="section__title">
+        Understand The
+        <span class="gradient-text">Result</span>
+      </h3>
+
+      <p>
+        BMI is calculated using your weight relative to your
+        height. It can be used as a general screening measure,
+        but it does not describe every aspect of individual
+        health or body composition.
+      </p>
+
+
+      <ul class="bmi__scale">
+
+        <li>
+          <i style="--c:#60a5fa;"></i>
+          <b>Underweight</b>
+          <span>Below 18.5</span>
+        </li>
+
+        <li>
+          <i style="--c:#16a34a;"></i>
+          <b>Healthy Range</b>
+          <span>18.5 &#8211; 24.9</span>
+        </li>
+
+        <li>
+          <i style="--c:#f59e0b;"></i>
+          <b>Overweight</b>
+          <span>25 &#8211; 29.9</span>
+        </li>
+
+        <li>
+          <i style="--c:#ef4444;"></i>
+          <b>Obesity Range</b>
+          <span>30 and above</span>
+        </li>
+
+      </ul>
+
+    </div>
+
+
+    <div class="bmi__box" data-anim="fade-left">
+
+      <div class="bmi__fields">
+
+        <label>
+
+          <span>Height (cm)</span>
+
+          <input
+            type="number"
+            id="bmiHeight"
+            placeholder="Example: 170"
+            min="80"
+            max="250"
+            inputmode="decimal"
+          />
+
+        </label>
+
+
+        <label>
+
+          <span>Weight (kg)</span>
+
+          <input
+            type="number"
+            id="bmiWeight"
+            placeholder="Example: 65"
+            min="20"
+            max="300"
+            inputmode="decimal"
+          />
+
+        </label>
+
+      </div>
+
+
+      <button
+        type="button"
+        class="btn btn--primary btn--block"
+        id="bmiBtn"
+      >
+        Calculate My BMI
+      </button>
+
+
+      <div class="bmi__result" id="bmiResult">
+
+        <div class="bmi__value" id="bmiValue">
+          &#8212;
+        </div>
+
+        <div class="bmi__cat" id="bmiCat">
+          Enter your details
+        </div>
+
+        <div class="bmi__bar">
+          <span id="bmiBar"></span>
+        </div>
+
+      </div>
+
+      <p class="bmi__note" id="bmiNote">
+        BMI is a screening measure and should not be used
+        as a standalone diagnosis.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= WHAT IS BMI ================= -->
+<section class="section why">
+
+  <div class="container">
+
+    <div class="section__head" data-anim="fade-up">
+
+      <span class="tag">Understanding BMI</span>
+
+      <h2 class="section__title">
+        What Is
+        <span class="gradient-text">BMI?</span>
+      </h2>
+
+      <p class="section__sub">
+        A simple measurement used to compare body weight with
+        height.
+      </p>
+
+    </div>
+
+
+    <div class="why__grid">
+
+      <article class="why__card" data-tilt data-anim="fade-up">
+
+        <div class="why__ico">&#128208;</div>
+
+        <h4>Height &amp; Weight</h4>
+
+        <p>
+          BMI uses your height and weight to produce a numerical
+          value that can be placed into broad categories.
+        </p>
+
+      </article>
+
+
+      <article class="why__card" data-tilt data-anim="fade-up" data-delay="80">
+
+        <div class="why__ico">&#128289;</div>
+
+        <h4>Simple Number</h4>
+
+        <p>
+          The result provides a quick way to begin a conversation
+          about weight-related health factors.
+        </p>
+
+      </article>
+
+
+      <article class="why__card" data-tilt data-anim="fade-up" data-delay="160">
+
+        <div class="why__ico">&#128202;</div>
+
+        <h4>General Screening</h4>
+
+        <p>
+          BMI can be useful for screening at a population level,
+          but it does not provide a complete picture of health.
+        </p>
+
+      </article>
+
+
+      <article class="why__card" data-tilt data-anim="fade-up" data-delay="240">
+
+        <div class="why__ico">&#128589;</div>
+
+        <h4>Body Composition</h4>
+
+        <p>
+          BMI does not directly measure muscle mass, body fat
+          distribution or overall body composition.
+        </p>
+
+      </article>
+
+
+      <article class="why__card" data-tilt data-anim="fade-up" data-delay="320">
+
+        <div class="why__ico">&#127919;</div>
+
+        <h4>Useful Starting Point</h4>
+
+        <p>
+          Your BMI can be one piece of information when planning
+          broader nutrition and lifestyle goals.
+        </p>
+
+      </article>
+
+
+      <article class="why__card" data-tilt data-anim="fade-up" data-delay="400">
+
+        <div class="why__ico">&#128104;&#8205;&#9877;&#65039;</div>
+
+        <h4>Expert Interpretation</h4>
+
+        <p>
+          Individual circumstances should be considered when
+          interpreting BMI and deciding on health goals.
+        </p>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= BMI FORMULA ================= -->
+<section class="section formula-section">
+
+  <div class="container">
+
+    <div class="about__grid">
+
+      <div class="about__media" data-anim="zoom-in">
+
+        <div class="about__img about__img--1">
+
+          <img
+            src="images/clinical-nutrition.webp"
+            alt="BMI formula illustration"
+          />
+
+        </div>
+
+        <div class="about__img about__img--2">
+
+          <img
+            src="images/about-1.webp"
+            alt="Healthy lifestyle"
+          />
+
+        </div>
+
+        <div class="about__badge">
+
+          <strong>kg/m&sup2;</strong>
+
+          <span>BMI Formula</span>
+
+        </div>
+
+      </div>
+
+
+      <div class="about__text" data-anim="fade-left">
+
+        <span class="tag">The Formula</span>
+
+        <h2 class="section__title">
+          How Is BMI
+          <span class="gradient-text">Calculated?</span>
+        </h2>
+
+        <p>
+          BMI is calculated by dividing body weight in kilograms
+          by height in metres squared.
+        </p>
+
+
+        <div class="formula-box">
+
+          <strong>
+            BMI = Weight (kg) &#247; Height&sup2; (m)
+          </strong>
+
+          <span>
+            Example: weight divided by height in metres squared.
+          </span>
+
+        </div>
+
+
+        <ul class="about__list">
+
+          <li>
+            <i>&#10003;</i>
+            <span>Measure your height accurately.</span>
+          </li>
+
+          <li>
+            <i>&#10003;</i>
+            <span>Record your current weight.</span>
+          </li>
+
+          <li>
+            <i>&#10003;</i>
+            <span>Convert height to metres.</span>
+          </li>
+
+          <li>
+            <i>&#10003;</i>
+            <span>Use the BMI calculator above.</span>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= BMI LIMITATIONS ================= -->
+<section class="section process">
+
+  <div class="container">
+
+    <div class="section__head" data-anim="fade-up">
+
+      <span class="tag">Important To Know</span>
+
+      <h2 class="section__title">
+        BMI Does Not Tell
+        <span class="gradient-text">The Whole Story</span>
+      </h2>
+
+      <p class="section__sub">
+        Use BMI as one piece of information rather than a complete
+        assessment of your health.
+      </p>
+
+    </div>
+
+
+    <div class="steps">
+
+      <article class="step" data-anim="fade-up">
+
+        <div class="step__num">01</div>
+
+        <h4>Muscle Mass</h4>
+
+        <p>
+          People with higher muscle mass may have a higher BMI
+          without having high body fat.
+        </p>
+
+      </article>
+
+
+      <article class="step" data-anim="fade-up" data-delay="100">
+
+        <div class="step__num">02</div>
+
+        <h4>Age &amp; Context</h4>
+
+        <p>
+          Age, development and individual circumstances can affect
+          how BMI should be interpreted.
+        </p>
+
+      </article>
+
+
+      <article class="step" data-anim="fade-up" data-delay="200">
+
+        <div class="step__num">03</div>
+
+        <h4>Body Fat</h4>
+
+        <p>
+          BMI does not directly measure body fat percentage or
+          where body fat is distributed.
+        </p>
+
+      </article>
+
+
+      <article class="step" data-anim="fade-up" data-delay="300">
+
+        <div class="step__num">04</div>
+
+        <h4>Overall Health</h4>
+
+        <p>
+          Nutrition, activity, sleep, medical history and other
+          factors also contribute to overall health.
+        </p>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= WHAT TO DO AFTER BMI ================= -->
+<section class="section">
+
+  <div class="container">
+
+    <div class="section__head" data-anim="fade-up">
+
+      <span class="tag">Next Step</span>
+
+      <h2 class="section__title">
+        What Should You Do
+        <span class="gradient-text">After Checking BMI?</span>
+      </h2>
+
+      <p class="section__sub">
+        Your result can help you decide what information to
+        explore next.
+      </p>
+
+    </div>
+
+
+    <div class="cards3d">
+
+
+      <article class="why__card" data-anim="fade-up">
+
+        <div class="why__ico">&#129367;</div>
+
+        <h4>Review Your Nutrition</h4>
+
+        <p>
+          Look at your regular meals, portions, food quality and
+          eating patterns.
+        </p>
+
+        <a
+          href="services.html"
+          class="post__link"
+        >
+          Explore Services &#8594;
+        </a>
+
+      </article>
+
+
+      <article class="why__card" data-anim="fade-up" data-delay="100">
+
+        <div class="why__ico">&#127939;</div>
+
+        <h4>Review Activity</h4>
+
+        <p>
+          Consider how regular physical activity fits into your
+          current lifestyle.
+        </p>
+
+        <a
+          href="tips.html"
+          class="post__link"
+        >
+          Read Health Tips &#8594;
+        </a>
+
+      </article>
+
+
+      <article class="why__card" data-anim="fade-up" data-delay="200">
+
+        <div class="why__ico">&#128104;&#8205;&#9877;&#65039;</div>
+
+        <h4>Speak With An Expert</h4>
+
+        <p>
+          Get individualized guidance when you want to understand
+          your result in a broader context.
+        </p>
+
+        <a
+          href="contact.html"
+          class="post__link"
+        >
+          Book Consultation &#8594;
+        </a>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= BMI RANGE BAND ================= -->
+<section class="band">
+
+  <div class="container">
+
+    <div class="band__inner" data-anim="zoom-in">
+
+      <div class="band__item">
+
+        <strong>&lt;18.5</strong>
+
+        <span>Underweight Range</span>
+
+      </div>
+
+
+      <div class="band__item">
+
+        <strong>18.5&#8211;24.9</strong>
+
+        <span>Healthy Range</span>
+
+      </div>
+
+
+      <div class="band__item">
+
+        <strong>25&#8211;29.9</strong>
+
+        <span>Overweight Range</span>
+
+      </div>
+
+
+      <div class="band__item">
+
+        <strong>30+</strong>
+
+        <span>Obesity Range</span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= BMI FAQ ================= -->
+<section class="section faq" id="faq">
+
+  <div class="container">
+
+    <div class="faq__wrap">
+
+      <div class="faq__intro" data-anim="fade-right">
+
+        <span class="tag">Common Questions</span>
+
+        <h2 class="section__title">
+          BMI
+          <span class="gradient-text">FAQ</span>
+        </h2>
+
+        <p>
+          Learn more about the calculator, BMI ranges and how to
+          interpret your result.
+        </p>
+
+        <a
+          href="contact.html"
+          class="btn btn--primary"
+        >
+          Ask Our Experts
+        </a>
+
+      </div>
+
+
+      <div class="faq-list" data-anim="fade-left">
+
+
+        <div class="faq-item">
+
+          <button
+            class="faq-question"
+            type="button"
+          >
+
+            <span>
+              What does BMI stand for?
+            </span>
+
+            <span>+</span>
+
+          </button>
+
+          <div class="faq-answer">
+
+            <p>
+              BMI stands for Body Mass Index. It is a numerical
+              measure based on weight and height.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+          <button
+            class="faq-question"
+            type="button"
+          >
+
+            <span>
+              Is BMI a complete measure of health?
+            </span>
+
+            <span>+</span>
+
+          </button>
+
+          <div class="faq-answer">
+
+            <p>
+              No. BMI is a screening measure and does not directly
+              measure body fat, muscle mass or overall health.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+          <button
+            class="faq-question"
+            type="button"
+          >
+
+            <span>
+              Can athletes have a high BMI?
+            </span>
+
+            <span>+</span>
+
+          </button>
+
+          <div class="faq-answer">
+
+            <p>
+              Yes. People with significant muscle mass can have a
+              higher BMI because BMI does not distinguish muscle
+              from body fat.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+          <button
+            class="faq-question"
+            type="button"
+          >
+
+            <span>
+              Should I change my diet based only on BMI?
+            </span>
+
+            <span>+</span>
+
+          </button>
+
+          <div class="faq-answer">
+
+            <p>
+              Avoid making major health decisions based only on
+              one BMI number. Consider your overall health,
+              lifestyle and individual circumstances.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+          <button
+            class="faq-question"
+            type="button"
+          >
+
+            <span>
+              Can Stackly help me understand my result?
+            </span>
+
+            <span>+</span>
+
+          </button>
+
+          <div class="faq-answer">
+
+            <p>
+              You can explore Stackly nutrition services or contact
+              the team for guidance about your nutrition goals.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+          <button
+            class="faq-question"
+            type="button"
+          >
+
+            <span>
+              Is this BMI calculator free?
+            </span>
+
+            <span>+</span>
+
+          </button>
+
+          <div class="faq-answer">
+
+            <p>
+              Yes. The BMI calculator is provided as a simple
+              informational tool for calculating BMI.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= FINAL CTA ================= -->
+<section class="section final-cta--plans">
+
+  <div class="container">
+
+    <div class="mini-cta__inner" data-anim="fade-up">
+
+      <span class="tag">
+        Take The Next Step
+      </span>
+
+      <h2>
+        Your BMI Is Just The Beginning.
+      </h2>
+
+      <p>
+        Use your result as a starting point and explore practical
+        nutrition strategies designed around your lifestyle.
+      </p>
+
+      <div class="final-cta__actions">
+
+        <a
+          href="services.html"
+          class="btn btn--primary"
+        >
+          Explore Nutrition Services
+        </a>
+
+        <a
+          href="contact.html"
+          class="btn btn--outline"
+        >
+          Book Consultation
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a href="index.html" class="logo">
+       <img src="images/logo.webp" alt="Stackly Nutrition Centre" class="logo__img" />
+      </a>
+      <p>Science-backed nutrition coaching for Indian lifestyles. Eat better, live stronger.</p>
+      <div class="footer__social">
+        <a href="404.html" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a href="404.html" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12s.014 3.668.072 4.948c.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24s3.668-.014 4.948-.072c4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+        </a>
+        <a href="404.html" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+        </a>
+        <a href="404.html" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </a>
+        <a href="404.html" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer__col">
+      <h4>Programs</h4>
+      <a href="services.html">Fat Loss</a>
+      <a href="services.html">Clinical Nutrition</a>
+      <a href="services.html">Sports Fuel</a>
+      <a href="services.html">Kids &amp; Family</a>
+    </div>
+
+    <div class="footer__col">
+      <h4>Company</h4>
+      <a href="about.html">About Us</a>
+      <a href="experts.html">Our Experts</a>
+      <a href="plans.html">Pricing</a>
+      <a href="reviews.html">Reviews</a>
+    </div>
+
+    <div class="footer__col footer__contact">
+      <h4>Contact</h4>
+      <ul>
+        <li>
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.03-.24c1.12.37 2.33.57 3.56.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.4 21 3 13.6 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z"/></svg>
+          <a href="tel:+919876543210">+91 98765 43210</a>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          <a href="mailto:care@stackly.in">care@stackly.in</a>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+          <span>42 Green Park, New Delhi 110016</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 10.59V7h-2v6.41l4.29 4.3 1.42-1.42L13 12.59z"/></svg>
+          <span>Mon – Sat, 9:00 AM – 8:00 PM</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer__col footer__news">
+      <h4>Weekly Health Tip</h4>
+      <p>One practical nutrition email every Monday. No spam.</p>
+      <form class="news" id="news">
+        <input type="email" placeholder="Your email" required />
+        <button type="submit">&#8594;</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="container footer__bottom">
+    <span>&copy; 2026 Stackly Nutrition Centre. All rights reserved.</span>
+    <span>Privacy Policy &nbsp;&bull;&nbsp; Terms of Service</span>
+  </div>
+</footer>
+
+
+<!-- ================= BACK TO TOP ================= -->
+<button class="to-top" id="toTop" aria-label="Back to top">&#8593;</button>
+
+<script src="script.js"></script>
+</body>
+</html>

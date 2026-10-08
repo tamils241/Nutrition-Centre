@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>My Plan | Stackly Nutrition Centre</title>
+<meta name="description" content="Your Stackly Nutrition plan - current programme, progress and plan documents." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body class="dash-body">
+
+<div class="dash">
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside class="dash-side">
+
+    <div class="dash-side__brand">
+      <a href="index.html" class="dash-side__logo" aria-label="Stackly Nutrition Centre">
+        <img src="images/logo.webp" alt="Stackly Nutrition Centre" class="dash-side__logo-img" />
+      </a>
+    </div>
+
+    <nav class="dash-nav" aria-label="Client navigation">
+      <span class="dash-nav__label">Main</span>
+
+      <a href="clients-dashboard.html" class="dash-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>
+        Dashboard
+      </a>
+
+      <a href="client-plan.html" class="dash-nav__link active" aria-current="page">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M9 12h6M9 16h4"/></svg>
+        My Plan
+      </a>
+
+      <a href="client-meals.html" class="dash-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18M5 6h14M7 3h10"/><path d="M6 11v10h12V11M9 15h.01M15 15h.01M12 18h.01"/></svg>
+        My Meals
+      </a>
+
+      <span class="dash-nav__label">Track</span>
+
+      <a href="client-check-ins.html" class="dash-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M9 16l2 2 4-4"/></svg>
+        Check-ins
+        <span class="dash-nav__badge">1</span>
+      </a>
+
+      <a href="client-progress.html" class="dash-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m22 7-8.5 8.5-5-5L2 17"/><path d="M16 7h6v6"/></svg>
+        Progress
+      </a>
+
+      <span class="dash-nav__label">Support</span>
+
+      <a href="client-support.html" class="dash-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Chat with Dietitian
+        <span class="dash-nav__badge">2</span>
+      </a>
+
+      <a href="client-settings.html" class="dash-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+        Settings
+      </a>
+    </nav>
+
+    <div class="dash-side__foot">
+      <div class="dash-side__user">
+        <span class="dash-avatar">PS</span>
+        <div>
+          <b>Priya Sharma</b>
+          <span>Client · Plan: Weight Loss</span>
+        </div>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- ================= MOBILE OVERLAY ================= -->
+  <div class="dash-overlay" aria-hidden="true"></div>
+
+  <!-- ================= MAIN ================= -->
+  <div class="dash-main">
+
+    <header class="dash-top">
+      <button class="dash-top__burger" type="button" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="dash-top__search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="search" id="dashSearch" placeholder="Search my meals, plans, reports…" aria-label="Search dashboard" />
+      </div>
+
+      <div class="dash-top__action">
+        <button class="dash-icon-btn" type="button" aria-label="Notifications">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+          <span class="dot"></span>
+        </button>
+
+        <div class="dash-notif">
+          <div class="dash-notif__head">
+            <b>Notifications</b>
+            <button type="button" class="dash-notif__clear">Mark all read</button>
+          </div>
+          <div class="dash-notif__list">
+            <a href="#" class="dash-notif__item unread">
+              <span class="dash-notif__ico">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M9 12h6M9 16h4"/></svg>
+              </span>
+              <div>
+                <b>Check-in reminder</b>
+                <span>Your check-in with Dr. Meera Iyer is this Saturday at 9:00 AM.</span>
+                <time>10 min ago</time>
+              </div>
+            </a>
+            <a href="#" class="dash-notif__item unread">
+              <span class="dash-notif__ico">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18M5 6h14M7 3h10"/><path d="M6 11v10h12V11M9 15h.01M15 15h.01M12 18h.01"/></svg>
+              </span>
+              <div>
+                <b>Meal plan updated</b>
+                <span>Your Week 12 meal plan is ready with new recipes.</span>
+                <time>1 hr ago</time>
+              </div>
+            </a>
+            <a href="#" class="dash-notif__item">
+              <span class="dash-notif__ico">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.1V12a10 10 0 1 1-5.9-9.1"/><path d="M22 4 12 14l-3-3"/></svg>
+              </span>
+              <div>
+                <b>Goal reached</b>
+                <span>You logged your meals 7 days in a row. Keep it up!</span>
+                <time>Yesterday</time>
+              </div>
+            </a>
+          </div>
+          <a href="#" class="dash-notif__foot">View all notifications</a>
+        </div>
+
+        <a href="#" class="dash-top__profile">
+          <span class="dash-avatar">PS</span>
+          <div>
+            <b>Priya Sharma</b>
+            <span>priya@example.com</span>
+          </div>
+        </a>
+      </div>
+    </header>
+
+    <main class="dash-content">
+
+      <!-- ================= PAGE HEAD ================= -->
+      <div class="dash-head">
+        <div>
+          <h1 class="dash-head__title">My <span>Plan</span></h1>
+          <p class="dash-head__sub">Fat Loss · 12-week programme with Dr. Meera Iyer.</p>
+        </div>
+        <a href="#" class="btn btn--primary btn--sm">Download Plan PDF</a>
+      </div>
+
+      <!-- ================= STAT CARDS ================= -->
+      <div class="dash-grid--stats">
+
+        <div class="dstat">
+          <div class="dstat__ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          </div>
+          <p class="dstat__label">Plan Started</p>
+          <p class="dstat__value">Jul 12</p>
+          <span class="dstat__delta up">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m7 10 5-5 5 5M12 5v14"/></svg>
+            day <span>1 of 90</span>
+          </span>
+        </div>
+
+        <div class="dstat dstat--lime">
+          <div class="dstat__ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12a10 10 0 1 1-10-10"/><path d="M22 4 12 14l-3-3"/></svg>
+          </div>
+          <p class="dstat__label">Days Completed</p>
+          <p class="dstat__value">87</p>
+          <span class="dstat__delta up">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m7 10 5-5 5 5M12 5v14"/></svg>
+            97% <span>on-track</span>
+          </span>
+        </div>
+
+        <div class="dstat dstat--orange">
+          <div class="dstat__ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 7H9.5a2.5 2.5 0 0 0 0 5h5a2.5 2.5 0 0 1 0 5H6"/></svg>
+          </div>
+          <p class="dstat__label">Renews On</p>
+          <p class="dstat__value">Oct 12</p>
+          <span class="dstat__delta down">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m17 14-5 5-5-5M12 19V5"/></svg>
+            in 5 <span>days</span>
+          </span>
+        </div>
+
+        <div class="dstat dstat--blue">
+          <div class="dstat__ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="4"/><path d="M3 21v-1a6 6 0 0 1 6-6h0a6 6 0 0 1 6 6v1"/><path d="M16 3.1a4 4 0 0 1 0 7.8M19 21v-1a6 6 0 0 0-4-5.7"/></svg>
+          </div>
+          <p class="dstat__label">Check-ins Used</p>
+          <p class="dstat__value">11/12</p>
+          <span class="dstat__delta up">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m7 10 5-5 5 5M12 5v14"/></svg>
+            1 <span>remaining</span>
+          </span>
+        </div>
+
+      </div>
+
+      <!-- ================= CURRENT PLAN + PROGRESS ================= -->
+      <div class="dash-grid--23">
+
+        <div class="dash-card">
+          <div class="dash-card__head">
+            <div>
+              <h3 class="dash-card__title">Current Programme</h3>
+              <p class="dash-card__sub">Fat Loss · 12 weeks · ₹6,999</p>
+            </div>
+            <span class="dpill dpill--active">Active</span>
+          </div>
+
+          <div class="dplan" style="box-shadow:none">
+            <div class="dplan__head">
+              <span class="dplan__ico">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 7H9.5a2.5 2.5 0 0 0 0 5h5a2.5 2.5 0 0 1 0 5H6"/></svg>
+              </span>
+              <div>
+                <h3 style="font-size:1.1rem">Fat Loss</h3>
+                <p style="font-size:.74rem;color:var(--muted);margin-top:2px">With Dr. Meera Iyer</p>
+              </div>
+              <span class="dplan__price">₹6,999<span style="font-size:.66rem;color:var(--muted);font-weight:600">/3mo</span></span>
+            </div>
+            <div class="dplan__meta">
+              <span>Home-cooked</span>
+              <span>Weekly check-in</span>
+              <span>Fitness sync</span>
+            </div>
+            <p>Calorie-managed Indian meals, 1,850 kcal daily target and weekly weigh-ins booked for Saturday 9:00 AM.</p>
+          </div>
+
+          <div style="margin-top:16px;border-top:1px dashed var(--line);padding-top:14px">
+            <b style="font-size:.88rem">What's included</b>
+            <div class="dlist" style="margin-top:8px">
+              <div class="dlist__item">
+                <span class="dlist__time">✓</span>
+                <div class="dlist__body">
+                  <b>Personalised meal plan</b>
+                  <span>Updated every 2 weeks</span>
+                </div>
+              </div>
+              <div class="dlist__item">
+                <span class="dlist__time">✓</span>
+                <div class="dlist__body">
+                  <b>12 weekly video check-ins</b>
+                  <span>With dietitian</span>
+                </div>
+              </div>
+              <div class="dlist__item">
+                <span class="dlist__time">✓</span>
+                <div class="dlist__body">
+                  <b>WhatsApp support</b>
+                  <span>9 AM – 9 PM, daily</span>
+                </div>
+              </div>
+              <div class="dlist__item">
+                <span class="dlist__time">✓</span>
+                <div class="dlist__body">
+                  <b>Grocery list + recipes</b>
+                  <span>Weekly downloads</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <a href="client-meals.html" class="btn btn--outline btn--sm" style="margin-top:16px;width:100%">View today's meals</a>
+        </div>
+
+        <div class="dash-card">
+          <div class="dash-card__head">
+            <div>
+              <h3 class="dash-card__title">Plan Progress</h3>
+              <p class="dash-card__sub">Overall completion</p>
+            </div>
+          </div>
+
+          <div class="dprogress">
+            <div>
+              <div class="dprogress__ring" style="background:conic-gradient(var(--green) 0% 82%, var(--line) 82% 100%)">82%<span>Overall</span></div>
+              <b>Day 87 of 90</b>
+              <p>3 days remaining</p>
+            </div>
+            <div>
+              <div class="dprogress__ring" style="background:conic-gradient(var(--lime) 0% 74%, var(--line) 74% 100%)">74%<span>Nutrients</span></div>
+              <b>Protein 52/95 g</b>
+              <p>Today's intake</p>
+            </div>
+            <div>
+              <div class="dprogress__ring" style="background:conic-gradient(var(--orange) 0% 92%, var(--line) 92% 100%)">92%<span>Check-ins</span></div>
+              <b>11 of 12 done</b>
+              <p>1 remaining</p>
+            </div>
+          </div>
+
+          <div style="border-top:1px dashed var(--line);padding-top:14px;margin-top:16px">
+            <b style="font-size:.88rem">Next milestone</b>
+            <div class="dlist" style="margin-top:8px">
+              <div class="dlist__item">
+                <span class="dlist__time">Oct 12</span>
+                <div class="dlist__body">
+                  <b>Final Review + Renewal</b>
+                  <span>Reach 70 kg goal · book an extra session</span>
+                </div>
+                <a href="#" class="btn btn--sm btn--outline">Book</a>
+              </div>
+            </div>
+          </div>
+
+          <a href="client-support.html" class="btn btn--ghost btn--sm" style="margin-top:14px;width:100%">Message Dr. Meera</a>
+        </div>
+
+      </div>
+
+      <!-- ================= 90 DAY TIMELINE ================= -->
+      <div class="dash-card dash-card--pad0">
+
+        <div class="dtoolbar" style="padding:20px 22px 12px">
+          <div>
+            <h3 class="dash-card__title">90-Day Plan Timeline</h3>
+            <p class="dash-card__sub">Three phases designed around your goal</p>
+          </div>
+          <span class="dash-card__more">Full guide</span>
+        </div>
+
+        <div class="dash-table-wrap">
+          <table class="dash-table">
+            <thead>
+              <tr>
+                <th>Phase</th>
+                <th>Days</th>
+                <th>Focus</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><b>Foundation</b></td>
+                <td>Day 1 – 30</td>
+                <td>Calorie re-framing, portion basics, habit building</td>
+                <td><span class="dpill dpill--lime">Completed</span></td>
+              </tr>
+              <tr>
+                <td><b>Accelerate</b></td>
+                <td>Day 31 – 60</td>
+                <td>Protein focus, strength training sync, metabolic boost</td>
+                <td><span class="dpill dpill--lime">Completed</span></td>
+              </tr>
+              <tr>
+                <td><b>Sustain</b></td>
+                <td>Day 61 – 90</td>
+                <td>Weight maintenance, mindful eating, slip-day handling</td>
+                <td><span class="dpill dpill--active">In progress</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+      <!-- ================= PLAN DOCUMENTS ================= -->
+      <div class="dash-card">
+
+        <div class="dash-card__head">
+          <div>
+            <h3 class="dash-card__title">Plan Documents</h3>
+            <p class="dash-card__sub">Everything you need for your current plan</p>
+          </div>
+        </div>
+
+        <div class="dreport">
+          <span class="dreport__ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M12 11v6m0 0 3-3m-3 3-3-3"/></svg>
+          </span>
+          <div class="dreport__body">
+            <b>Daily Meal Plan — Week 13</b>
+            <span>PDF · updated Oct 05, 2026</span>
+          </div>
+          <button class="btn btn--outline btn--sm" type="button">Download</button>
+        </div>
+
+        <div class="dreport">
+          <span class="dreport__ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M12 11v6m0 0 3-3m-3 3-3-3"/></svg>
+          </span>
+          <div class="dreport__body">
+            <b>Weekly Grocery List</b>
+            <span>PDF · updated Oct 05, 2026</span>
+          </div>
+          <button class="btn btn--outline btn--sm" type="button">Download</button>
+        </div>
+
+        <div class="dreport">
+          <span class="dreport__ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M12 11v6m0 0 3-3m-3 3-3-3"/></svg>
+          </span>
+          <div class="dreport__body">
+            <b>Recipe Book — High Protein</b>
+            <span>PDF · 30 recipes</span>
+          </div>
+          <button class="btn btn--outline btn--sm" type="button">Download</button>
+        </div>
+
+        <div class="dreport">
+          <span class="dreport__ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M12 11v6m0 0 3-3m-3 3-3-3"/></svg>
+          </span>
+          <div class="dreport__body">
+            <b>Fitness App Sync Guide</b>
+            <span>PDF · Google Fit / Apple Health</span>
+          </div>
+          <button class="btn btn--outline btn--sm" type="button">Download</button>
+        </div>
+
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

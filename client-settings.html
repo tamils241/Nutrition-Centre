@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Settings | Stackly Nutrition Centre</title>
+<meta name="description" content="Manage your Stackly Nutrition profile, notifications and preferences." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body class="dash-body">
+
+<div class="dash">
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside class="dash-side">
+
+    <div class="dash-side__brand">
+      <a href="index.html" class="dash-side__logo" aria-label="Stackly Nutrition Centre">
+        <img src="images/logo.webp" alt="Stackly Nutrition Centre" class="dash-side__logo-img" />
+      </a>
+    </div>
+
+    <nav class="dash-nav" aria-label="Client navigation">
+      <span class="dash-nav__label">Main</span>
+
+      <a href="clients-dashboard.html" class="dash-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>
+        Dashboard
+      </a>
+
+      <a href="client-plan.html" class="dash-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M9 12h6M9 16h4"/></svg>
+        My Plan
+      </a>
+
+      <a href="client-meals.html" class="dash-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18M5 6h14M7 3h10"/><path d="M6 11v10h12V11M9 15h.01M15 15h.01M12 18h.01"/></svg>
+        My Meals
+      </a>
+
+      <span class="dash-nav__label">Track</span>
+
+      <a href="client-check-ins.html" class="dash-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M9 16l2 2 4-4"/></svg>
+        Check-ins
+        <span class="dash-nav__badge">1</span>
+      </a>
+
+      <a href="client-progress.html" class="dash-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m22 7-8.5 8.5-5-5L2 17"/><path d="M16 7h6v6"/></svg>
+        Progress
+      </a>
+
+      <span class="dash-nav__label">Support</span>
+
+      <a href="client-support.html" class="dash-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Chat with Dietitian
+        <span class="dash-nav__badge">2</span>
+      </a>
+
+      <a href="client-settings.html" class="dash-nav__link active" aria-current="page">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+        Settings
+      </a>
+    </nav>
+
+    <div class="dash-side__foot">
+      <div class="dash-side__user">
+        <span class="dash-avatar">PS</span>
+        <div>
+          <b>Priya Sharma</b>
+          <span>Client · Plan: Weight Loss</span>
+        </div>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- ================= MOBILE OVERLAY ================= -->
+  <div class="dash-overlay" aria-hidden="true"></div>
+
+  <!-- ================= MAIN ================= -->
+  <div class="dash-main">
+
+    <header class="dash-top">
+      <button class="dash-top__burger" type="button" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="dash-top__search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="search" id="dashSearch" placeholder="Search my meals, plans, reports…" aria-label="Search dashboard" />
+      </div>
+
+      <div class="dash-top__action">
+        <button class="dash-icon-btn" type="button" aria-label="Notifications">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+          <span class="dot"></span>
+        </button>
+
+        <div class="dash-notif">
+          <div class="dash-notif__head">
+            <b>Notifications</b>
+            <button type="button" class="dash-notif__clear">Mark all read</button>
+          </div>
+          <div class="dash-notif__list">
+            <a href="#" class="dash-notif__item unread">
+              <span class="dash-notif__ico">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M9 12h6M9 16h4"/></svg>
+              </span>
+              <div>
+                <b>Check-in reminder</b>
+                <span>Your check-in with Dr. Meera Iyer is this Saturday at 9:00 AM.</span>
+                <time>10 min ago</time>
+              </div>
+            </a>
+            <a href="#" class="dash-notif__item unread">
+              <span class="dash-notif__ico">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18M5 6h14M7 3h10"/><path d="M6 11v10h12V11M9 15h.01M15 15h.01M12 18h.01"/></svg>
+              </span>
+              <div>
+                <b>Meal plan updated</b>
+                <span>Your Week 12 meal plan is ready with new recipes.</span>
+                <time>1 hr ago</time>
+              </div>
+            </a>
+            <a href="#" class="dash-notif__item">
+              <span class="dash-notif__ico">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.1V12a10 10 0 1 1-5.9-9.1"/><path d="M22 4 12 14l-3-3"/></svg>
+              </span>
+              <div>
+                <b>Goal reached</b>
+                <span>You logged your meals 7 days in a row. Keep it up!</span>
+                <time>Yesterday</time>
+              </div>
+            </a>
+          </div>
+          <a href="#" class="dash-notif__foot">View all notifications</a>
+        </div>
+
+        <a href="#" class="dash-top__profile">
+          <span class="dash-avatar">PS</span>
+          <div>
+            <b>Priya Sharma</b>
+            <span>priya@example.com</span>
+          </div>
+        </a>
+      </div>
+    </header>
+
+    <main class="dash-content">
+
+      <!-- ================= PAGE HEAD ================= -->
+      <div class="dash-head">
+        <div>
+          <h1 class="dash-head__title">Settings <span>&amp; Preferences</span></h1>
+          <p class="dash-head__sub">Manage your profile, notifications and app preferences.</p>
+        </div>
+        <a href="#" class="btn btn--primary btn--sm">Save Changes</a>
+      </div>
+
+      <div class="dash-grid--settings">
+
+        <!-- ================= PROFILE ================= -->
+        <div class="dash-card dsheet">
+          <h3 class="dash-card__title">Profile Details</h3>
+          <p class="dash-card__sub">This is how your dietitian sees you</p>
+
+          <form class="dform" onsubmit="return false">
+            <div class="dform__row">
+              <div class="dform__field">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" value="Priya" />
+              </div>
+              <div class="dform__field">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" value="Sharma" />
+              </div>
+            </div>
+
+            <div class="dform__row">
+              <div class="dform__field">
+                <label for="clientEmail">Email</label>
+                <input type="email" id="clientEmail" value="priya@example.com" />
+              </div>
+              <div class="dform__field">
+                <label for="clientPhone">Phone</label>
+                <input type="tel" id="clientPhone" value="+91 98450 12345" />
+              </div>
+            </div>
+
+            <div class="dform__row">
+              <div class="dform__field">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" value="1994-11-03" />
+              </div>
+              <div class="dform__field">
+                <label for="city">City</label>
+                <select id="city">
+                  <option>Bengaluru</option>
+                  <option>Mumbai</option>
+                  <option>Delhi</option>
+                  <option>Hyderabad</option>
+                  <option>Chennai</option>
+                  <option>Pune</option>
+                </select>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- ================= HEALTH ================= -->
+        <div class="dash-card dsheet">
+          <h3 class="dash-card__title">Health Details</h3>
+          <p class="dash-card__sub">Goal, activity and diet style</p>
+
+          <form class="dform" onsubmit="return false">
+            <div class="dform__row">
+              <div class="dform__field">
+                <label for="healthGoal">Current Goal</label>
+                <select id="healthGoal">
+                  <option>Weight Loss</option>
+                  <option>Muscle Gain</option>
+                  <option>Maintenance</option>
+                  <option>Manage PCOS</option>
+                  <option>Gut Health</option>
+                </select>
+              </div>
+              <div class="dform__field">
+                <label for="height">Height</label>
+                <input type="text" id="height" value="167 cm" />
+              </div>
+            </div>
+
+            <div class="dform__row">
+              <div class="dform__field">
+                <label for="weight">Weight (kg)</label>
+                <input type="text" id="weight" value="72.6" />
+              </div>
+              <div class="dform__field">
+                <label for="activity">Activity Level</label>
+                <select id="activity">
+                  <option>Sedentary</option>
+                  <option>Light</option>
+                  <option>Moderate</option>
+                  <option>Very Active</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="dform__row">
+              <div class="dform__field">
+                <label for="diet">Diet Style</label>
+                <select id="diet">
+                  <option>Vegetarian</option>
+                  <option>Non-Vegetarian</option>
+                  <option>Vegan</option>
+                  <option>Jain</option>
+                </select>
+              </div>
+              <div class="dform__field">
+                <label for="allergies">Allergies (if any)</label>
+                <input type="text" id="allergies" value="None" />
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="dash-grid--settings">
+
+        <!-- ================= NOTIFICATIONS ================= -->
+        <div class="dash-card dsheet">
+          <h3 class="dash-card__title">Notifications</h3>
+          <p class="dash-card__sub">Choose what you want to hear about</p>
+
+          <div class="switch-row">
+            <div>
+              <b>Meal reminders</b>
+              <span>Daily 8 AM · 1 PM · 8 PM</span>
+            </div>
+            <label class="toggle">
+              <input type="checkbox" checked aria-label="Meal reminders" />
+              <span></span>
+            </label>
+          </div>
+
+          <div class="switch-row">
+            <div>
+              <b>Check-in reminders</b>
+              <span>A day before each session</span>
+            </div>
+            <label class="toggle">
+              <input type="checkbox" checked aria-label="Check-in reminders" />
+              <span></span>
+            </label>
+          </div>
+
+          <div class="switch-row">
+            <div>
+              <b>New messages</b>
+              <span>From your dietitian</span>
+            </div>
+            <label class="toggle">
+              <input type="checkbox" checked aria-label="New messages" />
+              <span></span>
+            </label>
+          </div>
+
+          <div class="switch-row">
+            <div>
+              <b>Progress updates</b>
+              <span>Weekly weight + measurement report</span>
+            </div>
+            <label class="toggle">
+              <input type="checkbox" checked aria-label="Progress updates" />
+              <span></span>
+            </label>
+          </div>
+
+          <div class="switch-row">
+            <div>
+              <b>Marketing emails</b>
+              <span>Tips, offers &amp; events</span>
+            </div>
+            <label class="toggle">
+              <input type="checkbox" aria-label="Marketing emails" />
+              <span></span>
+            </label>
+          </div>
+        </div>
+
+        <!-- ================= PREFERENCES ================= -->
+        <div class="dash-card dsheet">
+          <h3 class="dash-card__title">Preferences</h3>
+          <p class="dash-card__sub">Language, units and display</p>
+
+          <div class="switch-row">
+            <div>
+              <b>Language</b>
+            </div>
+            <select class="dform__input" aria-label="Language" style="width:150px">
+              <option>English</option>
+              <option>हिन्दी · Hindi</option>
+              <option>தமிழ் · Tamil</option>
+            </select>
+          </div>
+
+          <div class="switch-row">
+            <div>
+              <b>Measurement units</b>
+            </div>
+            <select class="dform__input" aria-label="Measurement units" style="width:150px">
+              <option>Metric (kg, cm)</option>
+              <option>Imperial (lb, in)</option>
+            </select>
+          </div>
+
+          <div class="switch-row">
+            <div>
+              <b>Calendar preview</b>
+              <span>Show upcoming events on dashboard</span>
+            </div>
+            <label class="toggle">
+              <input type="checkbox" checked aria-label="Calendar preview" />
+              <span></span>
+            </label>
+          </div>
+
+          <div class="switch-row">
+            <div>
+              <b>Public progress</b>
+              <span>Share milestones with your dietitian</span>
+            </div>
+            <label class="toggle">
+              <input type="checkbox" checked aria-label="Public progress" />
+              <span></span>
+            </label>
+          </div>
+
+          <div class="switch-row" style="border-bottom:none">
+            <div>
+              <b>Email frequency</b>
+              <span>How often we write to you</span>
+            </div>
+            <select class="dform__input" aria-label="Email frequency" style="width:150px">
+              <option>Weekly digest</option>
+              <option>Monthly</option>
+              <option>Only important</option>
+            </select>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ================= DANGER ZONE ================= -->
+      <div class="dash-card dsheet sheet--danger">
+        <h3 class="dash-card__title">Danger Zone</h3>
+
+        <div class="switch-row">
+          <div>
+            <b>Pause my programme</b>
+            <span>Freeze check-ins and meal plan for upto 30 days</span>
+          </div>
+          <a href="#" class="btn btn--sm btn--outline" style="border-color:var(--orange);color:var(--orange)">Pause</a>
+        </div>
+
+        <div class="switch-row">
+          <div>
+            <b>Delete my account</b>
+            <span>This removes all your data permanently</span>
+          </div>
+          <a href="#" class="btn btn--sm btn--outline" style="border-color:var(--red);color:var(--red)">Delete</a>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>My Meals | Stackly Nutrition Centre</title>
+<meta name="description" content="Your Stackly Nutrition meals - today's schedule, food swaps and weekly meal plan." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body class="dash-body">
+
+<div class="dash">
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside class="dash-side">
+
+    <div class="dash-side__brand">
+      <a href="index.html" class="dash-side__logo" aria-label="Stackly Nutrition Centre">
+        <img src="images/logo.webp" alt="Stackly Nutrition Centre" class="dash-side__logo-img" />
+      </a>
+    </div>
+
+    <nav class="dash-nav" aria-label="Client navigation">
+      <span class="dash-nav__label">Main</span>
+
+      <a href="clients-dashboard.html" class="dash-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>
+        Dashboard
+      </a>
+
+      <a href="client-plan.html" class="dash-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M9 12h6M9 16h4"/></svg>
+        My Plan
+      </a>
+
+      <a href="client-meals.html" class="dash-nav__link active" aria-current="page">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18M5 6h14M7 3h10"/><path d="M6 11v10h12V11M9 15h.01M15 15h.01M12 18h.01"/></svg>
+        My Meals
+      </a>
+
+      <span class="dash-nav__label">Track</span>
+
+      <a href="client-check-ins.html" class="dash-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M9 16l2 2 4-4"/></svg>
+        Check-ins
+        <span class="dash-nav__badge">1</span>
+      </a>
+
+      <a href="client-progress.html" class="dash-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m22 7-8.5 8.5-5-5L2 17"/><path d="M16 7h6v6"/></svg>
+        Progress
+      </a>
+
+      <span class="dash-nav__label">Support</span>
+
+      <a href="client-support.html" class="dash-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Chat with Dietitian
+        <span class="dash-nav__badge">2</span>
+      </a>
+
+      <a href="client-settings.html" class="dash-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+        Settings
+      </a>
+    </nav>
+
+    <div class="dash-side__foot">
+      <div class="dash-side__user">
+        <span class="dash-avatar">PS</span>
+        <div>
+          <b>Priya Sharma</b>
+          <span>Client · Plan: Weight Loss</span>
+        </div>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- ================= MOBILE OVERLAY ================= -->
+  <div class="dash-overlay" aria-hidden="true"></div>
+
+  <!-- ================= MAIN ================= -->
+  <div class="dash-main">
+
+    <header class="dash-top">
+      <button class="dash-top__burger" type="button" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="dash-top__search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="search" id="dashSearch" placeholder="Search my meals, plans, reports…" aria-label="Search dashboard" />
+      </div>
+
+      <div class="dash-top__action">
+        <button class="dash-icon-btn" type="button" aria-label="Notifications">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+          <span class="dot"></span>
+        </button>
+
+        <div class="dash-notif">
+          <div class="dash-notif__head">
+            <b>Notifications</b>
+            <button type="button" class="dash-notif__clear">Mark all read</button>
+          </div>
+          <div class="dash-notif__list">
+            <a href="#" class="dash-notif__item unread">
+              <span class="dash-notif__ico">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M9 12h6M9 16h4"/></svg>
+              </span>
+              <div>
+                <b>Check-in reminder</b>
+                <span>Your check-in with Dr. Meera Iyer is this Saturday at 9:00 AM.</span>
+                <time>10 min ago</time>
+              </div>
+            </a>
+            <a href="#" class="dash-notif__item unread">
+              <span class="dash-notif__ico">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18M5 6h14M7 3h10"/><path d="M6 11v10h12V11M9 15h.01M15 15h.01M12 18h.01"/></svg>
+              </span>
+              <div>
+                <b>Meal plan updated</b>
+                <span>Your Week 12 meal plan is ready with new recipes.</span>
+                <time>1 hr ago</time>
+              </div>
+            </a>
+            <a href="#" class="dash-notif__item">
+              <span class="dash-notif__ico">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.1V12a10 10 0 1 1-5.9-9.1"/><path d="M22 4 12 14l-3-3"/></svg>
+              </span>
+              <div>
+                <b>Goal reached</b>
+                <span>You logged your meals 7 days in a row. Keep it up!</span>
+                <time>Yesterday</time>
+              </div>
+            </a>
+          </div>
+          <a href="#" class="dash-notif__foot">View all notifications</a>
+        </div>
+
+        <a href="#" class="dash-top__profile">
+          <span class="dash-avatar">PS</span>
+          <div>
+            <b>Priya Sharma</b>
+            <span>priya@example.com</span>
+          </div>
+        </a>
+      </div>
+    </header>
+
+    <main class="dash-content">
+
+      <!-- ================= PAGE HEAD ================= -->
+      <div class="dash-head">
+        <div>
+          <h1 class="dash-head__title">My <span>Meals</span></h1>
+          <p class="dash-head__sub">Today's schedule · 1,476 / 1,850 kcal logged.</p>
+        </div>
+        <a href="#" class="btn btn--primary btn--sm">+ Log Meal</a>
+      </div>
+
+      <!-- ================= STAT CARDS ================= -->
+      <div class="dash-grid--stats">
+
+        <div class="dstat">
+          <div class="dstat__ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 8h10M9 3h6M8 8l1 12a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2l1-12"/><path d="M10 13h4"/></svg>
+          </div>
+          <p class="dstat__label">Calories Today</p>
+          <p class="dstat__value">1,476 <small style="font-size:1rem">/ 1,850</small></p>
+          <span class="dstat__delta up">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m7 10 5-5 5 5M12 5v14"/></svg>
+            80% <span>of daily goal</span>
+          </span>
+        </div>
+
+        <div class="dstat dstat--lime">
+          <div class="dstat__ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8Z"/></svg>
+          </div>
+          <p class="dstat__label">Protein</p>
+          <p class="dstat__value">52 <small style="font-size:1rem">/ 95 g</small></p>
+          <span class="dstat__delta up">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m7 10 5-5 5 5M12 5v14"/></svg>
+            55% <span>of target</span>
+          </span>
+        </div>
+
+        <div class="dstat dstat--blue">
+          <div class="dstat__ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a5 5 0 0 0 5-5v-7a5 5 0 0 0-10 0v7a5 5 0 0 0 5 5Z"/><path d="M7 12h10"/></svg>
+          </div>
+          <p class="dstat__label">Water</p>
+          <p class="dstat__value">1.8 <small style="font-size:1rem">/ 2.5 L</small></p>
+          <span class="dstat__delta up">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m7 10 5-5 5 5M12 5v14"/></svg>
+            72% <span>of target</span>
+          </span>
+        </div>
+
+        <div class="dstat dstat--orange">
+          <div class="dstat__ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h16l-1.5 9a2 2 0 0 1-2 1.7h-9a2 2 0 0 1-2-1.7Z"/><path d="M8 10V6a4 4 0 0 1 8 0v4"/></svg>
+          </div>
+          <p class="dstat__label">Meals Logged</p>
+          <p class="dstat__value">4/5</p>
+          <span class="dstat__delta down">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m17 14-5 5-5-5M12 19V5"/></svg>
+            dinner <span>left to log</span>
+          </span>
+        </div>
+
+      </div>
+
+      <!-- ================= TODAY'S SCHEDULE + SWAPS ================= -->
+      <div class="dash-grid--2">
+
+        <div class="dash-card">
+          <div class="dash-card__head">
+            <div>
+              <h3 class="dash-card__title">Today's Schedule</h3>
+              <p class="dash-card__sub">Recommended by Dr. Meera</p>
+            </div>
+            <span class="dash-card__more">Edit</span>
+          </div>
+
+          <div class="dmeal">
+            <span class="dmeal__ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h16l-1.5 9a2 2 0 0 1-2 1.7h-9a2 2 0 0 1-2-1.7Z"/><path d="M8 10V6a4 4 0 0 1 8 0v4"/></svg>
+            </span>
+            <div class="dmeal__body">
+              <b>Masala Oats + 2 boiled eggs</b>
+              <span>8:15 AM · Breakfast · 385 kcal</span>
+            </div>
+            <span class="dpill dpill--lime">Done</span>
+          </div>
+
+          <div class="dmeal">
+            <span class="dmeal__ico" style="background:rgba(249,115,22,.12);color:var(--orange)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4"/><path d="M12 3a5 5 0 0 1 5 5c0 2-1 3-1 5H8c0-2-1-3-1-5a5 5 0 0 1 5-5Z"/></svg>
+            </span>
+            <div class="dmeal__body">
+              <b>Dal + rice + curd bowl</b>
+              <span>1:30 PM · Lunch · 612 kcal</span>
+            </div>
+            <span class="dpill dpill--lime">Done</span>
+          </div>
+
+          <div class="dmeal">
+            <span class="dmeal__ico" style="background:rgba(163,230,53,.2);color:#4d7c0f">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a5 5 0 0 0 5-5v-7a5 5 0 0 0-10 0v7a5 5 0 0 0 5 5Z"/><path d="M7 12h10"/></svg>
+            </span>
+            <div class="dmeal__body">
+              <b>Roasted chana + green tea</b>
+              <span>5:00 PM · Snack · 164 kcal</span>
+            </div>
+            <span class="dpill dpill--lime">Done</span>
+          </div>
+
+          <div class="dmeal">
+            <span class="dmeal__ico" style="background:rgba(59,130,246,.12);color:#2563eb">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18M12 3c2.5 0 4 1.8 4 4 0 3-4 3-4 6"/><path d="M15 15a9 9 0 1 1-9-9"/></svg>
+            </span>
+            <div class="dmeal__body">
+              <b>Grilled paneer tikka salad</b>
+              <span>8:00 PM · Dinner · planned</span>
+            </div>
+            <span class="dpill dpill--pending">Log</span>
+          </div>
+
+        </div>
+
+        <div class="dash-card">
+          <div class="dash-card__head">
+            <div>
+              <h3 class="dash-card__title">Smart Swaps</h3>
+              <p class="dash-card__sub">Same taste, fewer calories</p>
+            </div>
+            <span class="dash-card__more">Suggestions</span>
+          </div>
+
+          <div class="dlist">
+            <div class="dlist__item">
+              <span class="dlist__time">−120</span>
+              <div class="dlist__body">
+                <b>Regular rice → Cauliflower rice</b>
+                <span>For dinner, swap once this week</span>
+              </div>
+              <span class="dpill dpill--active">Good</span>
+            </div>
+            <div class="dlist__item">
+              <span class="dlist__time">−80</span>
+              <div class="dlist__body">
+                <b>Parotta → 100% whole-wheat roti</b>
+                <span>Keeps 4g extra fibre per roti</span>
+              </div>
+              <span class="dpill dpill--active">Good</span>
+            </div>
+            <div class="dlist__item">
+              <span class="dlist__time">−90</span>
+              <div class="dlist__body">
+                <b>Sweetened curd → Plain Greek curd</b>
+                <span>Adds 9g protein, less sugar</span>
+              </div>
+              <span class="dpill dpill--active">Good</span>
+            </div>
+            <div class="dlist__item">
+              <span class="dlist__time">−60</span>
+              <div class="dlist__body">
+                <b>Cola → Sparkling water + lemon</b>
+                <span>Zero sugar alternative</span>
+              </div>
+              <span class="dpill dpill--lime">Try it</span>
+            </div>
+          </div>
+
+          <a href="#" class="btn btn--outline btn--sm" style="margin-top:16px;width:100%">Ask for more swaps</a>
+        </div>
+
+      </div>
+
+      <!-- ================= WEEKLY MEAL PLAN ================= -->
+      <div class="dash-card dash-card--pad0">
+
+        <div class="dtoolbar" style="padding:20px 22px 12px">
+          <div>
+            <h3 class="dash-card__title">Weekly Meal Plan</h3>
+            <p class="dash-card__sub">Oct 05 – Oct 11 · log status per day</p>
+          </div>
+          <span class="dash-card__more">Change week</span>
+        </div>
+
+        <div class="dtoolbar" style="padding:6px 22px 14px">
+          <button class="dfilter on" type="button" data-filter="all">All</button>
+          <button class="dfilter" type="button" data-filter="logged">Logged</button>
+          <button class="dfilter" type="button" data-filter="partial">Partial</button>
+          <button class="dfilter" type="button" data-filter="missed">Missed</button>
+        </div>
+
+        <div class="dash-table-wrap">
+          <table class="dash-table">
+            <thead>
+              <tr>
+                <th>Day</th>
+                <th>Breakfast</th>
+                <th>Lunch</th>
+                <th>Snack</th>
+                <th>Dinner</th>
+                <th>Calories</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-status="logged">
+                <td><b>Mon</b><br><span style="font-size:.74rem;color:var(--muted)">Oct 05</span></td>
+                <td>Masala oats</td>
+                <td>Dal rice</td>
+                <td>Fruit bowl</td>
+                <td>Paneer tikka</td>
+                <td><b>1,640 kcal</b></td>
+                <td><span class="dpill dpill--active">Logged</span></td>
+              </tr>
+              <tr data-status="logged">
+                <td><b>Tue</b><br><span style="font-size:.74rem;color:var(--muted)">Oct 06</span></td>
+                <td>Poha + egg</td>
+                <td>Roti + sabzi</td>
+                <td>Roasted chana</td>
+                <td>Grilled fish</td>
+                <td><b>1,790 kcal</b></td>
+                <td><span class="dpill dpill--active">Logged</span></td>
+              </tr>
+              <tr data-status="logged">
+                <td><b>Wed</b><br><span style="font-size:.74rem;color:var(--muted)">Oct 07</span></td>
+                <td>Idli + sambar</td>
+                <td>Veg pulao</td>
+                <td>Nuts</td>
+                <td>Chicken salad</td>
+                <td><b>1,525 kcal</b></td>
+                <td><span class="dpill dpill--active">Logged</span></td>
+              </tr>
+              <tr data-status="partial">
+                <td><b>Thu</b><br><span style="font-size:.74rem;color:var(--muted)">Oct 08</span></td>
+                <td>Besan cheela</td>
+                <td>Rice + dal</td>
+                <td>—</td>
+                <td>Veg khichdi</td>
+                <td><b>1,380 kcal</b></td>
+                <td><span class="dpill dpill--pending">Partial</span></td>
+              </tr>
+              <tr data-status="logged">
+                <td><b>Fri</b><br><span style="font-size:.74rem;color:var(--muted)">Oct 09</span></td>
+                <td>Ragi dosa</td>
+                <td>Rajma rice</td>
+                <td>Fruit</td>
+                <td>Paneer salad</td>
+                <td><b>1,560 kcal</b></td>
+                <td><span class="dpill dpill--active">Logged</span></td>
+              </tr>
+              <tr data-status="missed">
+                <td><b>Sat</b><br><span style="font-size:.74rem;color:var(--muted)">Oct 10</span></td>
+                <td>—</td>
+                <td>Roti + chole</td>
+                <td>—</td>
+                <td>Fish curry</td>
+                <td><b>1,120 kcal</b></td>
+                <td><span class="dpill dpill--paused">Missed</span></td>
+              </tr>
+              <tr data-status="logged">
+                <td><b>Sun</b><br><span style="font-size:.74rem;color:var(--muted)">Oct 11</span></td>
+                <td>Bread + eggs</td>
+                <td>Pulav + raita</td>
+                <td>Nuts</td>
+                <td>Grilled chicken</td>
+                <td><b>1,705 kcal</b></td>
+                <td><span class="dpill dpill--active">Logged</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

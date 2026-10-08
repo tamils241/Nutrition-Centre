@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Check-ins | Stackly Nutrition Centre</title>
+<meta name="description" content="Your Stackly Nutrition check-ins - history, streaks and upcoming sessions." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body class="dash-body">
+
+<div class="dash">
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside class="dash-side">
+
+    <div class="dash-side__brand">
+      <a href="index.html" class="dash-side__logo" aria-label="Stackly Nutrition Centre">
+        <img src="images/logo.webp" alt="Stackly Nutrition Centre" class="dash-side__logo-img" />
+      </a>
+    </div>
+
+    <nav class="dash-nav" aria-label="Client navigation">
+      <span class="dash-nav__label">Main</span>
+
+      <a href="clients-dashboard.html" class="dash-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>
+        Dashboard
+      </a>
+
+      <a href="client-plan.html" class="dash-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M9 12h6M9 16h4"/></svg>
+        My Plan
+      </a>
+
+      <a href="client-meals.html" class="dash-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18M5 6h14M7 3h10"/><path d="M6 11v10h12V11M9 15h.01M15 15h.01M12 18h.01"/></svg>
+        My Meals
+      </a>
+
+      <span class="dash-nav__label">Track</span>
+
+      <a href="client-check-ins.html" class="dash-nav__link active" aria-current="page">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M9 16l2 2 4-4"/></svg>
+        Check-ins
+        <span class="dash-nav__badge">1</span>
+      </a>
+
+      <a href="client-progress.html" class="dash-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m22 7-8.5 8.5-5-5L2 17"/><path d="M16 7h6v6"/></svg>
+        Progress
+      </a>
+
+      <span class="dash-nav__label">Support</span>
+
+      <a href="client-support.html" class="dash-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Chat with Dietitian
+        <span class="dash-nav__badge">2</span>
+      </a>
+
+      <a href="client-settings.html" class="dash-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+        Settings
+      </a>
+    </nav>
+
+    <div class="dash-side__foot">
+      <div class="dash-side__user">
+        <span class="dash-avatar">PS</span>
+        <div>
+          <b>Priya Sharma</b>
+          <span>Client · Plan: Weight Loss</span>
+        </div>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- ================= MOBILE OVERLAY ================= -->
+  <div class="dash-overlay" aria-hidden="true"></div>
+
+  <!-- ================= MAIN ================= -->
+  <div class="dash-main">
+
+    <header class="dash-top">
+      <button class="dash-top__burger" type="button" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="dash-top__search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="search" id="dashSearch" placeholder="Search my meals, plans, reports…" aria-label="Search dashboard" />
+      </div>
+
+      <div class="dash-top__action">
+        <button class="dash-icon-btn" type="button" aria-label="Notifications">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+          <span class="dot"></span>
+        </button>
+
+        <div class="dash-notif">
+          <div class="dash-notif__head">
+            <b>Notifications</b>
+            <button type="button" class="dash-notif__clear">Mark all read</button>
+          </div>
+          <div class="dash-notif__list">
+            <a href="#" class="dash-notif__item unread">
+              <span class="dash-notif__ico">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M9 12h6M9 16h4"/></svg>
+              </span>
+              <div>
+                <b>Check-in reminder</b>
+                <span>Your check-in with Dr. Meera Iyer is this Saturday at 9:00 AM.</span>
+                <time>10 min ago</time>
+              </div>
+            </a>
+            <a href="#" class="dash-notif__item unread">
+              <span class="dash-notif__ico">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18M5 6h14M7 3h10"/><path d="M6 11v10h12V11M9 15h.01M15 15h.01M12 18h.01"/></svg>
+              </span>
+              <div>
+                <b>Meal plan updated</b>
+                <span>Your Week 12 meal plan is ready with new recipes.</span>
+                <time>1 hr ago</time>
+              </div>
+            </a>
+            <a href="#" class="dash-notif__item">
+              <span class="dash-notif__ico">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.1V12a10 10 0 1 1-5.9-9.1"/><path d="M22 4 12 14l-3-3"/></svg>
+              </span>
+              <div>
+                <b>Goal reached</b>
+                <span>You logged your meals 7 days in a row. Keep it up!</span>
+                <time>Yesterday</time>
+              </div>
+            </a>
+          </div>
+          <a href="#" class="dash-notif__foot">View all notifications</a>
+        </div>
+
+        <a href="#" class="dash-top__profile">
+          <span class="dash-avatar">PS</span>
+          <div>
+            <b>Priya Sharma</b>
+            <span>priya@example.com</span>
+          </div>
+        </a>
+      </div>
+    </header>
+
+    <main class="dash-content">
+
+      <!-- ================= PAGE HEAD ================= -->
+      <div class="dash-head">
+        <div>
+          <h1 class="dash-head__title">Check-<span>ins</span></h1>
+          <p class="dash-head__sub">11 of 12 sessions done · next on Saturday.</p>
+        </div>
+        <a href="#" class="btn btn--primary btn--sm">+ Schedule Check-in</a>
+      </div>
+
+      <!-- ================= STAT CARDS ================= -->
+      <div class="dash-grid--stats">
+
+        <div class="dstat">
+          <div class="dstat__ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m13 2-2 9h6l-4 11"/><path d="M2 5h4l3 8"/></svg>
+          </div>
+          <p class="dstat__label">Check-in Streak</p>
+          <p class="dstat__value">6 weeks</p>
+          <span class="dstat__delta up">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m7 10 5-5 5 5M12 5v14"/></svg>
+            2 weeks <span>longer than last</span>
+          </span>
+        </div>
+
+        <div class="dstat dstat--lime">
+          <div class="dstat__ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="4"/><path d="M3 21v-1a6 6 0 0 1 6-6h0a6 6 0 0 1 6 6v1"/><path d="M16 3.1a4 4 0 0 1 0 7.8M19 21v-1a6 6 0 0 0-4-5.7"/></svg>
+          </div>
+          <p class="dstat__label">Completed</p>
+          <p class="dstat__value">9</p>
+          <span class="dstat__delta up">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m7 10 5-5 5 5M12 5v14"/></svg>
+            <span>this programme</span>
+          </span>
+        </div>
+
+        <div class="dstat dstat--orange">
+          <div class="dstat__ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M9 15l2 2 4-4"/></svg>
+          </div>
+          <p class="dstat__label">Next Check-in</p>
+          <p class="dstat__value">Oct 12</p>
+          <span class="dstat__delta up">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12H4M10 6l-6 6 6 6"/></svg>
+            Sat, 9:00 AM <span>· with Dr. Meera</span>
+          </span>
+        </div>
+
+        <div class="dstat dstat--blue">
+          <div class="dstat__ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.1V12a10 10 0 1 1-5.9-9.1"/><path d="M22 4 12 14l-3-3"/></svg>
+          </div>
+          <p class="dstat__label">Progress on Goal</p>
+          <p class="dstat__value">92%</p>
+          <span class="dstat__delta up">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m7 10 5-5 5 5M12 5v14"/></svg>
+            2.6 kg <span>to reach 70 kg</span>
+          </span>
+        </div>
+
+      </div>
+
+      <!-- ================= NEXT CHECK-IN + CALENDAR ================= -->
+      <div class="dash-grid--32">
+
+        <div class="dash-card dash-welcome" style="margin-bottom:0">
+          <div class="dash-welcome__inner">
+            <h1>Next check-in <span>Sat · Oct 12</span></h1>
+            <p style="max-width:56ch">Your final review with Dr. Meera Iyer. Booked for 9:00 AM, video call (30 min). Reach your 70 kg goal and renew the plan.</p>
+            <div style="display:flex;gap:10px;margin-top:16px;flex-wrap:wrap">
+              <a href="client-support.html" class="btn btn--primary btn--sm">Reschedule</a>
+              <a href="#" class="btn btn--ghost btn--sm" style="color:#fff;border-color:rgba(255,255,255,.35)">Prepare checklist</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="dash-card">
+          <div class="dash-card__head">
+            <div>
+              <h3 class="dash-card__title">Check-in Calendar</h3>
+              <p class="dash-card__sub">Weekly · Sat 9:00 AM</p>
+            </div>
+            <span class="dash-card__more" id="calLabel">•</span>
+          </div>
+
+          <div class="dcal" id="calBody" data-checkins="1,5,8,12,15,19,22,26,29" data-label="Oct 2026" aria-label="Check-in calendar"></div>
+
+          <div class="dchart__legend" style="margin-top:16px">
+            <span><span class="dcal__dot" style="background:#4d7c0f;width:8px;height:8px;border-radius:50%"></span> Completed check-in</span>
+            <span><span class="dcal__dot" style="background:var(--green);width:8px;height:8px;border-radius:50%"></span> Upcoming</span>
+            <span><span style="display:inline-block;width:14px;height:14px;border:2px solid var(--green);border-radius:6px"></span> Today</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ================= CHECK-IN HISTORY ================= -->
+      <div class="dash-card dash-card--pad0">
+
+        <div class="dtoolbar" style="padding:20px 22px 12px">
+          <div>
+            <h3 class="dash-card__title">Check-in History</h3>
+            <p class="dash-card__sub">All sessions for your current plan</p>
+          </div>
+          <a href="#" class="btn btn--ghost btn--sm">Export history</a>
+        </div>
+
+        <div class="dtoolbar" style="padding:6px 22px 14px">
+          <button class="dfilter on" type="button" data-filter="all">All</button>
+          <button class="dfilter" type="button" data-filter="done">Completed</button>
+          <button class="dfilter" type="button" data-filter="scheduled">Scheduled</button>
+          <button class="dfilter" type="button" data-filter="missed">Missed</button>
+        </div>
+
+        <div class="dash-table-wrap">
+          <table class="dash-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Session</th>
+                <th>Dietitian</th>
+                <th>Mode</th>
+                <th>Weight Logged</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-status="done">
+                <td><b>Oct 05</b><br><span style="font-size:.74rem;color:var(--muted)">Sat · 9:00 AM</span></td>
+                <td>Check-in #7</td>
+                <td>Dr. Meera Iyer</td>
+                <td>Video call</td>
+                <td>72.6 kg / 76%</td>
+                <td><span class="dpill dpill--lime">Completed</span></td>
+                <td><a href="#" class="btn btn--sm btn--outline">Notes</a></td>
+              </tr>
+              <tr data-status="done">
+                <td><b>Sep 28</b><br><span style="font-size:.74rem;color:var(--muted)">Sat · 9:00 AM</span></td>
+                <td>Check-in #6</td>
+                <td>Dr. Meera Iyer</td>
+                <td>Video call</td>
+                <td>73.1 kg / 74%</td>
+                <td><span class="dpill dpill--lime">Completed</span></td>
+                <td><a href="#" class="btn btn--sm btn--outline">Notes</a></td>
+              </tr>
+              <tr data-status="done">
+                <td><b>Sep 21</b><br><span style="font-size:.74rem;color:var(--muted)">Sat · 9:00 AM</span></td>
+                <td>Check-in #5</td>
+                <td>Dr. Meera Iyer</td>
+                <td>Video call</td>
+                <td>73.8 kg / 72%</td>
+                <td><span class="dpill dpill--lime">Completed</span></td>
+                <td><a href="#" class="btn btn--sm btn--outline">Notes</a></td>
+              </tr>
+              <tr data-status="done">
+                <td><b>Sep 14</b><br><span style="font-size:.74rem;color:var(--muted)">Sat · 9:00 AM</span></td>
+                <td>Check-in #4</td>
+                <td>Dr. Meera Iyer</td>
+                <td>Video call</td>
+                <td>74.4 kg / 70%</td>
+                <td><span class="dpill dpill--lime">Completed</span></td>
+                <td><a href="#" class="btn btn--sm btn--outline">Notes</a></td>
+              </tr>
+              <tr data-status="missed">
+                <td><b>Sep 07</b><br><span style="font-size:.74rem;color:var(--muted)">Sat · 9:00 AM</span></td>
+                <td>Check-in #3</td>
+                <td>—</td>
+                <td>—</td>
+                <td>—</td>
+                <td><span class="dpill dpill--paused">Missed</span></td>
+                <td><a href="#" class="btn btn--sm btn--outline">Reschedule</a></td>
+              </tr>
+              <tr data-status="done">
+                <td><b>Aug 31</b><br><span style="font-size:.74rem;color:var(--muted)">Sat · 9:00 AM</span></td>
+                <td>Check-in #2</td>
+                <td>Dr. Meera Iyer</td>
+                <td>Video call</td>
+                <td>74.9 kg / 69%</td>
+                <td><span class="dpill dpill--lime">Completed</span></td>
+                <td><a href="#" class="btn btn--sm btn--outline">Notes</a></td>
+              </tr>
+              <tr data-status="done">
+                <td><b>Aug 24</b><br><span style="font-size:.74rem;color:var(--muted)">Sat · 9:00 AM</span></td>
+                <td>Check-in #1</td>
+                <td>Dr. Meera Iyer</td>
+                <td>Video call</td>
+                <td>75.4 kg / 68%</td>
+                <td><span class="dpill dpill--lime">Completed</span></td>
+                <td><a href="#" class="btn btn--sm btn--outline">Notes</a></td>
+              </tr>
+              <tr data-status="scheduled">
+                <td><b>Oct 12</b><br><span style="font-size:.74rem;color:var(--muted)">Sat · 9:00 AM</span></td>
+                <td>Final Review</td>
+                <td>Dr. Meera Iyer</td>
+                <td>Video call</td>
+                <td>—</td>
+                <td><span class="dpill dpill--active">Scheduled</span></td>
+                <td><a href="#" class="btn btn--sm btn--outline">Reschedule</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="dpage">
+          <span class="dpage__info">Showing 8 of 11 sessions</span>
+          <a class="on" href="#">1</a>
+          <a href="#" aria-label="Next page">&rsaquo;</a>
+        </div>
+
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

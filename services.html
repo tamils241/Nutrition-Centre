@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Services | Stackly Nutrition Centre</title>
+<meta name="description" content="Weight loss, clinical nutrition, sports fuel, kids and family programs." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ================= PRELOADER ================= -->
+<div class="preloader" id="preloader">
+  <div class="preloader__ring"></div>
+  <span class="preloader__text">STACKLY</span>
+</div>
+
+<!-- ================= CURSOR ================= -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+
+<!-- ================= HEADER ================= -->
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="index.html" class="logo">
+      <img src="images/logo.webp" alt="Stackly Nutrition Centre" class="logo__img" />
+    </a>
+
+    <nav class="nav" id="mainNavigation" aria-hidden="true">
+      <button class="nav-close" type="button" aria-label="Close navigation" title="Close menu">&times;</button>
+
+      <ul class="nav__list">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="about.html" class="nav__link">About</a></li>
+        <li><a href="services.html" class="nav__link active">Services</a></li>
+        <li><a href="plans.html" class="nav__link">Plans</a></li>
+        <li><a href="bmi.html" class="nav__link">BMI</a></li>
+        <li><a href="experts.html" class="nav__link">Experts</a></li>
+        <li><a href="tips.html" class="nav__link">Tips</a></li>
+        <li><a href="reviews.html" class="nav__link">Reviews</a></li>
+        <li><a href="contact.html" class="nav__link">Contact</a></li>
+      </ul>
+
+      <!-- MOBILE LOGIN -->
+      <div class="mobile-nav-login">
+        <a href="login.html" class="btn btn--primary mobile-login-btn">
+          <span>Login</span>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </nav>
+
+    <div class="header__actions">
+      <a href="login.html" class="btn btn--ghost btn--sm login-btn">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        Log In
+      </a>
+
+      <button class="hamburger" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mainNavigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= SERVICES HERO ================= -->
+<main>
+
+<section class="hero services-hero">
+  <div class="hero__bg">
+    <div class="hero__blob hero__blob--1"></div>
+    <div class="hero__blob hero__blob--2"></div>
+    <div class="hero__grid"></div>
+  </div>
+
+  <div class="container hero__inner">
+    <div class="hero__content" data-anim="fade-right">
+      <span class="tag">Nutrition Services</span>
+
+      <h1 class="hero__title">
+        Nutrition Plans Built
+        <span class="gradient-text">Around Your Life</span>
+      </h1>
+
+      <p class="hero__desc">
+        Practical, science-backed nutrition programs designed for Indian
+        lifestyles, personal goals, health needs and everyday routines.
+      </p>
+
+      <div class="hero__btns">
+        <a href="plans.html" class="btn btn--primary">
+          Explore Plans
+        </a>
+
+        <a href="contact.html" class="btn btn--outline">
+          Book Consultation
+        </a>
+      </div>
+
+      <div class="hero__stats">
+        <div class="stat">
+          <strong>10+</strong>
+          <span>Nutrition Programs</span>
+        </div>
+
+        <div class="stat">
+          <strong>1:1</strong>
+          <span>Expert Guidance</span>
+        </div>
+
+        <div class="stat">
+          <strong>100%</strong>
+          <span>Personalized Approach</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__visual" data-anim="fade-left">
+      <div class="hero__shape">
+        <img
+          src="images/about-1.webp"
+          alt="Healthy nutrition consultation"
+        />
+      </div>
+
+      <div class="hero__card hero__card--float1">
+        <span class="ico">&#129367;</span>
+        <div class="hero__card-info">
+          <h4>Personalized Meals</h4>
+          <p>Designed for your routine</p>
+        </div>
+      </div>
+
+      <div class="hero__card hero__card--float2">
+        <span class="ico">&#128202;</span>
+        <div class="hero__card-info">
+          <b>Goal Tracking</b>
+          <small>Weekly progress review</small>
+        </div>
+      </div>
+
+      <div class="hero__card hero__card--main">
+        <div class="ring-chart" style="--p:85">
+          <span>85%</span>
+        </div>
+        <div class="hero__card-info">
+          <h4>Consistency</h4>
+          <p>Build habits that last</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================= SERVICE OVERVIEW ================= -->
+<section class="section services" id="programs">
+  <div class="container">
+
+    <div class="section__head" data-anim="fade-up">
+      <span class="tag">What We Offer</span>
+
+      <h2 class="section__title">
+        Complete Nutrition
+        <span class="gradient-text">Support</span>
+      </h2>
+
+      <p class="section__sub">
+        Choose a program based on your health requirements, lifestyle,
+        fitness goals and family needs.
+      </p>
+    </div>
+
+    <div class="cards3d">
+
+      <!-- FAT LOSS -->
+      <article class="flip-card" data-tilt data-anim="fade-up">
+        <div class="flip-card__inner">
+
+          <div
+            class="flip-card__face flip-card__front"
+            style="background-image:
+            linear-gradient(180deg,rgba(11,27,18,0) 25%,rgba(11,27,18,.88) 78%),
+            url('images/hero.webp');">
+
+            <div>
+              <h3>Fat Loss</h3>
+              <p>Sustainable weight management without extreme dieting.</p>
+              <div class="flip-card__hint">
+                Hover to explore &#8594;
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card__face flip-card__back">
+            <h3>Fat Loss Program</h3>
+
+            <ul>
+              <li>Personal calorie strategy</li>
+              <li>Indian meal planning</li>
+              <li>Weekly progress tracking</li>
+              <li>Habit-building guidance</li>
+              <li>Coach support</li>
+            </ul>
+
+            <a href="plans.html" class="btn">
+              View Program
+            </a>
+          </div>
+
+        </div>
+      </article>
+
+
+      <!-- CLINICAL -->
+      <article class="flip-card" data-tilt data-anim="fade-up" data-delay="80">
+        <div class="flip-card__inner">
+
+          <div
+            class="flip-card__face flip-card__front"
+            style="background-image:
+            linear-gradient(180deg,rgba(11,27,18,0) 25%,rgba(11,27,18,.88) 78%),
+            url('images/clinical-nutrition.webp');">
+
+            <div>
+              <h3>Clinical Nutrition</h3>
+              <p>Nutrition support for health-focused lifestyle changes.</p>
+
+              <div class="flip-card__hint">
+                Hover to explore &#8594;
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card__face flip-card__back">
+            <h3>Clinical Nutrition</h3>
+
+            <ul>
+              <li>Diet assessment</li>
+              <li>Personalized meal structure</li>
+              <li>Food habit review</li>
+              <li>Progress monitoring</li>
+              <li>Expert guidance</li>
+            </ul>
+
+            <a href="contact.html" class="btn">
+              Talk To Expert
+            </a>
+          </div>
+
+        </div>
+      </article>
+
+
+      <!-- SPORTS -->
+      <article class="flip-card" data-tilt data-anim="fade-up" data-delay="160">
+        <div class="flip-card__inner">
+
+          <div
+            class="flip-card__face flip-card__front"
+            style="background-image:
+            linear-gradient(180deg,rgba(11,27,18,0) 25%,rgba(11,27,18,.88) 78%),
+            url('images/sports-fuel.webp');">
+
+            <div>
+              <h3>Sports Fuel</h3>
+              <p>Nutrition strategies for training, performance and recovery.</p>
+
+              <div class="flip-card__hint">
+                Hover to explore &#8594;
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card__face flip-card__back">
+            <h3>Sports Fuel</h3>
+
+            <ul>
+              <li>Pre-workout nutrition</li>
+              <li>Post-workout meals</li>
+              <li>Protein planning</li>
+              <li>Hydration strategy</li>
+              <li>Recovery support</li>
+            </ul>
+
+            <a href="plans.html" class="btn">
+              Explore Sports Plan
+            </a>
+          </div>
+
+        </div>
+      </article>
+
+
+      <!-- KIDS -->
+      <article class="flip-card" data-tilt data-anim="fade-up" data-delay="240">
+        <div class="flip-card__inner">
+
+          <div
+            class="flip-card__face flip-card__front"
+            style="background-image:
+            linear-gradient(180deg,rgba(11,27,18,0) 25%,rgba(11,27,18,.88) 78%),
+            url('images/kids&family.webp');">
+
+            <div>
+              <h3>Kids &amp; Family</h3>
+              <p>Simple family nutrition habits for growing lifestyles.</p>
+
+              <div class="flip-card__hint">
+                Hover to explore &#8594;
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card__face flip-card__back">
+            <h3>Kids &amp; Family</h3>
+
+            <ul>
+              <li>Family meal planning</li>
+              <li>Healthy snack ideas</li>
+              <li>Balanced food habits</li>
+              <li>Lunchbox guidance</li>
+              <li>Parent education</li>
+            </ul>
+
+            <a href="contact.html" class="btn">
+              Get Guidance
+            </a>
+          </div>
+
+        </div>
+      </article>
+
+
+      <!-- WOMEN -->
+      <article class="flip-card" data-tilt data-anim="fade-up" data-delay="320">
+        <div class="flip-card__inner">
+
+          <div
+            class="flip-card__face flip-card__front"
+            style="background-image:
+            linear-gradient(180deg,rgba(11,27,18,0) 25%,rgba(11,27,18,.88) 78%),
+            url('images/skin-hair.webp');">
+
+            <div>
+              <h3>Women's Nutrition</h3>
+              <p>Personalized nutrition support across changing lifestyles.</p>
+
+              <div class="flip-card__hint">
+                Hover to explore &#8594;
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card__face flip-card__back">
+            <h3>Women's Nutrition</h3>
+
+            <ul>
+              <li>Personal nutrition assessment</li>
+              <li>Balanced meal planning</li>
+              <li>Energy-focused nutrition</li>
+              <li>Lifestyle guidance</li>
+              <li>Progress reviews</li>
+            </ul>
+
+            <a href="contact.html" class="btn">
+              Book Consultation
+            </a>
+          </div>
+
+        </div>
+      </article>
+
+
+      <!-- LIFESTYLE -->
+      <article class="flip-card" data-tilt data-anim="fade-up" data-delay="400">
+        <div class="flip-card__inner">
+
+          <div
+            class="flip-card__face flip-card__front"
+            style="background-image:
+            linear-gradient(180deg,rgba(11,27,18,0) 25%,rgba(11,27,18,.88) 78%),
+            url('images/about-2.webp');">
+
+            <div>
+              <h3>Lifestyle Nutrition</h3>
+              <p>Build realistic habits that fit your everyday schedule.</p>
+
+              <div class="flip-card__hint">
+                Hover to explore &#8594;
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card__face flip-card__back">
+            <h3>Lifestyle Nutrition</h3>
+
+            <ul>
+              <li>Daily eating routines</li>
+              <li>Meal timing guidance</li>
+              <li>Healthy substitutions</li>
+              <li>Eating-out strategies</li>
+              <li>Long-term habit planning</li>
+            </ul>
+
+            <a href="plans.html" class="btn">
+              See Plans
+            </a>
+          </div>
+
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ================= WHY CHOOSE US ================= -->
+<section class="section why" id="why-stackly">
+
+  <div class="container">
+
+    <div class="section__head" data-anim="fade-up">
+      <span class="tag">Why Stackly</span>
+
+      <h2 class="section__title">
+        More Than A
+        <span class="gradient-text">Diet Chart</span>
+      </h2>
+
+      <p class="section__sub">
+        Our approach focuses on practical habits, consistency and
+        personalized guidance instead of one-size-fits-all plans.
+      </p>
+    </div>
+
+    <div class="why__grid">
+
+      <article class="why__card" data-tilt data-anim="fade-up">
+        <div class="why__ico">&#127919;</div>
+        <h4>Goal Based</h4>
+        <p>
+          Your nutrition plan starts with your personal objective,
+          routine and food preferences.
+        </p>
+      </article>
+
+      <article class="why__card" data-tilt data-anim="fade-up" data-delay="80">
+        <div class="why__ico">&#127858;</div>
+        <h4>Indian Friendly</h4>
+        <p>
+          Meal suggestions are designed around familiar foods,
+          regional preferences and practical cooking habits.
+        </p>
+      </article>
+
+      <article class="why__card" data-tilt data-anim="fade-up" data-delay="160">
+        <div class="why__ico">&#128200;</div>
+        <h4>Progress Tracking</h4>
+        <p>
+          Regular check-ins help identify what is working and where
+          your plan needs adjustment.
+        </p>
+      </article>
+
+      <article class="why__card" data-tilt data-anim="fade-up" data-delay="240">
+        <div class="why__ico">&#128104;&#8205;&#9877;&#65039;</div>
+        <h4>Expert Support</h4>
+        <p>
+          Get guidance from trained nutrition professionals throughout
+          your program.
+        </p>
+      </article>
+
+      <article class="why__card" data-tilt data-anim="fade-up" data-delay="320">
+        <div class="why__ico">&#128260;</div>
+        <h4>Flexible Plans</h4>
+        <p>
+          Adjust meals and routines according to work, travel,
+          family and fitness schedules.
+        </p>
+      </article>
+
+      <article class="why__card" data-tilt data-anim="fade-up" data-delay="400">
+        <div class="why__ico">&#127793;</div>
+        <h4>Long-Term Habits</h4>
+        <p>
+          Learn practical habits that can continue beyond your
+          initial nutrition program.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ================= HOW IT WORKS ================= -->
+<section class="section process" id="process">
+
+  <div class="container">
+
+    <div class="section__head" data-anim="fade-up">
+      <span class="tag">Simple Process</span>
+
+      <h2 class="section__title">
+        How Your Nutrition
+        <span class="gradient-text">Journey Works</span>
+      </h2>
+
+      <p class="section__sub">
+        Four simple stages from your first consultation to ongoing
+        progress.
+      </p>
+    </div>
+
+    <div class="steps">
+
+      <article class="step" data-anim="fade-up">
+        <div class="step__num">01</div>
+        <h4>Assessment</h4>
+        <p>
+          Understand your current food habits, lifestyle, goals and
+          nutrition requirements.
+        </p>
+      </article>
+
+      <article class="step" data-anim="fade-up" data-delay="100">
+        <div class="step__num">02</div>
+        <h4>Plan</h4>
+        <p>
+          Receive a practical nutrition structure designed around
+          your daily routine.
+        </p>
+      </article>
+
+      <article class="step" data-anim="fade-up" data-delay="200">
+        <div class="step__num">03</div>
+        <h4>Implement</h4>
+        <p>
+          Follow your meals, habits and recommendations with ongoing
+          support.
+        </p>
+      </article>
+
+      <article class="step" data-anim="fade-up" data-delay="300">
+        <div class="step__num">04</div>
+        <h4>Review</h4>
+        <p>
+          Review progress and make adjustments as your goals and
+          lifestyle evolve.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================= SERVICE COMPARISON ================= -->
+<section class="section comparison" id="compare">
+
+  <div class="container">
+
+    <div class="section__head" data-anim="fade-up">
+      <span class="tag">Compare Programs</span>
+
+      <h2 class="section__title">
+        Find The Right
+        <span class="gradient-text">Service</span>
+      </h2>
+
+      <p class="section__sub">
+        Compare our main nutrition programs before choosing the
+        right starting point.
+      </p>
+    </div>
+
+    <div class="comparison__table-wrap" data-anim="fade-up">
+
+      <table class="comparison__table">
+
+        <thead>
+          <tr>
+            <th>Program</th>
+            <th>Best For</th>
+            <th>Meal Planning</th>
+            <th>Progress Review</th>
+            <th>Expert Support</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <tr>
+            <td><strong>Fat Loss</strong></td>
+            <td>Weight management</td>
+            <td>&#10003;</td>
+            <td>&#10003;</td>
+            <td>&#10003;</td>
+          </tr>
+
+          <tr>
+            <td><strong>Clinical Nutrition</strong></td>
+            <td>Health-focused nutrition</td>
+            <td>&#10003;</td>
+            <td>&#10003;</td>
+            <td>&#10003;</td>
+          </tr>
+
+          <tr>
+            <td><strong>Sports Fuel</strong></td>
+            <td>Training &amp; performance</td>
+            <td>&#10003;</td>
+            <td>&#10003;</td>
+            <td>&#10003;</td>
+          </tr>
+
+          <tr>
+            <td><strong>Kids &amp; Family</strong></td>
+            <td>Family nutrition habits</td>
+            <td>&#10003;</td>
+            <td>&#10003;</td>
+            <td>&#10003;</td>
+          </tr>
+
+          <tr>
+            <td><strong>Lifestyle</strong></td>
+            <td>Everyday healthy eating</td>
+            <td>&#10003;</td>
+            <td>&#10003;</td>
+            <td>&#10003;</td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ================= FIRST CONSULTATION ================= -->
+<section class="section first-consultation" id="first-consultation">
+
+  <div class="container">
+
+    <div class="section__head" data-anim="fade-up">
+      <span class="tag">Your First Session</span>
+
+      <h2 class="section__title">
+        What Happens In Your
+        <span class="gradient-text">First Consultation?</span>
+      </h2>
+
+      <p class="section__sub">
+        Your first session is designed to understand you before
+        recommending a nutrition strategy.
+      </p>
+    </div>
+
+    <div class="consultation__timeline">
+
+      <article class="consultation-step" data-anim="fade-up">
+        <div class="consultation-step__icon">01</div>
+
+        <div>
+          <h3>Goal Discussion</h3>
+          <p>
+            Discuss your main goals, current challenges and what
+            you want to achieve through nutrition.
+          </p>
+        </div>
+      </article>
+
+      <article class="consultation-step" data-anim="fade-up" data-delay="80">
+        <div class="consultation-step__icon">02</div>
+
+        <div>
+          <h3>Lifestyle Review</h3>
+          <p>
+            Understand your work schedule, activity level, meal
+            timing, cooking habits and food preferences.
+          </p>
+        </div>
+      </article>
+
+      <article class="consultation-step" data-anim="fade-up" data-delay="160">
+        <div class="consultation-step__icon">03</div>
+
+        <div>
+          <h3>Nutrition Assessment</h3>
+          <p>
+            Review your existing eating pattern and identify
+            practical areas where improvements can be made.
+          </p>
+        </div>
+      </article>
+
+      <article class="consultation-step" data-anim="fade-up" data-delay="240">
+        <div class="consultation-step__icon">04</div>
+
+        <div>
+          <h3>Personal Strategy</h3>
+          <p>
+            Build an initial nutrition direction based on your
+            goals, preferences and lifestyle.
+          </p>
+        </div>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================= NUTRITION PHILOSOPHY ================= -->
+<section class="section philosophy" id="philosophy">
+
+  <div class="container">
+
+    <div class="philosophy__box" data-anim="zoom-in">
+
+      <div class="philosophy__content">
+
+        <span class="tag">Our Philosophy</span>
+
+        <h2 class="section__title">
+          Eat Better.
+          <span class="gradient-text">Live Better.</span>
+        </h2>
+
+        <p>
+          Nutrition should work with your lifestyle rather than
+          forcing your lifestyle to work around a diet.
+        </p>
+
+        <div class="philosophy__points">
+
+          <div>
+            <strong>01</strong>
+            <span>Practical meals</span>
+          </div>
+
+          <div>
+            <strong>02</strong>
+            <span>Flexible routines</span>
+          </div>
+
+          <div>
+            <strong>03</strong>
+            <span>Consistent habits</span>
+          </div>
+
+          <div>
+            <strong>04</strong>
+            <span>Long-term thinking</span>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="philosophy__quote">
+
+        <span class="quote-mark">&#8220;</span>
+
+        <p>
+          The best nutrition plan is one you can realistically
+          follow, enjoy and maintain.
+        </p>
+
+        <span>
+          Stackly Nutrition Centre
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================= SERVICE FAQ ================= -->
+<section class="section service-faq" id="service-faq">
+
+  <div class="container">
+
+    <div class="section__head" data-anim="fade-up">
+      <span class="tag">Frequently Asked</span>
+
+      <h2 class="section__title">
+        Services
+        <span class="gradient-text">FAQ</span>
+      </h2>
+
+      <p class="section__sub">
+        Common questions about our nutrition services and programs.
+      </p>
+    </div>
+
+    <div class="faq-list" data-anim="fade-up">
+
+      <div class="faq-item">
+
+        <button class="faq-question" type="button">
+          <span>Which nutrition service should I choose?</span>
+          <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+          <p>
+            Start by identifying your main goal. Fat Loss is focused
+            on weight management, Sports Fuel supports active
+            lifestyles, and Lifestyle Nutrition focuses on everyday
+            healthy eating.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="faq-item">
+
+        <button class="faq-question" type="button">
+          <span>Can my plan include Indian foods?</span>
+          <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+          <p>
+            Yes. The program can be structured around familiar
+            Indian meals, ingredients, cooking methods and your
+            personal food preferences.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="faq-item">
+
+        <button class="faq-question" type="button">
+          <span>Do I need to completely avoid my favourite foods?</span>
+          <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+          <p>
+            Nutrition planning can focus on balance, portions,
+            frequency and practical substitutions instead of
+            unnecessarily removing every food you enjoy.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="faq-item">
+
+        <button class="faq-question" type="button">
+          <span>How often is progress reviewed?</span>
+          <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+          <p>
+            Progress can be reviewed according to your selected
+            program and individual requirements so the strategy
+            can be adjusted when necessary.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="faq-item">
+
+        <button class="faq-question" type="button">
+          <span>Can I book a consultation before selecting a plan?</span>
+          <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+          <p>
+            Yes. Use the contact page to request a consultation
+            and discuss which service is appropriate for your goals.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================= FINAL CTA ================= -->
+<section class="section final-cta--plans">
+
+  <div class="container">
+
+    <div class="mini-cta__inner" data-anim="fade-up">
+
+      <span class="tag">
+        Start Your Nutrition Journey
+      </span>
+
+      <h2>
+        Ready To Build A Healthier Routine?
+      </h2>
+
+      <p>
+        Explore our plans or speak with the Stackly Nutrition Centre
+        team to find a program that fits your goals.
+      </p>
+
+      <div class="final-cta__actions">
+
+        <a href="plans.html" class="btn btn--primary">
+          View Plans
+        </a>
+
+        <a href="contact.html" class="btn btn--outline">
+          Book Consultation
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a href="index.html" class="logo">
+       <img src="images/logo.webp" alt="Stackly Nutrition Centre" class="logo__img" />
+      </a>
+      <p>Science-backed nutrition coaching for Indian lifestyles. Eat better, live stronger.</p>
+      <div class="footer__social">
+        <a href="404.html" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a href="404.html" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12s.014 3.668.072 4.948c.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24s3.668-.014 4.948-.072c4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+        </a>
+        <a href="404.html" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+        </a>
+        <a href="404.html" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </a>
+        <a href="404.html" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer__col">
+      <h4>Programs</h4>
+      <a href="services.html">Fat Loss</a>
+      <a href="services.html">Clinical Nutrition</a>
+      <a href="services.html">Sports Fuel</a>
+      <a href="services.html">Kids &amp; Family</a>
+    </div>
+
+    <div class="footer__col">
+      <h4>Company</h4>
+      <a href="about.html">About Us</a>
+      <a href="experts.html">Our Experts</a>
+      <a href="plans.html">Pricing</a>
+      <a href="reviews.html">Reviews</a>
+    </div>
+
+    <div class="footer__col footer__contact">
+      <h4>Contact</h4>
+      <ul>
+        <li>
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.03-.24c1.12.37 2.33.57 3.56.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.4 21 3 13.6 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z"/></svg>
+          <a href="tel:+919876543210">+91 98765 43210</a>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          <a href="mailto:care@stackly.in">care@stackly.in</a>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+          <span>42 Green Park, New Delhi 110016</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 10.59V7h-2v6.41l4.29 4.3 1.42-1.42L13 12.59z"/></svg>
+          <span>Mon – Sat, 9:00 AM – 8:00 PM</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer__col footer__news">
+      <h4>Weekly Health Tip</h4>
+      <p>One practical nutrition email every Monday. No spam.</p>
+      <form class="news" id="news">
+        <input type="email" placeholder="Your email" required />
+        <button type="submit">&#8594;</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="container footer__bottom">
+    <span>&copy; 2026 Stackly Nutrition Centre. All rights reserved.</span>
+    <span>Privacy Policy &nbsp;&bull;&nbsp; Terms of Service</span>
+  </div>
+</footer>
+
+
+<!-- ================= BACK TO TOP ================= -->
+<button class="to-top" id="toTop" aria-label="Back to top">&#8593;</button>
+
+<script src="script.js"></script>
+</body>
+</html>

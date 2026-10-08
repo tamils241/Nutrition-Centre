@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Meal Plans | Stackly Nutrition Centre</title>
+<meta name="description" content="Stackly Nutrition admin meal plans - manage plan templates, pricing and enrolments." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body class="dash-body">
+
+<div class="dash">
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside class="dash-side">
+
+    <div class="dash-side__brand">
+      <a href="index.html" class="dash-side__logo" aria-label="Stackly Nutrition Centre">
+        <img src="images/logo.webp" alt="Stackly Nutrition Centre" class="dash-side__logo-img" />
+      </a>
+    </div>
+
+    <nav class="dash-nav" aria-label="Admin navigation">
+      <span class="dash-nav__label">Main</span>
+
+      <a href="admin-dashboard.html" class="dash-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>
+        Dashboard
+      </a>
+
+      <a href="admin-clients.html" class="dash-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="4"/><path d="M3 21v-1a6 6 0 0 1 6-6h0a6 6 0 0 1 6 6v1"/><path d="M16 3.1a4 4 0 0 1 0 7.8M19 21v-1a6 6 0 0 0-4-5.7"/></svg>
+        Clients
+        <span class="dash-nav__badge">128</span>
+      </a>
+
+      <a href="admin-appointments.html" class="dash-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        Appointments
+      </a>
+
+      <span class="dash-nav__label">Management</span>
+
+      <a href="admin-meal-plans.html" class="dash-nav__link active" aria-current="page">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4"/><path d="M12 3a5 5 0 0 1 5 5c0 2-1 3-1 5H8c0-2-1-3-1-5a5 5 0 0 1 5-5Z"/></svg>
+        Meal Plans
+      </a>
+
+      <a href="admin-reports.html" class="dash-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10M18 20V4M6 20v-4"/></svg>
+        Reports &amp; Analytics
+      </a>
+
+      <a href="admin-settings.html" class="dash-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3h0a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5h0a1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9v0a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1Z"/></svg>
+        Settings
+      </a>
+
+      <span class="dash-nav__label">Team</span>
+
+      <a href="admin-dietitians.html" class="dash-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg>
+        Dietitians
+      </a>
+    </nav>
+
+    <div class="dash-side__foot">
+      <div class="dash-side__user">
+        <span class="dash-avatar">AM</span>
+        <div>
+          <b>Admin Manager</b>
+          <span>Super Admin</span>
+        </div>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- ================= MOBILE OVERLAY ================= -->
+  <div class="dash-overlay" aria-hidden="true"></div>
+
+  <!-- ================= MAIN ================= -->
+  <div class="dash-main">
+
+    <header class="dash-top">
+      <button class="dash-top__burger" type="button" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="dash-top__search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="search" id="dashSearch" placeholder="Search clients, bookings, plans…" aria-label="Search dashboard" />
+      </div>
+
+      <div class="dash-top__action">
+        <button class="dash-icon-btn" type="button" aria-label="Notifications">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+          <span class="dot"></span>
+        </button>
+
+        <div class="dash-notif">
+          <div class="dash-notif__head">
+            <b>Notifications</b>
+            <button type="button" class="dash-notif__clear">Mark all read</button>
+          </div>
+          <div class="dash-notif__list">
+            <a href="#" class="dash-notif__item unread">
+              <span class="dash-notif__ico">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M9 12h6M9 16h4"/></svg>
+              </span>
+              <div>
+                <b>New booking received</b>
+                <span>Anita Desai booked a consultation for tomorrow 5:00 PM.</span>
+                <time>10 min ago</time>
+              </div>
+            </a>
+            <a href="#" class="dash-notif__item unread">
+              <span class="dash-notif__ico">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18M5 6h14M7 3h10"/><path d="M6 11v10h12V11M9 15h.01M15 15h.01M12 18h.01"/></svg>
+              </span>
+              <div>
+                <b>Check-in pending review</b>
+                <span>Priya Sharma uploaded her weekly log — awaiting review.</span>
+                <time>1 hr ago</time>
+              </div>
+            </a>
+            <a href="#" class="dash-notif__item">
+              <span class="dash-notif__ico">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.1V12a10 10 0 1 1-5.9-9.1"/><path d="M22 4 12 14l-3-3"/></svg>
+              </span>
+              <div>
+                <b>Monthly report ready</b>
+                <span>September bookings hit 128 — 18% growth.</span>
+                <time>Yesterday</time>
+              </div>
+            </a>
+          </div>
+          <a href="#" class="dash-notif__foot">View all notifications</a>
+        </div>
+
+        <a href="login.html" class="dash-top__profile">
+          <span class="dash-avatar">AM</span>
+          <div>
+            <b>Admin Manager</b>
+            <span>admin@stackly.in</span>
+          </div>
+        </a>
+      </div>
+    </header>
+
+    <main class="dash-content">
+
+      <!-- ================= PAGE HEAD ================= -->
+      <div class="dash-head">
+        <div>
+          <h1 class="dash-head__title">Meal <span>Plans</span></h1>
+          <p class="dash-head__sub">Create and manage the programmes clients subscribe to.</p>
+        </div>
+        <a href="404.html" class="btn btn--primary btn--sm">+ New Plan</a>
+      </div>
+
+      <!-- ================= STAT CARDS ================= -->
+      <div class="dash-grid--stats">
+
+        <div class="dstat">
+          <div class="dstat__ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4"/><path d="M12 3a5 5 0 0 1 5 5c0 2-1 3-1 5H8c0-2-1-3-1-5a5 5 0 0 1 5-5Z"/></svg>
+          </div>
+          <p class="dstat__label">Active Plans</p>
+          <p class="dstat__value">12</p>
+          <span class="dstat__delta up">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m7 10 5-5 5 5M12 5v14"/></svg>
+            2 <span>added this month</span>
+          </span>
+        </div>
+
+        <div class="dstat dstat--lime">
+          <div class="dstat__ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="4"/><path d="M3 21v-1a6 6 0 0 1 6-6h0a6 6 0 0 1 6 6v1"/><path d="M16 3.1a4 4 0 0 1 0 7.8M19 21v-1a6 6 0 0 0-4-5.7"/></svg>
+          </div>
+          <p class="dstat__label">Enrolled Clients</p>
+          <p class="dstat__value">2,340</p>
+          <span class="dstat__delta up">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m7 10 5-5 5 5M12 5v14"/></svg>
+            12% <span>vs last month</span>
+          </span>
+        </div>
+
+        <div class="dstat dstat--orange">
+          <div class="dstat__ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4Z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <p class="dstat__label">Avg. Rating</p>
+          <p class="dstat__value">4.8</p>
+          <span class="dstat__delta up">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m7 10 5-5 5 5M12 5v14"/></svg>
+            from 2,400 reviews
+          </span>
+        </div>
+
+        <div class="dstat dstat--blue">
+          <div class="dstat__ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/><path d="M6 15h4"/></svg>
+          </div>
+          <p class="dstat__label">Revenue / Plans</p>
+          <p class="dstat__value">64%</p>
+          <span class="dstat__delta up">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m7 10 5-5 5 5M12 5v14"/></svg>
+            of total revenue
+          </span>
+        </div>
+
+      </div>
+
+      <!-- ================= PLAN CARDS ================= -->
+      <div class="dgrid-3">
+
+        <div class="dplan">
+          <div class="dplan__head">
+            <span class="dplan__ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 7H9.5a2.5 2.5 0 0 0 0 5h5a2.5 2.5 0 0 1 0 5H6"/></svg>
+            </span>
+            <span class="dplan__price">₹6,999<span style="font-size:.7rem;color:var(--muted);font-weight:600">/3mo</span></span>
+          </div>
+          <h3>Fat Loss</h3>
+          <p>Calorie-managed Indian meal plans with weekly weigh-ins and fitness syncing.</p>
+          <div class="dplan__meta">
+            <span>Home-cooked</span>
+            <span>640 clients</span>
+            <span>Weekly check-in</span>
+          </div>
+          <div class="dplan__head" style="margin-top:auto">
+            <span class="dpill dpill--active">Active</span>
+            <a href="404.html" class="btn btn--outline btn--sm">Manage</a>
+          </div>
+        </div>
+
+        <div class="dplan">
+          <div class="dplan__head">
+            <span class="dplan__ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 8l14 8M19 8 5 16"/><circle cx="12" cy="12" r="9"/></svg>
+            </span>
+            <span class="dplan__price">₹8,999<span style="font-size:.7rem;color:var(--muted);font-weight:600">/2mo</span></span>
+          </div>
+          <h3>Clinical</h3>
+          <p>Doctor-supervised nutrition for diabetes, BP, thyroid and cholesterol management.</p>
+          <div class="dplan__meta">
+            <span>Lab tie-ups</span>
+            <span>380 clients</span>
+            <span>Monthly review</span>
+          </div>
+          <div class="dplan__head" style="margin-top:auto">
+            <span class="dpill dpill--active">Active</span>
+            <a href="404.html" class="btn btn--outline btn--sm">Manage</a>
+          </div>
+        </div>
+
+        <div class="dplan">
+          <div class="dplan__head">
+            <span class="dplan__ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v13"/><path d="M9 8h6M9 12h6M9 16h4"/></svg>
+            </span>
+            <span class="dplan__price">₹7,499<span style="font-size:.7rem;color:var(--muted);font-weight:600">/3mo</span></span>
+          </div>
+          <h3>Gut &amp; Diabetes</h3>
+          <p>Gut-healing and low-GI meal plans for better digestion and sugar control.</p>
+          <div class="dplan__meta">
+            <span>Probiotic focus</span>
+            <span>290 clients</span>
+            <span>14-day plans</span>
+          </div>
+          <div class="dplan__head" style="margin-top:auto">
+            <span class="dpill dpill--active">Active</span>
+            <a href="404.html" class="btn btn--outline btn--sm">Manage</a>
+          </div>
+        </div>
+
+        <div class="dplan">
+          <div class="dplan__head">
+            <span class="dplan__ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg>
+            </span>
+            <span class="dplan__price">₹9,499<span style="font-size:.7rem;color:var(--muted);font-weight:600">/2mo</span></span>
+          </div>
+          <h3>Sports Fuel</h3>
+          <p>Performance nutrition for athletes with pre/post-workout fuelling plans.</p>
+          <div class="dplan__meta">
+            <span>Gym pairing</span>
+            <span>210 clients</span>
+            <span>Strength focus</span>
+          </div>
+          <div class="dplan__head" style="margin-top:auto">
+            <span class="dpill dpill--active">Active</span>
+            <a href="404.html" class="btn btn--outline btn--sm">Manage</a>
+          </div>
+        </div>
+
+        <div class="dplan">
+          <div class="dplan__head">
+            <span class="dplan__ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Zm0 0v6M12 18h-3M12 16h4m-4 3h2"/></svg>
+            </span>
+            <span class="dplan__price">₹5,999<span style="font-size:.7rem;color:var(--muted);font-weight:600">/3mo</span></span>
+          </div>
+          <h3>Kids &amp; Family</h3>
+          <p>Growth-focused nutrition for children and simple family meal makeovers.</p>
+          <div class="dplan__meta">
+            <span>Age 3-16</span>
+            <span>175 clients</span>
+            <span>School-box menus</span>
+          </div>
+          <div class="dplan__head" style="margin-top:auto">
+            <span class="dpill dpill--active">Active</span>
+            <a href="404.html" class="btn btn--outline btn--sm">Manage</a>
+          </div>
+        </div>
+
+        <div class="dplan">
+          <div class="dplan__head">
+            <span class="dplan__ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 14a4 4 0 1 0-4-4 4 4 0 0 0 4 4Zm0 0-1.5 5.5M12 14l1.5 5.5M10.5 19h3"/></svg>
+            </span>
+            <span class="dplan__price">₹6,499<span style="font-size:.7rem;color:var(--muted);font-weight:600">/3mo</span></span>
+          </div>
+          <h3>Skin &amp; Hair</h3>
+          <p>Glow-from-within plans with collagen foods, hydration and micronutrient focus.</p>
+          <div class="dplan__meta">
+            <span>Collagen rich</span>
+            <span>165 clients</span>
+            <span>Hair-fall support</span>
+          </div>
+          <div class="dplan__head" style="margin-top:auto">
+            <span class="dpill dpill--active">Active</span>
+            <a href="404.html" class="btn btn--outline btn--sm">Manage</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ================= ENROLMENTS TABLE ================= -->
+      <div class="dash-card dash-card--pad0">
+
+        <div class="dtoolbar" style="padding:20px 22px 12px">
+          <div>
+            <h3 class="dash-card__title">Recent Enrolments</h3>
+            <p class="dash-card__sub">Newest sign-ups across all plans</p>
+          </div>
+          <span class="dash-card__more">View all</span>
+        </div>
+
+        <div class="dtoolbar" style="padding:6px 22px 14px">
+          <button class="dfilter on" type="button" data-filter="all">All</button>
+          <button class="dfilter" type="button" data-filter="active">Active</button>
+          <button class="dfilter" type="button" data-filter="trial">Trial</button>
+          <button class="dfilter" type="button" data-filter="draft">Draft</button>
+        </div>
+
+        <div class="dash-table-wrap">
+          <table class="dash-table" id="plansTable">
+            <thead>
+              <tr>
+                <th>Client</th>
+                <th>Plan</th>
+                <th>Dietitian</th>
+                <th>Enrolled</th>
+                <th>Renewal</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-status="active">
+                <td>
+                  <div class="dash-cell-user">
+                    <span class="dash-avatar" style="background:linear-gradient(135deg,#f97316,#fbbf24)">PS</span>
+                    <div><b>Priya Sharma</b><span>priya@example.com</span></div>
+                  </div>
+                </td>
+                <td>Fat Loss</td>
+                <td>Meera Iyer</td>
+                <td>Jul 12, 2026</td>
+                <td>Oct 12, 2026</td>
+                <td><span class="dpill dpill--active">Active</span></td>
+                <td>
+                  <div class="dash-table__actions">
+                    <a href="404.html" class="btn btn--sm btn--outline">Details</a>
+                    <a href="404.html" class="btn--icon" aria-label="Remove plan">
+                      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/></svg>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              <tr data-status="trial">
+                <td>
+                  <div class="dash-cell-user">
+                    <span class="dash-avatar" style="background:linear-gradient(135deg,#16a34a,#a3e635)">RV</span>
+                    <div><b>Rahul Verma</b><span>rahul@example.com</span></div>
+                  </div>
+                </td>
+                <td>Gut &amp; Diabetes</td>
+                <td>Arjun Nair</td>
+                <td>Oct 02, 2026</td>
+                <td>−</td>
+                <td><span class="dpill dpill--blue">Trial</span></td>
+                <td>
+                  <div class="dash-table__actions">
+                    <a href="404.html" class="btn btn--sm btn--outline">Details</a>
+                    <a href="404.html" class="btn--icon" aria-label="Remove plan">
+                      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/></svg>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              <tr data-status="active">
+                <td>
+                  <div class="dash-cell-user">
+                    <span class="dash-avatar" style="background:linear-gradient(135deg,#2563eb,#60a5fa)">SK</span>
+                    <div><b>Sana Khan</b><span>sana@example.com</span></div>
+                  </div>
+                </td>
+                <td>Clinical</td>
+                <td>Kavya Rao</td>
+                <td>Aug 01, 2026</td>
+                <td>Nov 01, 2026</td>
+                <td><span class="dpill dpill--active">Active</span></td>
+                <td>
+                  <div class="dash-table__actions">
+                    <a href="404.html" class="btn btn--sm btn--outline">Details</a>
+                    <a href="404.html" class="btn--icon" aria-label="Remove plan">
+                      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/></svg>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              <tr data-status="draft">
+                <td>
+                  <div class="dash-cell-user">
+                    <span class="dash-avatar" style="background:linear-gradient(135deg,#8b5cf6,#a78bfa)">AD</span>
+                    <div><b>Asha Devi</b><span>asha@example.com</span></div>
+                  </div>
+                </td>
+                <td>Sports Fuel</td>
+                <td>Rohit Malhotra</td>
+                <td>−</td>
+                <td>−</td>
+                <td><span class="dpill dpill--paused">Draft</span></td>
+                <td>
+                  <div class="dash-table__actions">
+                    <a href="404.html" class="btn btn--sm btn--outline">Details</a>
+                    <a href="404.html" class="btn--icon" aria-label="Remove plan">
+                      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/></svg>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              <tr data-status="active">
+                <td>
+                  <div class="dash-cell-user">
+                    <span class="dash-avatar" style="background:linear-gradient(135deg,#0ea5e9,#22d3ee)">NJ</span>
+                    <div><b>Nikhil Jain</b><span>nikhil@example.com</span></div>
+                  </div>
+                </td>
+                <td>Kids &amp; Family</td>
+                <td>Meera Iyer</td>
+                <td>Sep 15, 2026</td>
+                <td>Dec 15, 2026</td>
+                <td><span class="dpill dpill--active">Active</span></td>
+                <td>
+                  <div class="dash-table__actions">
+                    <a href="404.html" class="btn btn--sm btn--outline">Details</a>
+                    <a href="404.html" class="btn--icon" aria-label="Remove plan">
+                      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/></svg>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="dpage">
+          <span class="dpage__info">Showing 5 of 214 recent enrolments</span>
+          <a class="on" href="404.html">1</a>
+          <a href="404.html">2</a>
+          <a href="404.html">3</a>
+          <a href="404.html" aria-label="Next page">&rsaquo;</a>
+        </div>
+
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

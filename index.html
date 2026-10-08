@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Stackly | Nutrition Centre</title>
+<meta name="description" content="Stackly Nutrition Centre — expert diet plans, clinical nutrition, weight management and wellness programs." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ================= PRELOADER ================= -->
+<div class="preloader" id="preloader">
+  <div class="preloader__ring"></div>
+  <span class="preloader__text">STACKLY</span>
+</div>
+
+<!-- ================= CURSOR ================= -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+
+<!-- ================= HEADER ================= -->
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="index.html" class="logo">
+      <img src="images/logo.webp" alt="Stackly Nutrition Centre" class="logo__img" />
+    </a>
+
+    <nav class="nav" id="mainNavigation" aria-hidden="true">
+      <button class="nav-close" type="button" aria-label="Close navigation" title="Close menu">&times;</button>
+
+      <ul class="nav__list">
+        <li><a href="index.html" class="nav__link active">Home</a></li>
+        <li><a href="about.html" class="nav__link">About</a></li>
+        <li><a href="services.html" class="nav__link">Services</a></li>
+        <li><a href="plans.html" class="nav__link">Plans</a></li>
+        <li><a href="bmi.html" class="nav__link">BMI</a></li>
+        <li><a href="experts.html" class="nav__link">Experts</a></li>
+        <li><a href="tips.html" class="nav__link">Tips</a></li>
+        <li><a href="reviews.html" class="nav__link">Reviews</a></li>
+        <li><a href="contact.html" class="nav__link">Contact</a></li>
+      </ul>
+
+      <!-- MOBILE LOGIN -->
+      <div class="mobile-nav-login">
+        <a href="login.html" class="btn btn--primary mobile-login-btn">
+          <span>Login</span>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </nav>
+
+    <div class="header__actions">
+      <a href="login.html" class="btn btn--ghost btn--sm login-btn">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        Log In
+      </a>
+
+      <button class="hamburger" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mainNavigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+  <div class="hero__bg">
+    <div class="hero__blob hero__blob--1"></div>
+    <div class="hero__blob hero__blob--2"></div>
+    <div class="hero__grid"></div>
+  </div>
+
+  <div class="container hero__inner">
+    <div class="hero__content" data-anim="fade-right">
+      <span class="tag">100% Natural &bull; Science Backed</span>
+      <h1 class="hero__title">
+        Fuel Your Body With<br />
+        <span class="gradient-text">Smart Nutrition</span>
+      </h1>
+      <p class="hero__desc">
+        Stackly Nutrition Centre builds personalised diet strategies for weight loss,
+        clinical care, sports performance and everyday wellness — guided by certified dietitians.
+      </p>
+
+      <div class="hero__btns">
+        <a href="#plans" class="btn btn--primary">Start Your Journey</a>
+        <a href="#services" class="btn btn--ghost">
+          <span class="btn__play">&#9658;</span> Explore Programs
+        </a>
+      </div>
+
+      <div class="hero__stats">
+        <div class="stat"><strong data-count="12500">0</strong><span>Happy Clients</span></div>
+        <div class="stat"><strong data-count="98">0</strong><span>% Success Rate</span></div>
+        <div class="stat"><strong data-count="45">0</strong><span>Expert Dieticians</span></div>
+      </div>
+    </div>
+
+    <div class="hero__visual" data-anim="fade-left">
+      <div class="hero__card hero__card--main">
+        <div class="ring-chart" style="--p:86">
+          <span>86<small>%</small></span>
+        </div>
+        <div class="hero__card-info">
+          <h4>Weekly Progress</h4>
+          <p>Metabolic rate improved</p>
+        </div>
+      </div>
+
+      <div class="hero__card hero__card--float1">
+        <span class="ico">&#127823;</span>
+        <div><b>2,140 kcal</b><small>Today's intake</small></div>
+      </div>
+
+      <div class="hero__card hero__card--float2">
+        <span class="ico">&#128170;</span>
+        <div><b>+18%</b><small>Lean muscle</small></div>
+      </div>
+
+      <div class="hero__shape">
+        <img src="images/hero.webp" alt="Healthy food bowl" />
+      </div>
+    </div>
+  </div>
+
+  <a href="#about" class="scroll-hint"><span></span>Scroll</a>
+</section>
+
+<!-- ================= MARQUEE ================= -->
+<div class="marquee">
+  <div class="marquee__track">
+    <span>Weight Loss</span><i>&#9679;</i><span>Clinical Diet</span><i>&#9679;</i>
+    <span>Sports Nutrition</span><i>&#9679;</i><span>PCOS Care</span><i>&#9679;</i>
+    <span>Diabetes Control</span><i>&#9679;</i><span>Kids Nutrition</span><i>&#9679;</i>
+    <span>Weight Loss</span><i>&#9679;</i><span>Clinical Diet</span><i>&#9679;</i>
+    <span>Sports Nutrition</span><i>&#9679;</i><span>PCOS Care</span><i>&#9679;</i>
+    <span>Diabetes Control</span><i>&#9679;</i><span>Kids Nutrition</span><i>&#9679;</i>
+  </div>
+</div>
+
+<!-- ================= ABOUT ================= -->
+<section class="section about" id="about">
+  <div class="container">
+    <div class="about__grid">
+      <div class="about__media" data-anim="zoom-in">
+        <div class="about__img about__img--1">
+          <img src="images/about-1.webp" alt="Fresh salad">
+        </div>
+        <div class="about__img about__img--2">
+          <img src="images/about-2.webp" alt="Fitness">
+        </div>
+        <div class="about__badge">
+          <strong>12+</strong><span>Years of Care</span>
+        </div>
+      </div>
+
+      <div class="about__text" data-anim="fade-left">
+        <span class="tag">Who We Are</span>
+        <h2 class="section__title">Nutrition That Is <span class="gradient-text">Measured, Not Guessed</span></h2>
+        <p>
+          At Stackly Nutrition Centre we combine body composition analysis, blood panel review
+          and lifestyle mapping to design plans you can actually follow — no crash diets,
+          no supplements you don't need.
+        </p>
+
+        <ul class="about__list">
+          <li><i>&#10003;</i> Custom macro &amp; calorie profiling</li>
+          <li><i>&#10003;</i> Weekly dietitian check-ins</li>
+          <li><i>&#10003;</i> Indian, Continental &amp; Fusion meal charts</li>
+          <li><i>&#10003;</i> In-clinic &amp; online consultations</li>
+        </ul>
+
+        <div class="about__sig">
+          <div class="about__avatar">
+            <img src="images/doctore.webp" alt="Lead dietitian">
+          </div>
+          <div>
+            <b>Dr. Meera Kapoor</b>
+            <span>Chief Clinical Dietitian, Stackly</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY US ================= -->
+<section class="section why" id="why">
+  <div class="container">
+    <div class="section__head" data-anim="fade-up">
+      <span class="tag">Why Stackly</span>
+      <h2 class="section__title">Reasons People <span class="gradient-text">Trust Us</span></h2>
+      <p class="section__sub">No crash diets, no detox teas — just measurable, expert-led nutrition.</p>
+    </div>
+
+    <div class="why__grid">
+      <div class="why__card" data-tilt data-anim="fade-up">
+        <span class="why__ico">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
+        </span>
+        <h4>100% Personalised</h4>
+        <p>Every plan is built from your body composition, blood reports, food habits and daily routine.</p>
+      </div>
+
+      <div class="why__card" data-tilt data-anim="fade-up" data-delay="80">
+        <span class="why__ico">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5"/><path d="M4 19h16"/><path d="M8 16v-5"/><path d="M13 16V8"/><path d="M18 16v-3"/></svg>
+        </span>
+        <h4>Result Tracked Weekly</h4>
+        <p>Weight, inches, energy and labs are logged every week so progress is never a guess.</p>
+      </div>
+
+      <div class="why__card" data-tilt data-anim="fade-up" data-delay="160">
+        <span class="why__ico">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.9 8.9 0 0 1-4-.9L3 21l1.9-4.6A8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5z"/></svg>
+        </span>
+        <h4>Daily Chat Support</h4>
+        <p>Snack emergency or travel day? Message your dietitian and get a swap within minutes.</p>
+      </div>
+
+      <div class="why__card" data-tilt data-anim="fade-up" data-delay="240">
+        <span class="why__ico">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg>
+        </span>
+        <h4>Clinically Supervised</h4>
+        <p>PCOS, thyroid, diabetes and kidney cases are handled with your doctor in the loop.</p>
+      </div>
+
+      <div class="why__card" data-tilt data-anim="fade-up" data-delay="320">
+        <span class="why__ico">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 4 13c0-6 7-9 16-9 0 9-4 16-9 16z"/><path d="M4 21c2-6 6-9 10-11"/></svg>
+        </span>
+        <h4>Real Indian Food</h4>
+        <p>Dal, roti, rice and filter coffee stay on the menu — portioned, not prohibited.</p>
+      </div>
+
+      <div class="why__card" data-tilt data-anim="fade-up" data-delay="400">
+        <span class="why__ico">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        </span>
+        <h4>Flexible Timings</h4>
+        <p>Early morning or 10 PM slots, in-clinic or video — the schedule bends around you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICES (3D FLIP CARDS) ================= -->
+<section class="section services" id="services">
+  <div class="container">
+    <div class="section__head" data-anim="fade-up">
+      <span class="tag">Our Programs</span>
+      <h2 class="section__title">Services Built Around <span class="gradient-text">Your Goal</span></h2>
+      <p class="section__sub">Hover / tap any card to flip it in 3D and read the details.</p>
+    </div>
+
+    <div class="cards3d">
+      <article class="flip-card" data-tilt>
+        <div class="flip-card__inner">
+          <div class="flip-card__face flip-card__front" style="background-image:linear-gradient(180deg,rgba(11,27,18,0) 25%,rgba(11,27,18,.88) 78%),url('images/hero.webp')">
+            <h3>Fat Loss Program</h3>
+            <p>Sustainable calorie deficit with strength &amp; step coaching.</p>
+            <span class="flip-card__hint">Tap to know more &#8594;</span>
+          </div>
+          <div class="flip-card__face flip-card__back">
+            <h3>Fat Loss</h3>
+            <ul>
+              <li>DEXA / BMI tracking</li>
+              <li>4-week meal rotation</li>
+              <li>Cheat-meal strategy</li>
+              <li>WhatsApp coach support</li>
+            </ul>
+            <a href="404.html" class="btn btn--sm">Join Now</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="flip-card" data-tilt>
+        <div class="flip-card__inner">
+          <div class="flip-card__face flip-card__front" style="background-image:linear-gradient(180deg,rgba(11,27,18,0) 25%,rgba(11,27,18,.88) 78%),url('images/clinical-nutrition.webp')">
+            <h3>Clinical Nutrition</h3>
+            <p>Therapeutic diets for PCOS, Thyroid, Kidney &amp; Heart care.</p>
+            <span class="flip-card__hint">Tap to know more &#8594;</span>
+          </div>
+          <div class="flip-card__face flip-card__back">
+            <h3>Clinical</h3>
+            <ul>
+              <li>Doctor co-ordination</li>
+              <li>Lab-report based plans</li>
+              <li>Low-sodium / renal charts</li>
+              <li>Monthly re-evaluation</li>
+            </ul>
+            <a href="404.html" class="btn btn--sm">Consult</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="flip-card" data-tilt>
+        <div class="flip-card__inner">
+          <div class="flip-card__face flip-card__front" style="background-image:linear-gradient(180deg,rgba(11,27,18,0) 25%,rgba(11,27,18,.88) 78%),url('images/sports-fuel.webp')">
+            <h3>Sports Fuel</h3>
+            <p>Performance macro cycling for athletes &amp; gym lovers.</p>
+            <span class="flip-card__hint">Tap to know more &#8594;</span>
+          </div>
+          <div class="flip-card__face flip-card__back">
+            <h3>Sports Fuel</h3>
+            <ul>
+              <li>Pre / post workout timing</li>
+              <li>Creatine &amp; protein advice</li>
+              <li>Hydration protocol</li>
+              <li>Competition peak week</li>
+            </ul>
+            <a href="404.html" class="btn btn--sm">Join Now</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="flip-card" data-tilt>
+        <div class="flip-card__inner">
+          <div class="flip-card__face flip-card__front" style="background-image:linear-gradient(180deg,rgba(11,27,18,0) 25%,rgba(11,27,18,.88) 78%),url('images/kids&family.webp')">
+            <h3>Kids &amp; Family</h3>
+            <p>Growth-friendly plans for picky eaters and growing kids.</p>
+            <span class="flip-card__hint">Tap to know more &#8594;</span>
+          </div>
+          <div class="flip-card__face flip-card__back">
+            <h3>Family Care</h3>
+            <ul>
+              <li>Height-weight percentiles</li>
+              <li>Iron &amp; calcium focus</li>
+              <li>Lunchbox ideas</li>
+              <li>Parent workshops</li>
+            </ul>
+            <a href="404.html" class="btn btn--sm">Book</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="flip-card" data-tilt>
+        <div class="flip-card__inner">
+          <div class="flip-card__face flip-card__front" style="background-image:linear-gradient(180deg,rgba(11,27,18,0) 25%,rgba(11,27,18,.88) 78%),url('images/gut-diabetes.webp')">
+            <h3>Gut &amp; Diabetes</h3>
+            <p>Low-GI, fibre-first protocols for sugar and digestion control.</p>
+            <span class="flip-card__hint">Tap to know more &#8594;</span>
+          </div>
+          <div class="flip-card__face flip-card__back">
+            <h3>Gut / Diabetes</h3>
+            <ul>
+              <li>CGM pattern review</li>
+              <li>GI &amp; load swapping</li>
+              <li>Probiotic food list</li>
+              <li>HbA1c milestones</li>
+            </ul>
+            <a href="404.html" class="btn btn--sm">Consult</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="flip-card" data-tilt>
+        <div class="flip-card__inner">
+          <div class="flip-card__face flip-card__front" style="background-image:linear-gradient(180deg,rgba(11,27,18,0) 25%,rgba(11,27,18,.88) 78%),url('images/skin-hair.webp')">
+              <h3>Skin &amp; Hair</h3>
+            <p>Beauty-from-within nutrition for glow, hair fall and acne.</p>
+            <span class="flip-card__hint">Tap to know more &#8594;</span>
+          </div>
+          <div class="flip-card__face flip-card__back">
+            <h3>Beauty Nutrition</h3>
+            <ul>
+              <li>Biotin &amp; zinc audit</li>
+              <li>Anti-inflammatory foods</li>
+              <li>Water &amp; sleep cycle</li>
+              <li>8-week glow plan</li>
+            </ul>
+            <a href="404.html" class="btn btn--sm">Join Now</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROCESS ================= -->
+<section class="section process">
+  <div class="container">
+    <div class="section__head" data-anim="fade-up">
+      <span class="tag">How It Works</span>
+      <h2 class="section__title">Four Steps To A <span class="gradient-text">Healthier You</span></h2>
+    </div>
+
+    <div class="steps">
+      <div class="step" data-anim="fade-up">
+        <span class="step__num">01</span>
+        <h4>Free Assessment</h4>
+        <p>Body composition, lifestyle and medical history captured.</p>
+      </div>
+      <div class="step" data-anim="fade-up" data-delay="100">
+        <span class="step__num">02</span>
+        <h4>Custom Plan</h4>
+        <p>Macro targets and a 7-day Indian meal chart is delivered.</p>
+      </div>
+      <div class="step" data-anim="fade-up" data-delay="200">
+        <span class="step__num">03</span>
+        <h4>Weekly Coaching</h4>
+        <p>We track adherence, adjust calories and keep you accountable.</p>
+      </div>
+      <div class="step" data-anim="fade-up" data-delay="300">
+        <span class="step__num">04</span>
+        <h4>Results &amp; Maintain</h4>
+        <p>Re-assess, lock in habits and graduate to a maintenance plan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BMI CALCULATOR ================= -->
+<section class="section bmi" id="bmi">
+  <div class="container bmi__wrap">
+    <div class="bmi__intro" data-anim="fade-right">
+      <span class="tag">Free Tool</span>
+      <h2 class="section__title">Check Your <span class="gradient-text">BMI In Seconds</span></h2>
+      <p>A quick first check before you pick a plan. Enter your height and weight to see where you stand.</p>
+
+      <ul class="bmi__scale">
+        <li><i style="--c:#60a5fa"></i><b>Underweight</b><span>Below 18.5</span></li>
+        <li><i style="--c:#16a34a"></i><b>Normal</b><span>18.5 – 24.9</span></li>
+        <li><i style="--c:#f59e0b"></i><b>Overweight</b><span>25 – 29.9</span></li>
+        <li><i style="--c:#ef4444"></i><b>Obese</b><span>30 and above</span></li>
+      </ul>
+    </div>
+
+    <div class="bmi__box" data-anim="fade-left">
+      <div class="bmi__fields">
+        <label>
+          <span>Height (cm)</span>
+          <input type="number" id="bmiHeight" placeholder="170" min="80" max="250" />
+        </label>
+        <label>
+          <span>Weight (kg)</span>
+          <input type="number" id="bmiWeight" placeholder="68" min="20" max="300" />
+        </label>
+      </div>
+
+      <button type="button" class="btn btn--primary btn--block" id="bmiBtn">Calculate BMI</button>
+
+      <div class="bmi__result" id="bmiResult">
+        <div class="bmi__value" id="bmiValue">--</div>
+        <div class="bmi__cat" id="bmiCat">Enter your details above</div>
+        <div class="bmi__bar"><span id="bmiBar"></span></div>
+      </div>
+
+      <p class="bmi__note" id="bmiNote">BMI is a screening measure only — your dietitian will use body composition for a full picture.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MEAL GALLERY ================= -->
+<section class="section gallery">
+  <div class="container">
+    <div class="section__head" data-anim="fade-up">
+      <span class="tag">On The Plate</span>
+      <h2 class="section__title">What A Stackly Week <span class="gradient-text">Looks Like</span></h2>
+      <p class="section__sub">Balanced plates from real client meal charts — colourful, filling and desi-approved.</p>
+    </div>
+
+    <div class="gallery__grid">
+      <figure class="gallery__item gallery__item--tall" data-anim="zoom-in">
+        <img src="images/about-1.webp" alt="Fresh salad bowl" />
+        <figcaption><b>Power Bowl</b><span>420 kcal Â· High fibre</span></figcaption>
+      </figure>
+      <figure class="gallery__item" data-anim="zoom-in" data-delay="80">
+        <img src="images/hero.webp" alt="Healthy meal" />
+        <figcaption><b>Lean Lunch</b><span>510 kcal Â· 32g protein</span></figcaption>
+      </figure>
+      <figure class="gallery__item" data-anim="zoom-in" data-delay="160">
+        <img src="images/gut-diabetes.webp" alt="Low GI plate" />
+        <figcaption><b>Low-GI Plate</b><span>380 kcal Â· Diabetic friendly</span></figcaption>
+      </figure>
+      <figure class="gallery__item" data-anim="zoom-in" data-delay="240">
+        <img src="images/sports-fuel.webp" alt="Pre workout meal" />
+        <figcaption><b>Pre-Workout Fuel</b><span>340 kcal Â· Slow carbs</span></figcaption>
+      </figure>
+      <figure class="gallery__item gallery__item--wide" data-anim="zoom-in" data-delay="320">
+        <img src="images/clinical-nutrition.webp" alt="Therapeutic meal" />
+        <figcaption><b>Therapeutic Thali</b><span>460 kcal Â· Low sodium</span></figcaption>
+      </figure>
+      <figure class="gallery__item" data-anim="zoom-in" data-delay="400">
+        <img src="images/kids&family.webp" alt="Kids meal box" />
+        <figcaption><b>Kids Lunchbox</b><span>300 kcal Â· Iron rich</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PLANS (3D TILT CARDS) ================= -->
+<section class="section plans" id="plans">
+  <div class="container">
+    <div class="section__head" data-anim="fade-up">
+      <span class="tag">Membership</span>
+      <h2 class="section__title">Simple <span class="gradient-text">Pricing</span></h2>
+      <p class="section__sub">No hidden charges. Cancel anytime in the first 7 days.</p>
+    </div>
+
+    <div class="plans__grid">
+      <article class="price-card" data-tilt data-anim="fade-up">
+        <div class="price-card__head">
+          <h3>Starter</h3>
+          <p>Perfect for first-timers</p>
+        </div>
+        <div class="price-card__price"><sup>&#8377;</sup>999<span>/month</span></div>
+        <ul>
+          <li>1 Consultation / month</li>
+          <li>Basic meal chart</li>
+          <li>Email support</li>
+          <li>Progress spreadsheet</li>
+        </ul>
+        <a href="404.html" class="btn btn--outline">Choose Starter</a>
+      </article>
+
+      <article class="price-card price-card--featured" data-tilt data-anim="fade-up" data-delay="120">
+        <span class="price-card__ribbon">Most Popular</span>
+        <div class="price-card__head">
+          <h3>Transform</h3>
+          <p>Our best-selling program</p>
+        </div>
+        <div class="price-card__price"><sup>&#8377;</sup>2,499<span>/month</span></div>
+        <ul>
+          <li>4 Consultations / month</li>
+          <li>Custom rotating menus</li>
+          <li>WhatsApp coach daily</li>
+          <li>Supplement guidance</li>
+          <li>Body composition report</li>
+        </ul>
+        <a href="contact.html" class="btn btn--primary">Choose Transform</a>
+      </article>
+
+      <article class="price-card" data-tilt data-anim="fade-up" data-delay="240">
+        <div class="price-card__head">
+          <h3>Clinical+</h3>
+          <p>Medical condition care</p>
+        </div>
+        <div class="price-card__price"><sup>&#8377;</sup>3,999<span>/month</span></div>
+        <ul>
+          <li>Unlimited consults</li>
+          <li>Doctor collaboration</li>
+          <li>Lab report reviews</li>
+          <li>Family member included</li>
+        </ul>
+        <a href="contact.html" class="btn btn--outline">Choose Clinical+</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COACHES ================= -->
+<section class="section coaches" id="coaches">
+  <div class="container">
+    <div class="section__head" data-anim="fade-up">
+      <span class="tag">Meet The Team</span>
+      <h2 class="section__title">Certified <span class="gradient-text">Experts</span></h2>
+    </div>
+
+    <div class="coaches__grid">
+      <article class="coach" data-tilt data-anim="fade-up">
+        <div class="coach__img">
+          <img src="images/doctor-1.webp" alt="Dietitian">
+          <div class="coach__social"><a href="#">in</a><a href="#">ig</a></div>
+        </div>
+        <div class="coach__body">
+          <h3>Dr. Meera Kapoor</h3>
+          <span>Clinical Nutritionist</span>
+          <p>12 years handling PCOS, thyroid and metabolic cases.</p>
+        </div>
+      </article>
+
+      <article class="coach" data-tilt data-anim="fade-up" data-delay="120">
+        <div class="coach__img">
+          <img src="images/doctor-2.webp" alt="Coach">
+          <div class="coach__social"><a href="#">in</a><a href="#">ig</a></div>
+        </div>
+        <div class="coach__body">
+          <h3>Rohan Verma</h3>
+          <span>Sports Dietitian</span>
+          <p>Feeds national-level athletes and pro gym athletes.</p>
+        </div>
+      </article>
+
+      <article class="coach" data-tilt data-anim="fade-up" data-delay="240">
+        <div class="coach__img">
+          <img src="images/doctor-3.webp" alt="Coach">
+          <div class="coach__social"><a href="#">in</a><a href="#">ig</a></div>
+        </div>
+        <div class="coach__body">
+          <h3>Ananya Sharma</h3>
+          <span>Paediatric Nutrition</span>
+          <p>Makes fussy eaters love vegetables — parents approve.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section class="section testimonials" id="testimonials">
+  <div class="container">
+    <div class="section__head" data-anim="fade-up">
+      <span class="tag">Success Stories</span>
+      <h2 class="section__title">What Clients <span class="gradient-text">Say</span></h2>
+    </div>
+
+    <div class="slider" id="slider">
+      <div class="slider__track" id="track">
+        <div class="slide">
+          <div class="slide__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"Lost 14 kg in 5 months without giving up roti. The weekly calls kept me honest."</p>
+          <div class="slide__user">
+            <img src="images/client-1.webp" alt="">
+            <div><b>Priya Nair</b><span>Kochi</span></div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"My HbA1c dropped from 8.9 to 6.4. Stackly's clinical team actually reads your reports."</p>
+          <div class="slide__user">
+            <img src="images/client-2.webp" alt="">
+            <div><b>Arun Desai</b><span>Pune</span></div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"Added 6 kg lean mass in a clean bulk. Pre/post workout timing made all the difference."</p>
+          <div class="slide__user">
+            <img src="images/client-3.webp" alt="">
+            <div><b>Karan Malhotra</b><span>Delhi</span></div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"My 7-year-old finally eats greens. The lunchbox ideas are a lifesaver."</p>
+          <div class="slide__user">
+            <img src="images/client-4.webp" alt="">
+            <div><b>Sneha Rao</b><span>Bengaluru</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slider__nav">
+        <button id="prev" aria-label="Previous">&#8592;</button>
+        <div class="slider__dots" id="dots"></div>
+        <button id="next" aria-label="Next">&#8594;</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= NUTRITION TIPS / BLOG ================= -->
+<section class="section blog" id="blog">
+  <div class="container">
+    <div class="section__head" data-anim="fade-up">
+      <span class="tag">Health Journal</span>
+      <h2 class="section__title">Nutrition Tips <span class="gradient-text">You Can Use Today</span></h2>
+      <p class="section__sub">Short, practical reads from our dietitians — no fads, no fear-mongering.</p>
+    </div>
+
+    <div class="blog__grid">
+      <article class="post" data-anim="fade-up">
+        <div class="post__img">
+          <img src="images/about-1.webp" alt="Plate method">
+          <span class="post__tag">Weight Loss</span>
+        </div>
+        <div class="post__body">
+          <div class="post__meta"><span>18 Sep 2026</span><i></i><span>5 min read</span></div>
+          <h3>The 50-25-25 Plate Method That Actually Keeps You Full</h3>
+          <p>Half the plate vegetables, one-quarter protein, one-quarter carbs — why this simple ratio beats calorie obsession for most people.</p>
+          <a href="404.html" class="post__link">Read Article &#8594;</a>
+        </div>
+      </article>
+
+      <article class="post" data-anim="fade-up" data-delay="120">
+        <div class="post__img">
+          <img src="images/gut-diabetes.webp" alt="Sugar control">
+          <span class="post__tag">Diabetes</span>
+        </div>
+        <div class="post__body">
+          <div class="post__meta"><span>02 Sep 2026</span><i></i><span>7 min read</span></div>
+          <h3>7 Dinner Swaps That Soften The Post-Meal Sugar Spike</h3>
+          <p>Roti order, rice portion and the 30-minute walk after dinner — small changes that move your HbA1c in the right direction.</p>
+          <a href="404.html" class="post__link">Read Article &#8594;</a>
+        </div>
+      </article>
+
+      <article class="post" data-anim="fade-up" data-delay="240">
+        <div class="post__img">
+          <img src="images/sports-fuel.webp" alt="Protein guide">
+          <span class="post__tag">Fitness</span>
+        </div>
+        <div class="post__body">
+          <div class="post__meta"><span>24 Aug 2026</span><i></i><span>6 min read</span></div>
+          <h3>How Much Protein Do You Really Need? (Indian Food Edition)</h3>
+          <p>Dal, paneer, eggs, chicken and curd — building 1.6 g/kg of protein a day without a single fancy supplement.</p>
+          <a href="404.html" class="post__link">Read Article &#8594;</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= NUTRITION CONDITIONS ================= -->
+<section class="section conditions" id="conditions">
+  <div class="container">
+
+    <div class="section__head" data-anim="fade-up">
+      <span class="tag">Specialised Care</span>
+
+      <h2 class="section__title">
+        Nutrition Support For
+        <span class="gradient-text">Every Stage</span>
+      </h2>
+
+      <p class="section__sub">
+        Practical nutrition strategies designed around your health goals,
+        lifestyle, food preferences and professional guidance.
+      </p>
+    </div>
+
+    <div class="conditions__grid">
+
+      <article class="condition-card" data-anim="fade-up">
+        <span class="condition-card__num">01</span>
+        <h3>Weight Management</h3>
+        <p>
+          Sustainable nutrition plans focused on healthy eating habits,
+          portion awareness and long-term consistency.
+        </p>
+        <a href="#services" class="post__link">
+          Explore Program &#8594;
+        </a>
+      </article>
+
+      <article class="condition-card" data-anim="fade-up" data-delay="80">
+        <span class="condition-card__num">02</span>
+        <h3>Diabetes Nutrition</h3>
+        <p>
+          Meal planning support focused on balanced carbohydrates,
+          fibre-rich foods and practical everyday choices.
+        </p>
+        <a href="#services" class="post__link">
+          Learn More &#8594;
+        </a>
+      </article>
+
+      <article class="condition-card" data-anim="fade-up" data-delay="160">
+        <span class="condition-card__num">03</span>
+        <h3>PCOS &amp; Hormonal Wellness</h3>
+        <p>
+          Personalised food routines designed to support healthy habits
+          alongside your medical care.
+        </p>
+        <a href="#services" class="post__link">
+          View Support &#8594;
+        </a>
+      </article>
+
+      <article class="condition-card" data-anim="fade-up" data-delay="240">
+        <span class="condition-card__num">04</span>
+        <h3>Sports Nutrition</h3>
+        <p>
+          Nutrition planning for training days, recovery, hydration,
+          performance and body composition goals.
+        </p>
+        <a href="#services" class="post__link">
+          Train Smarter &#8594;
+        </a>
+      </article>
+
+      <article class="condition-card" data-anim="fade-up" data-delay="320">
+        <span class="condition-card__num">05</span>
+        <h3>Kids Nutrition</h3>
+        <p>
+          Family-friendly meal ideas that make balanced nutrition easier
+          for growing children and busy parents.
+        </p>
+        <a href="#services" class="post__link">
+          Family Care &#8594;
+        </a>
+      </article>
+
+      <article class="condition-card" data-anim="fade-up" data-delay="400">
+        <span class="condition-card__num">06</span>
+        <h3>Digestive Wellness</h3>
+        <p>
+          Food and lifestyle guidance designed around digestion,
+          meal timing, hydration and individual tolerance.
+        </p>
+        <a href="#services" class="post__link">
+          Discover More &#8594;
+        </a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= MEAL PLANS ================= -->
+<section class="section meal-plans" id="meal-plans">
+  <div class="container">
+
+    <div class="meal-plans__grid">
+
+      <div class="meal-plans__content" data-anim="fade-right">
+
+        <span class="tag">Your Daily Plate</span>
+
+        <h2 class="section__title">
+          A Meal Plan That
+          <span class="gradient-text">Fits Your Life</span>
+        </h2>
+
+        <p>
+          Your nutrition plan should work with your routine rather than
+          forcing your routine to change completely.
+        </p>
+
+        <ul class="about__list">
+          <li>
+            <i>&#10003;</i>
+            Breakfast, lunch and dinner planning
+          </li>
+
+          <li>
+            <i>&#10003;</i>
+            Vegetarian and non-vegetarian options
+          </li>
+
+          <li>
+            <i>&#10003;</i>
+            Indian and regional food choices
+          </li>
+
+          <li>
+            <i>&#10003;</i>
+            Office and travel-friendly alternatives
+          </li>
+
+          <li>
+            <i>&#10003;</i>
+            Restaurant and social-event swaps
+          </li>
+
+          <li>
+            <i>&#10003;</i>
+            Weekly adjustments based on progress
+          </li>
+        </ul>
+
+        <a href="contact.html" class="btn btn--primary">
+          Build My Meal Plan
+        </a>
+
+      </div>
+
+      <div class="meal-plans__visual" data-anim="fade-left">
+
+        <div class="meal-plans__card">
+          <span class="meal-plans__label">TODAY'S PLAN</span>
+
+          <div class="meal-row">
+            <span>Breakfast</span>
+            <b>Oats + Fruit</b>
+          </div>
+
+          <div class="meal-row">
+            <span>Mid Morning</span>
+            <b>Fruit + Nuts</b>
+          </div>
+
+          <div class="meal-row">
+            <span>Lunch</span>
+            <b>Rice + Dal + Salad</b>
+          </div>
+
+          <div class="meal-row">
+            <span>Evening</span>
+            <b>Curd + Seeds</b>
+          </div>
+
+          <div class="meal-row">
+            <span>Dinner</span>
+            <b>Roti + Paneer + Vegetables</b>
+          </div>
+
+          <div class="meal-plans__footer">
+            <span>Balanced</span>
+            <span>Flexible</span>
+            <span>Personalised</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONSULTATION JOURNEY ================= -->
+<section class="section journey" id="journey">
+
+  <div class="container">
+
+    <div class="section__head" data-anim="fade-up">
+      <span class="tag">Your Journey</span>
+
+      <h2 class="section__title">
+        From First Call To
+        <span class="gradient-text">Better Habits</span>
+      </h2>
+
+      <p class="section__sub">
+        A simple step-by-step experience designed to keep your nutrition
+        journey clear and manageable.
+      </p>
+    </div>
+
+    <div class="journey__grid">
+
+      <div class="journey-card" data-anim="fade-up">
+        <span>01</span>
+        <h3>Book</h3>
+        <p>
+          Choose an online or in-clinic consultation slot that works
+          for your schedule.
+        </p>
+      </div>
+
+      <div class="journey-card" data-anim="fade-up" data-delay="100">
+        <span>02</span>
+        <h3>Assess</h3>
+        <p>
+          Share your goals, routine, food preferences and relevant
+          health information.
+        </p>
+      </div>
+
+      <div class="journey-card" data-anim="fade-up" data-delay="200">
+        <span>03</span>
+        <h3>Plan</h3>
+        <p>
+          Receive a practical nutrition strategy built around your
+          individual needs.
+        </p>
+      </div>
+
+      <div class="journey-card" data-anim="fade-up" data-delay="300">
+        <span>04</span>
+        <h3>Track</h3>
+        <p>
+          Review progress regularly and adjust your routine as your
+          goals evolve.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= HEALTH GOALS ================= -->
+<section class="section goals" id="goals">
+
+  <div class="container">
+
+    <div class="section__head" data-anim="fade-up">
+      <span class="tag">Choose Your Goal</span>
+
+      <h2 class="section__title">
+        What Are You Working
+        <span class="gradient-text">Towards?</span>
+      </h2>
+    </div>
+
+    <div class="goals__grid">
+
+      <a href="plans.html" class="goal-card" data-anim="fade-up">
+        <span class="goal-card__icon">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v-3a4 4 0 0 1 4-4h0"/><path d="M20 12v-3a4 4 0 0 0-4-4h0"/><path d="M12 5v2"/><path d="M7 21l1.5-4.5"/><path d="M17 21l-1.5-4.5"/><path d="M6.5 11.5c1 1 3 1 5.5 0 2.5-1 4.5-1 5.5 0"/><path d="M12 14v2"/></svg>
+        </span>
+        <h3>Healthy Weight</h3>
+        <p>Build sustainable eating habits.</p>
+      </a>
+
+      <a href="plans.html" class="goal-card" data-anim="fade-up" data-delay="80">
+        <span class="goal-card__icon">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.5h11v11h-11z"/><path d="M6.5 6.5L3 3"/><path d="M17.5 6.5L21 3"/><path d="M6.5 17.5L3 21"/><path d="M17.5 17.5L21 21"/><path d="M12 12c-1.5 1.5-3 3-3 5 2 0 3.5-1.5 5-3-1.5-1.5-1.5-1.5-2-2z"/><path d="M12 12a6 6 0 0 1 8 8c-3 0-5-2-6-4"/></svg>
+        </span>
+        <h3>Build Strength</h3>
+        <p>Support training and recovery.</p>
+      </a>
+
+      <a href="plans.html" class="goal-card" data-anim="fade-up" data-delay="160">
+        <span class="goal-card__icon">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+        </span>
+        <h3>Better Wellness</h3>
+        <p>Improve everyday nutrition habits.</p>
+      </a>
+
+      <a href="plans.html" class="goal-card" data-anim="fade-up" data-delay="240">
+        <span class="goal-card__icon">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h11"/><path d="M3 9h7"/><path d="M3 13h4"/><path d="M12 21l-3-3.5 1.5-1.5L12 18l1.5-2 1.5 1.5L12 21z"/><circle cx="18" cy="8" r="3"/><path d="M18 11a3 3 0 1 1-3-3"/></svg>
+        </span>
+        <h3>Better Eating</h3>
+        <p>Create a balanced everyday plate.</p>
+      </a>
+
+      <a href="plans.html" class="goal-card" data-anim="fade-up" data-delay="320">
+        <span class="goal-card__icon">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="17.5" r="3"/><circle cx="18.5" cy="16" r="3"/><path d="M15 11l3 -5h-7"/><path d="M9.5 11c1.5-2 3.5-3 5.5-3"/><path d="M5.5 14.5c3-1.5 6-2 9-1.5"/></svg>
+        </span>
+        <h3>Sports Performance</h3>
+        <p>Fuel training and active lifestyles.</p>
+      </a>
+
+      <a href="plans.html" class="goal-card" data-anim="fade-up" data-delay="400">
+        <span class="goal-card__icon">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12c0 2 1.5 4 3 4s3-2 3-4c0-1-.5-2-1.5-2S12 11 12 12c0 1.5-.5 3-2 3S8 13.5 8 12"/><path d="M12 5a3 3 0 1 0-3 3 3 3 0 1 0 3 3 3 3 0 1 0 3-3 3 3 0 1 0-3-3z"/><circle cx="12" cy="12" r="9"/></svg>
+        </span>
+        <h3>Family Nutrition</h3>
+        <p>Make healthy eating easier at home.</p>
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= CONSULTATION OPTIONS ================= -->
+<section class="section consultation" id="consultation">
+
+  <div class="container">
+
+    <div class="consultation__box" data-anim="fade-up">
+
+      <div class="consultation__content">
+
+        <span class="tag">Flexible Consultation</span>
+
+        <h2 class="section__title">
+          Choose The Way You
+          <span class="gradient-text">Want To Meet</span>
+        </h2>
+
+        <p>
+          Get personalised nutrition guidance from the comfort of home
+          or visit the Stackly Nutrition Centre for an in-person session.
+        </p>
+
+        <div class="consultation__features">
+
+          <div>
+            <strong>ONLINE</strong>
+            <span>Video consultation</span>
+          </div>
+
+          <div>
+            <strong>CLINIC</strong>
+            <span>In-person appointment</span>
+          </div>
+
+          <div>
+            <strong>FOLLOW-UP</strong>
+            <span>Progress review</span>
+          </div>
+
+        </div>
+
+        <a href="contact.html" class="btn btn--primary">
+          Book Consultation
+        </a>
+
+      </div>
+
+      <div class="consultation__side">
+        <span class="consultation__status">&#9679; AVAILABLE</span>
+
+        <h3>Next available consultation</h3>
+
+        <strong>Today</strong>
+
+        <p>
+          Flexible appointment slots available for new and existing
+          members.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= FINAL CTA ================= -->
+<section class="section final-cta">
+
+  <div class="container">
+
+    <div class="final-cta__box" data-anim="fade-up">
+
+      <span class="tag">Start Today</span>
+
+      <h2>
+        Your Next Meal Can Be
+        <span class="gradient-text">A Better Choice</span>
+      </h2>
+
+      <p>
+        Stop guessing what to eat. Get a practical nutrition strategy
+        built around your goals, routine and food preferences.
+      </p>
+
+      <div class="final-cta__buttons">
+        <a href="contact.html" class="btn btn--primary">
+          Book Free Consultation
+        </a>
+
+        <a href="#bmi" class="btn btn--ghost">
+          Check Your BMI
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="section faq">
+  <div class="container faq__wrap">
+    <div class="faq__intro" data-anim="fade-right">
+      <span class="tag">FAQ</span>
+      <h2 class="section__title">Questions? <span class="gradient-text">Answered</span></h2>
+      <p>Still unsure? Message us on WhatsApp and a dietitian will reply within 30 minutes.</p>
+      <a href="contact.html" class="btn btn--primary">Ask a Dietitian</a>
+    </div>
+
+    <div class="accordion" data-anim="fade-left">
+      <div class="acc__item">
+        <button class="acc__head">Do I get a generic PDF plan?<span>+</span></button>
+        <div class="acc__body"><p>No. Every Stackly plan is built after your body composition and blood review — portion sizes, timings and swaps are yours alone.</p></div>
+      </div>
+      <div class="acc__item">
+        <button class="acc__head">Are online consultations effective?<span>+</span></button>
+        <div class="acc__body"><p>Yes. 70% of our clients are online. You upload measurements weekly and we adjust the plan over video calls.</p></div>
+      </div>
+      <div class="acc__item">
+        <button class="acc__head">Do I need supplements?<span>+</span></button>
+        <div class="acc__body"><p>Only if your diet or labs show a gap. We never sell supplements — we prescribe what is needed, food first.</p></div>
+      </div>
+      <div class="acc__item">
+        <button class="acc__head">How fast will I see results?<span>+</span></button>
+        <div class="acc__body"><p>Energy and digestion improve in 10–14 days. Visible body change is typically seen by week 4–6.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a href="#home" class="logo">
+       <img src="images/logo.webp" alt="Stackly Nutrition Centre" class="logo__img" />
+      </a>
+      <p>Science-backed nutrition coaching for Indian lifestyles. Eat better, live stronger.</p>
+      <div class="footer__social">
+        <a href="404.html" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a href="404.html" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12s.014 3.668.072 4.948c.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24s3.668-.014 4.948-.072c4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+        </a>
+        <a href="404.html" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+        </a>
+        <a href="404.html" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </a>
+        <a href="404.html" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer__col">
+      <h4>Programs</h4>
+      <a href="#services">Fat Loss</a>
+      <a href="#services">Clinical Nutrition</a>
+      <a href="#services">Sports Fuel</a>
+      <a href="#services">Kids &amp; Family</a>
+    </div>
+
+    <div class="footer__col">
+      <h4>Company</h4>
+      <a href="#about">About Us</a>
+      <a href="#coaches">Our Experts</a>
+      <a href="#plans">Pricing</a>
+      <a href="#testimonials">Reviews</a>
+    </div>
+
+    <div class="footer__col footer__contact">
+      <h4>Contact</h4>
+      <ul>
+        <li>
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.03-.24c1.12.37 2.33.57 3.56.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.4 21 3 13.6 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z"/></svg>
+          <a href="tel:+919876543210">+91 98765 43210</a>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          <a href="mailto:care@stackly.in">care@stackly.in</a>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+          <span>42 Green Park, New Delhi 110016</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 10.59V7h-2v6.41l4.29 4.3 1.42-1.42L13 12.59z"/></svg>
+          <span>Mon – Sat, 9:00 AM – 8:00 PM</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer__col footer__news">
+      <h4>Weekly Health Tip</h4>
+      <p>One practical nutrition email every Monday. No spam.</p>
+      <form class="news" id="news">
+        <input type="email" placeholder="Your email" required />
+        <button type="submit">&#8594;</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="container footer__bottom">
+    <span>&copy; 2026 Stackly Nutrition Centre. All rights reserved.</span>
+    <span>Privacy Policy &nbsp;&bull;&nbsp; Terms of Service</span>
+  </div>
+</footer>
+
+<!-- ================= BACK TO TOP ================= -->
+<button class="to-top" id="toTop" aria-label="Back to top">&#8593;</button>
+
+<script src="script.js"></script>
+</body>
+</html>

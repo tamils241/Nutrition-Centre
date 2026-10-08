@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Health Tips | Stackly Nutrition Centre</title>
+<meta name="description" content="Practical nutrition tips and healthy recipes from our dietitians." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ================= PRELOADER ================= -->
+<div class="preloader" id="preloader">
+  <div class="preloader__ring"></div>
+  <span class="preloader__text">STACKLY</span>
+</div>
+
+<!-- ================= CURSOR ================= -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+
+<!-- ================= HEADER ================= -->
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="index.html" class="logo">
+      <img src="images/logo.webp" alt="Stackly Nutrition Centre" class="logo__img" />
+    </a>
+
+<nav class="nav" id="mainNavigation" aria-hidden="true">
+      <button class="nav-close" type="button" aria-label="Close navigation" title="Close menu">&times;</button>
+
+      <ul class="nav__list">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="about.html" class="nav__link">About</a></li>
+        <li><a href="services.html" class="nav__link">Services</a></li>
+        <li><a href="plans.html" class="nav__link">Plans</a></li>
+        <li><a href="bmi.html" class="nav__link">BMI</a></li>
+        <li><a href="experts.html" class="nav__link">Experts</a></li>
+        <li><a href="tips.html" class="nav__link active">Tips</a></li>
+        <li><a href="reviews.html" class="nav__link">Reviews</a></li>
+        <li><a href="contact.html" class="nav__link">Contact</a></li>
+      </ul>
+
+      <!-- MOBILE LOGIN -->
+      <div class="mobile-nav-login">
+        <a href="login.html" class="btn btn--primary mobile-login-btn">
+          <span>Login</span>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </nav>
+
+    <div class="header__actions">
+      <a href="login.html" class="btn btn--ghost btn--sm login-btn">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        Log In
+      </a>
+
+      <button class="hamburger" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mainNavigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HEALTH TIPS PAGE ================= -->
+
+<main>
+
+  <!-- ================= TIPS HERO ================= -->
+  <section class="tips-hero section">
+    <div class="container tips-hero__grid">
+
+      <div class="tips-hero__content" data-anim="fade-right">
+        <span class="eyebrow">SMARTER EVERYDAY EATING</span>
+
+        <h1 class="section__title">
+          Simple Nutrition Tips for a
+          <span>Healthier You.</span>
+        </h1>
+
+        <p class="section__sub">
+          Practical, realistic and easy-to-follow nutrition guidance
+          designed for busy Indian lifestyles.
+        </p>
+
+        <div class="hero__btns">
+          <a href="#featured-tips" class="btn btn--primary">
+            Explore Tips
+          </a>
+
+          <a href="services.html" class="btn btn--outline">
+            Get Personal Guidance
+          </a>
+        </div>
+
+        <div class="tips-hero__highlights">
+          <div>
+            <strong>100+</strong>
+            <span>Practical Tips</span>
+          </div>
+
+          <div>
+            <strong>50+</strong>
+            <span>Healthy Recipes</span>
+          </div>
+
+          <div>
+            <strong>Expert</strong>
+            <span>Reviewed Content</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tips-hero__visual" data-anim="fade-left">
+        <div class="tips-hero__image">
+          <img
+            src="images/about-1.webp"
+            alt="Healthy balanced meal and nutrition"
+            loading="eager"
+          >
+        </div>
+
+        <div class="tips-hero__floating">
+          <span class="tips-hero__floating-icon">&#10003;</span>
+          <div>
+            <strong>Small Changes</strong>
+            <span>Big Daily Impact</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= QUICK TIP CATEGORIES ================= -->
+  <section class="section tips-categories" id="featured-tips">
+    <div class="container">
+
+      <div class="section__head" data-anim="fade-up">
+        <span class="eyebrow">EXPLORE BY TOPIC</span>
+
+        <h2 class="section__title">
+          Nutrition Tips That Fit
+          <span>Your Lifestyle.</span>
+        </h2>
+
+        <p class="section__sub">
+          Choose a topic and discover practical ideas you can start
+          using today.
+        </p>
+      </div>
+
+      <div class="tips-category-grid">
+
+        <a href="#weight-management" class="tips-category-card">
+          <span class="tips-category-card__number">01</span>
+          <div class="tips-category-card__icon">&#9878;</div>
+          <h3>Weight Management</h3>
+          <p>
+            Build sustainable eating habits without extreme diets
+            or unnecessary restrictions.
+          </p>
+          <span class="tips-category-card__link">
+            Explore Tips &#8594;
+          </span>
+        </a>
+
+        <a href="#balanced-meals" class="tips-category-card">
+          <span class="tips-category-card__number">02</span>
+          <div class="tips-category-card__icon">&#129367;</div>
+          <h3>Balanced Meals</h3>
+          <p>
+            Learn how to create satisfying meals with the right
+            balance of protein, vegetables and carbohydrates.
+          </p>
+          <span class="tips-category-card__link">
+            Explore Tips &#8594;
+          </span>
+        </a>
+
+        <a href="#hydration" class="tips-category-card">
+          <span class="tips-category-card__number">03</span>
+          <div class="tips-category-card__icon">&#128167;</div>
+          <h3>Hydration</h3>
+          <p>
+            Understand simple ways to make regular water intake
+            part of your everyday routine.
+          </p>
+          <span class="tips-category-card__link">
+            Explore Tips &#8594;
+          </span>
+        </a>
+
+        <a href="#fitness-fuel" class="tips-category-card">
+          <span class="tips-category-card__number">04</span>
+          <div class="tips-category-card__icon">&#9889;</div>
+          <h3>Fitness Fuel</h3>
+          <p>
+            Make smarter food choices around workouts, recovery
+            and active days.
+          </p>
+          <span class="tips-category-card__link">
+            Explore Tips &#8594;
+          </span>
+        </a>
+
+        <a href="#family-nutrition" class="tips-category-card">
+          <span class="tips-category-card__number">05</span>
+          <div class="tips-category-card__icon">&#128104;&#8205;&#128105;&#8205;&#128103;</div>
+          <h3>Family Nutrition</h3>
+          <p>
+            Make nutritious family meals easier, simpler and more
+            enjoyable for everyone.
+          </p>
+          <span class="tips-category-card__link">
+            Explore Tips &#8594;
+          </span>
+        </a>
+
+        <a href="#mindful-eating" class="tips-category-card">
+          <span class="tips-category-card__number">06</span>
+          <div class="tips-category-card__icon">&#129504;</div>
+          <h3>Mindful Eating</h3>
+          <p>
+            Improve your relationship with food by paying attention
+            to hunger, fullness and eating habits.
+          </p>
+          <span class="tips-category-card__link">
+            Explore Tips &#8594;
+          </span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================= DAILY NUTRITION RULES ================= -->
+  <section class="section tips-rules" id="balanced-meals">
+    <div class="container">
+
+      <div class="section__head" data-anim="fade-up">
+        <span class="eyebrow">DAILY BASICS</span>
+
+        <h2 class="section__title">
+          8 Simple Rules for
+          <span>Better Eating.</span>
+        </h2>
+
+        <p class="section__sub">
+          You don't need a perfect diet. Start with a few consistent
+          habits and build from there.
+        </p>
+      </div>
+
+      <div class="tips-rules__grid">
+
+        <article class="tips-rule">
+          <span>01</span>
+          <div>
+            <h3>Build Balanced Plates</h3>
+            <p>
+              Include a useful combination of vegetables, protein,
+              whole-food carbohydrates and healthy fats.
+            </p>
+          </div>
+        </article>
+
+        <article class="tips-rule">
+          <span>02</span>
+          <div>
+            <h3>Prioritise Protein</h3>
+            <p>
+              Include protein-rich foods regularly across your meals
+              to support satiety and everyday nutrition.
+            </p>
+          </div>
+        </article>
+
+        <article class="tips-rule">
+          <span>03</span>
+          <div>
+            <h3>Add More Vegetables</h3>
+            <p>
+              Mix different colours and varieties of vegetables
+              throughout the week.
+            </p>
+          </div>
+        </article>
+
+        <article class="tips-rule">
+          <span>04</span>
+          <div>
+            <h3>Choose Whole Foods Often</h3>
+            <p>
+              Make minimally processed foods the foundation of most
+              meals when practical.
+            </p>
+          </div>
+        </article>
+
+        <article class="tips-rule">
+          <span>05</span>
+          <div>
+            <h3>Drink Enough Water</h3>
+            <p>
+              Keep water accessible throughout the day and use
+              thirst as one useful hydration cue.
+            </p>
+          </div>
+        </article>
+
+        <article class="tips-rule">
+          <span>06</span>
+          <div>
+            <h3>Slow Down While Eating</h3>
+            <p>
+              Give yourself time to enjoy your food and notice
+              your hunger and fullness signals.
+            </p>
+          </div>
+        </article>
+
+        <article class="tips-rule">
+          <span>07</span>
+          <div>
+            <h3>Plan Before You Get Hungry</h3>
+            <p>
+              Keep simple meal and snack options available so
+              convenience does not always decide your choices.
+            </p>
+          </div>
+        </article>
+
+        <article class="tips-rule">
+          <span>08</span>
+          <div>
+            <h3>Focus on Consistency</h3>
+            <p>
+              One imperfect meal does not undo your progress.
+              Return to your routine at the next meal.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================= WEIGHT MANAGEMENT ================= -->
+  <section class="section tip-feature" id="weight-management">
+    <div class="container tip-feature__grid">
+
+      <div class="tip-feature__image" data-anim="zoom-in">
+        <img
+          src="images/about-2.webp"
+          alt="Healthy food choices for weight management"
+          loading="lazy"
+        >
+      </div>
+
+      <div class="tip-feature__content" data-anim="fade-left">
+        <span class="eyebrow">WEIGHT MANAGEMENT</span>
+
+        <h2 class="section__title">
+          Sustainable Habits
+          <span>Beat Quick Fixes.</span>
+        </h2>
+
+        <p class="section__sub">
+          Healthy weight management is usually easier to maintain
+          when your eating pattern is realistic enough to continue
+          over time.
+        </p>
+
+        <div class="tip-check-list">
+
+          <div class="tip-check">
+            <span>&#10003;</span>
+            <div>
+              <strong>Create regular meal patterns</strong>
+              <p>
+                Avoid relying on extreme restriction as your main strategy.
+              </p>
+            </div>
+          </div>
+
+          <div class="tip-check">
+            <span>&#10003;</span>
+            <div>
+              <strong>Increase food quality</strong>
+              <p>
+                Include more vegetables, fruits, protein and
+                minimally processed foods.
+              </p>
+            </div>
+          </div>
+
+          <div class="tip-check">
+            <span>&#10003;</span>
+            <div>
+              <strong>Watch portions without fear</strong>
+              <p>
+                Learn practical serving awareness instead of
+                eliminating entire food groups unnecessarily.
+              </p>
+            </div>
+          </div>
+
+          <div class="tip-check">
+            <span>&#10003;</span>
+            <div>
+              <strong>Track habits, not just weight</strong>
+              <p>
+                Consistency, energy, activity and meal quality can
+                also be useful progress markers.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <a href="services.html" class="btn btn--primary">
+          Explore Weight Management
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= HYDRATION ================= -->
+  <section class="section hydration" id="hydration">
+    <div class="container">
+
+      <div class="section__head" data-anim="fade-up">
+        <span class="eyebrow">HYDRATION</span>
+
+        <h2 class="section__title">
+          Make Water the
+          <span>Easy Choice.</span>
+        </h2>
+
+        <p class="section__sub">
+          Hydration does not need to be complicated. Create an
+          environment that makes drinking water easier.
+        </p>
+      </div>
+
+      <div class="hydration__grid">
+
+        <article class="hydration-card">
+          <div class="hydration-card__icon">01</div>
+          <h3>Start Your Day</h3>
+          <p>
+            Keep a glass or bottle of water ready when you begin
+            your morning routine.
+          </p>
+        </article>
+
+        <article class="hydration-card">
+          <div class="hydration-card__icon">02</div>
+          <h3>Carry a Bottle</h3>
+          <p>
+            Having water nearby makes regular drinking more
+            convenient during work and travel.
+          </p>
+        </article>
+
+        <article class="hydration-card">
+          <div class="hydration-card__icon">03</div>
+          <h3>Pair It With Meals</h3>
+          <p>
+            Keep water available during meals and use it as your
+            default drink more often.
+          </p>
+        </article>
+
+        <article class="hydration-card">
+          <div class="hydration-card__icon">04</div>
+          <h3>Make It Interesting</h3>
+          <p>
+            If plain water feels repetitive, try adding natural
+            flavours such as lemon or mint.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================= INDIAN PLATE ================= -->
+  <section class="section indian-plate">
+    <div class="container">
+
+      <div class="indian-plate__box">
+
+        <div class="indian-plate__content" data-anim="fade-right">
+          <span class="eyebrow">INDIAN MEAL GUIDE</span>
+
+          <h2 class="section__title">
+            Build a Better
+            <span>Indian Plate.</span>
+          </h2>
+
+          <p class="section__sub">
+            Healthy eating does not mean giving up familiar foods.
+            Start by improving the balance and variety of your meals.
+          </p>
+
+          <div class="plate-list">
+
+            <div class="plate-item">
+              <span class="plate-item__dot"></span>
+              <div>
+                <strong>Vegetables</strong>
+                <p>
+                  Add a generous variety of cooked or raw vegetables
+                  where practical.
+                </p>
+              </div>
+            </div>
+
+            <div class="plate-item">
+              <span class="plate-item__dot"></span>
+              <div>
+                <strong>Protein</strong>
+                <p>
+                  Include options such as dal, beans, curd, paneer,
+                  eggs, fish or other preferred protein sources.
+                </p>
+              </div>
+            </div>
+
+            <div class="plate-item">
+              <span class="plate-item__dot"></span>
+              <div>
+                <strong>Carbohydrates</strong>
+                <p>
+                  Choose rice, roti, millets, oats or other suitable
+                  carbohydrate foods according to your needs.
+                </p>
+              </div>
+            </div>
+
+            <div class="plate-item">
+              <span class="plate-item__dot"></span>
+              <div>
+                <strong>Healthy Fats</strong>
+                <p>
+                  Use nuts, seeds and appropriate cooking oils
+                  thoughtfully as part of a balanced pattern.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="indian-plate__visual" data-anim="zoom-in">
+          <img
+            src="images/gut-diabetes.webp"
+            alt="Balanced Indian nutrition plate"
+            loading="lazy"
+          >
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= FITNESS FUEL ================= -->
+  <section class="section fitness-fuel" id="fitness-fuel">
+    <div class="container">
+
+      <div class="section__head" data-anim="fade-up">
+        <span class="eyebrow">ACTIVE LIFESTYLE</span>
+
+        <h2 class="section__title">
+          Fuel Your
+          <span>Workout Better.</span>
+        </h2>
+
+        <p class="section__sub">
+          Your food choices around activity can help you build a
+          more consistent and enjoyable fitness routine.
+        </p>
+      </div>
+
+      <div class="fuel-grid">
+
+        <article class="fuel-card fuel-card--before">
+          <span class="fuel-card__label">BEFORE ACTIVITY</span>
+          <h3>Keep It Practical</h3>
+          <p>
+            Choose familiar foods that suit your digestion and
+            provide useful energy for your planned activity.
+          </p>
+          <ul>
+            <li>Easy-to-digest foods</li>
+            <li>Appropriate carbohydrates</li>
+            <li>Enough time before training</li>
+          </ul>
+        </article>
+
+        <article class="fuel-card fuel-card--during">
+          <span class="fuel-card__label">DURING ACTIVITY</span>
+          <h3>Listen to Your Body</h3>
+          <p>
+            Hydration and nutrition needs can vary depending on
+            exercise duration, intensity and environment.
+          </p>
+          <ul>
+            <li>Keep hydrated</li>
+            <li>Consider activity duration</li>
+            <li>Adjust to individual needs</li>
+          </ul>
+        </article>
+
+        <article class="fuel-card fuel-card--after">
+          <span class="fuel-card__label">AFTER ACTIVITY</span>
+          <h3>Recover With Balance</h3>
+          <p>
+            A balanced meal or snack can help you return to your
+            normal eating routine after training.
+          </p>
+          <ul>
+            <li>Include protein</li>
+            <li>Add carbohydrates as appropriate</li>
+            <li>Rehydrate regularly</li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================= MINDFUL EATING ================= -->
+  <section class="section mindful" id="mindful-eating">
+    <div class="container mindful__grid">
+
+      <div class="mindful__content" data-anim="fade-right">
+        <span class="eyebrow">MINDFUL EATING</span>
+
+        <h2 class="section__title">
+          Eat With
+          <span>More Awareness.</span>
+        </h2>
+
+        <p class="section__sub">
+          Mindful eating is about becoming more aware of your
+          experience with food rather than following rigid rules.
+        </p>
+
+        <div class="mindful-steps">
+
+          <div class="mindful-step">
+            <span>01</span>
+            <div>
+              <h3>Pause</h3>
+              <p>
+                Take a moment before eating and check how hungry
+                you actually feel.
+              </p>
+            </div>
+          </div>
+
+          <div class="mindful-step">
+            <span>02</span>
+            <div>
+              <h3>Notice</h3>
+              <p>
+                Pay attention to taste, texture, speed of eating
+                and distractions.
+              </p>
+            </div>
+          </div>
+
+          <div class="mindful-step">
+            <span>03</span>
+            <div>
+              <h3>Respond</h3>
+              <p>
+                Give yourself permission to make a considered
+                choice rather than an automatic one.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="mindful__visual" data-anim="zoom-in">
+        <img
+          src="images/hero.webp"
+          alt="Mindful healthy eating"
+          loading="lazy"
+        >
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= HEALTHY SNACKS ================= -->
+  <section class="section snacks">
+    <div class="container">
+
+      <div class="section__head" data-anim="fade-up">
+        <span class="eyebrow">SMART SNACKING</span>
+
+        <h2 class="section__title">
+          Better Snack Ideas for
+          <span>Busy Days.</span>
+        </h2>
+
+        <p class="section__sub">
+          Keep simple combinations ready so you have convenient
+          options between meals.
+        </p>
+      </div>
+
+      <div class="snacks-grid">
+
+        <article class="snack-card">
+          <span class="snack-card__tag">PROTEIN</span>
+          <h3>Curd + Fruit</h3>
+          <p>
+            A simple combination that can work well as a convenient
+            snack for many people.
+          </p>
+        </article>
+
+        <article class="snack-card">
+          <span class="snack-card__tag">QUICK</span>
+          <h3>Fruit + Nuts</h3>
+          <p>
+            Pair fruit with a small portion of nuts for a practical
+            snack combination.
+          </p>
+        </article>
+
+        <article class="snack-card">
+          <span class="snack-card__tag">TRADITIONAL</span>
+          <h3>Roasted Chana</h3>
+          <p>
+            A familiar pantry option that can be useful when you
+            want something simple and portable.
+          </p>
+        </article>
+
+        <article class="snack-card">
+          <span class="snack-card__tag">HOME MADE</span>
+          <h3>Vegetable Chaat</h3>
+          <p>
+            Combine vegetables with suitable ingredients to create
+            a colourful and satisfying snack.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================= FAMILY NUTRITION ================= -->
+  <section class="section family" id="family-nutrition">
+    <div class="container">
+
+      <div class="family__box">
+
+        <div class="family__content">
+          <span class="eyebrow">FAMILY NUTRITION</span>
+
+          <h2 class="section__title">
+            Make Healthy Eating
+            <span>a Family Habit.</span>
+          </h2>
+
+          <p class="section__sub">
+            Instead of preparing completely different meals for
+            everyone, build flexible family meals around nutritious
+            basics.
+          </p>
+
+          <div class="family__points">
+
+            <div>
+              <strong>01</strong>
+              <span>Keep fruits visible and accessible.</span>
+            </div>
+
+            <div>
+              <strong>02</strong>
+              <span>Include children in simple food preparation.</span>
+            </div>
+
+            <div>
+              <strong>03</strong>
+              <span>Offer variety without forcing food.</span>
+            </div>
+
+            <div>
+              <strong>04</strong>
+              <span>Make family meals a regular routine.</span>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="family__image" data-anim="zoom-in">
+          <img
+            src="images/kids&family.webp"
+            alt="Family enjoying a healthy meal"
+            loading="lazy"
+          >
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= 7-DAY HABIT CHALLENGE ================= -->
+  <section class="section habit-challenge">
+    <div class="container">
+
+      <div class="section__head" data-anim="fade-up">
+        <span class="eyebrow">7-DAY RESET</span>
+
+        <h2 class="section__title">
+          One Week.
+          <span>Seven Small Habits.</span>
+        </h2>
+
+        <p class="section__sub">
+          Use this simple challenge as a starting point for building
+          a more consistent nutrition routine.
+        </p>
+      </div>
+
+      <div class="habit-timeline">
+
+        <div class="habit-day">
+          <span>MON</span>
+          <strong>Water First</strong>
+          <p>Keep water within reach throughout the day.</p>
+        </div>
+
+        <div class="habit-day">
+          <span>TUE</span>
+          <strong>Add Vegetables</strong>
+          <p>Add an extra vegetable serving to one meal.</p>
+        </div>
+
+        <div class="habit-day">
+          <span>WED</span>
+          <strong>Protein Check</strong>
+          <p>Look for a protein source at your main meals.</p>
+        </div>
+
+        <div class="habit-day">
+          <span>THU</span>
+          <strong>Slow Down</strong>
+          <p>Eat one meal without rushing.</p>
+        </div>
+
+        <div class="habit-day">
+          <span>FRI</span>
+          <strong>Smart Snack</strong>
+          <p>Prepare one snack before hunger arrives.</p>
+        </div>
+
+        <div class="habit-day">
+          <span>SAT</span>
+          <strong>Meal Prep</strong>
+          <p>Prepare a few simple ingredients for the week.</p>
+        </div>
+
+        <div class="habit-day">
+          <span>SUN</span>
+          <strong>Review</strong>
+          <p>Identify one habit that you want to continue.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= NUTRITION MYTHS ================= -->
+  <section class="section myths">
+    <div class="container">
+
+      <div class="section__head" data-anim="fade-up">
+        <span class="eyebrow">MYTH VS REALITY</span>
+
+        <h2 class="section__title">
+          Let's Make Nutrition
+          <span>Less Confusing.</span>
+        </h2>
+      </div>
+
+      <div class="myths-grid">
+
+        <article class="myth-card">
+          <span class="myth-card__label">MYTH</span>
+          <h3>Carbohydrates are always bad.</h3>
+          <div class="myth-card__reality">
+            <strong>REALITY</strong>
+            <p>
+              Carbohydrates can be part of a balanced eating pattern.
+              The type, portion and overall diet matter.
+            </p>
+          </div>
+        </article>
+
+        <article class="myth-card">
+          <span class="myth-card__label">MYTH</span>
+          <h3>Healthy eating must be expensive.</h3>
+          <div class="myth-card__reality">
+            <strong>REALITY</strong>
+            <p>
+              Many nutritious foods such as dal, seasonal vegetables,
+              fruits and grains can be affordable choices.
+            </p>
+          </div>
+        </article>
+
+        <article class="myth-card">
+          <span class="myth-card__label">MYTH</span>
+          <h3>You need to remove all your favourite foods.</h3>
+          <div class="myth-card__reality">
+            <strong>REALITY</strong>
+            <p>
+              Sustainable nutrition can include flexibility and
+              occasional favourite foods.
+            </p>
+          </div>
+        </article>
+
+        <article class="myth-card">
+          <span class="myth-card__label">MYTH</span>
+          <h3>One perfect meal creates a healthy diet.</h3>
+          <div class="myth-card__reality">
+            <strong>REALITY</strong>
+            <p>
+              Overall eating patterns and consistency matter more
+              than a single meal.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================= HEALTHY ROUTINE ================= -->
+  <section class="section routine">
+    <div class="container">
+
+      <div class="section__head" data-anim="fade-up">
+        <span class="eyebrow">YOUR DAILY ROUTINE</span>
+
+        <h2 class="section__title">
+          Nutrition Beyond
+          <span>the Plate.</span>
+        </h2>
+
+        <p class="section__sub">
+          Food is important, but your overall routine also matters.
+        </p>
+      </div>
+
+      <div class="routine-grid">
+
+        <article class="routine-card">
+          <span>&#9728;</span>
+          <h3>Morning</h3>
+          <p>
+            Start with a realistic breakfast or first meal that
+            fits your schedule.
+          </p>
+        </article>
+
+        <article class="routine-card">
+          <span>&#129367;</span>
+          <h3>Midday</h3>
+          <p>
+            Aim for a balanced lunch and keep hydration accessible.
+          </p>
+        </article>
+
+        <article class="routine-card">
+          <span>&#128694;</span>
+          <h3>Movement</h3>
+          <p>
+            Include regular physical activity appropriate for
+            your lifestyle and abilities.
+          </p>
+        </article>
+
+        <article class="routine-card">
+          <span>&#127769;</span>
+          <h3>Evening</h3>
+          <p>
+            Create a calmer evening routine and avoid turning
+            tiredness into automatic snacking.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================= FEATURED ARTICLES ================= -->
+  <section class="section articles">
+    <div class="container">
+
+      <div class="section__head" data-anim="fade-up">
+        <span class="eyebrow">FROM THE NUTRITION DESK</span>
+
+        <h2 class="section__title">
+          Popular Reads &amp;
+          <span>Healthy Ideas.</span>
+        </h2>
+
+        <p class="section__sub">
+          Helpful topics to keep your nutrition knowledge growing.
+        </p>
+      </div>
+
+      <div class="articles-grid">
+
+        <article class="article-card">
+          <div class="article-card__image">
+            <img
+              src="images/gut-diabetes.webp"
+              alt="Balanced diet article"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="article-card__body">
+            <span>FOUNDATIONS</span>
+            <h3>How to Build a Balanced Indian Diet</h3>
+            <p>
+              A practical look at combining familiar foods into
+              balanced everyday meals.
+            </p>
+            <a href="services.html">Read More &#8594;</a>
+          </div>
+        </article>
+
+        <article class="article-card">
+          <div class="article-card__image">
+            <img
+              src="images/clinical-nutrition.webp"
+              alt="Healthy breakfast ideas"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="article-card__body">
+            <span>BREAKFAST</span>
+            <h3>Simple Breakfast Ideas for Busy Mornings</h3>
+            <p>
+              Easy combinations that can make your first meal
+              more practical and satisfying.
+            </p>
+            <a href="services.html">Read More &#8594;</a>
+          </div>
+        </article>
+
+        <article class="article-card">
+          <div class="article-card__image">
+            <img
+              src="images/sports-fuel.webp"
+              alt="Healthy snack ideas"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="article-card__body">
+            <span>SNACKING</span>
+            <h3>Smart Snacking Without Overthinking</h3>
+            <p>
+              Learn how to prepare simple snack options that
+              work with your everyday routine.
+            </p>
+            <a href="services.html">Read More &#8594;</a>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= FAQ ================= -->
+  <section class="section tips-faq">
+    <div class="container">
+
+      <div class="section__head" data-anim="fade-up">
+        <span class="eyebrow">COMMON QUESTIONS</span>
+
+        <h2 class="section__title">
+          Nutrition Tips
+          <span>FAQ.</span>
+        </h2>
+      </div>
+
+      <div class="faq__wrap">
+
+        <div class="faq__item">
+          <button class="faq__q" type="button">
+            Where should I start if I want to eat healthier?
+            <span>+</span>
+          </button>
+          <div class="faq__a">
+            <p>
+              Start with one or two practical changes, such as
+              improving meal balance, adding vegetables or making
+              water your regular drink. Build gradually rather than
+              changing everything at once.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__q" type="button">
+            Do I need to completely stop eating my favourite foods?
+            <span>+</span>
+          </button>
+          <div class="faq__a">
+            <p>
+              Not necessarily. A sustainable eating pattern can
+              include flexibility and occasional favourite foods
+              while keeping everyday choices balanced.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__q" type="button">
+            Are these tips suitable for everyone?
+            <span>+</span>
+          </button>
+          <div class="faq__a">
+            <p>
+              General nutrition tips are educational and may not
+              suit every individual. People with medical conditions,
+              special dietary needs or specific nutrition goals
+              should seek personalised professional guidance.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__q" type="button">
+            How can I get a personalised nutrition plan?
+            <span>+</span>
+          </button>
+          <div class="faq__a">
+            <p>
+              Visit our Services or Plans pages to explore
+              personalised nutrition coaching options.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================= CTA ================= -->
+  <section class="section tips-cta">
+    <div class="container">
+
+      <div class="tips-cta__box">
+
+        <div data-anim="fade-right">
+          <span class="eyebrow">READY TO START?</span>
+
+          <h2>
+            Turn Nutrition Knowledge
+            Into Everyday Habits.
+          </h2>
+
+          <p>
+            If you want guidance built around your lifestyle,
+            our nutrition programs can help you create a practical
+            path forward.
+          </p>
+        </div>
+
+        <div class="tips-cta__actions">
+          <a href="plans.html" class="btn btn--primary">
+            View Plans
+          </a>
+
+          <a href="contact.html" class="btn btn--ghost">
+            Talk to Us
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= DISCLAIMER ================= -->
+  <section class="section tips-disclaimer">
+    <div class="container">
+
+      <div class="tips-disclaimer__box">
+        <strong>Nutrition Information Notice</strong>
+
+        <p>
+          The information on this page is provided for general
+          educational purposes and is not intended to diagnose,
+          treat or prevent any medical condition. Individual
+          nutrition needs vary. For personalised advice, consult
+          a qualified healthcare or nutrition professional.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a href="index.html" class="logo">
+       <img src="images/logo.webp" alt="Stackly Nutrition Centre" class="logo__img" />
+      </a>
+      <p>Science-backed nutrition coaching for Indian lifestyles. Eat better, live stronger.</p>
+      <div class="footer__social">
+        <a href="404.html" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a href="404.html" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12s.014 3.668.072 4.948c.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24s3.668-.014 4.948-.072c4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+        </a>
+        <a href="404.html" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+        </a>
+        <a href="404.html" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </a>
+        <a href="404.html" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer__col">
+      <h4>Programs</h4>
+      <a href="services.html">Fat Loss</a>
+      <a href="services.html">Clinical Nutrition</a>
+      <a href="services.html">Sports Fuel</a>
+      <a href="services.html">Kids &amp; Family</a>
+    </div>
+
+    <div class="footer__col">
+      <h4>Company</h4>
+      <a href="about.html">About Us</a>
+      <a href="experts.html">Our Experts</a>
+      <a href="plans.html">Pricing</a>
+      <a href="reviews.html">Reviews</a>
+    </div>
+
+    <div class="footer__col footer__contact">
+      <h4>Contact</h4>
+      <ul>
+        <li>
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.03-.24c1.12.37 2.33.57 3.56.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.4 21 3 13.6 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z"/></svg>
+          <a href="tel:+919876543210">+91 98765 43210</a>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          <a href="mailto:care@stackly.in">care@stackly.in</a>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+          <span>42 Green Park, New Delhi 110016</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 10.59V7h-2v6.41l4.29 4.3 1.42-1.42L13 12.59z"/></svg>
+          <span>Mon – Sat, 9:00 AM – 8:00 PM</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer__col footer__news">
+      <h4>Weekly Health Tip</h4>
+      <p>One practical nutrition email every Monday. No spam.</p>
+      <form class="news" id="news">
+        <input type="email" placeholder="Your email" required />
+        <button type="submit">&#8594;</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="container footer__bottom">
+    <span>&copy; 2026 Stackly Nutrition Centre. All rights reserved.</span>
+    <span>Privacy Policy &nbsp;&bull;&nbsp; Terms of Service</span>
+  </div>
+</footer>
+
+
+<!-- ================= BACK TO TOP ================= -->
+<button class="to-top" id="toTop" aria-label="Back to top">&#8593;</button>
+
+<script src="script.js"></script>
+</body>
+</html>
