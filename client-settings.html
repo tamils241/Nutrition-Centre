@@ -76,6 +76,10 @@
           <span>Client · Plan: Weight Loss</span>
         </div>
       </div>
+      <button type="button" class="dash-logout">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="m16 17 5-5-5-5"/><path d="M21 12H9"/></svg>
+        Log out
+      </button>
     </div>
 
   </aside>
@@ -201,6 +205,7 @@
               <div class="dform__field">
                 <label for="city">City</label>
                 <select id="city">
+                  <option>Choose a city</option>
                   <option>Bengaluru</option>
                   <option>Mumbai</option>
                   <option>Delhi</option>
@@ -223,6 +228,9 @@
               <div class="dform__field">
                 <label for="healthGoal">Current Goal</label>
                 <select id="healthGoal">
+                  <option>Choose a goal</option>
+                  <option>Fat Loss</option>
+                  <option>Clinical Nutrition</option>
                   <option>Weight Loss</option>
                   <option>Muscle Gain</option>
                   <option>Maintenance</option>
@@ -244,6 +252,7 @@
               <div class="dform__field">
                 <label for="activity">Activity Level</label>
                 <select id="activity">
+                  <option>Choose an activity level</option>
                   <option>Sedentary</option>
                   <option>Light</option>
                   <option>Moderate</option>
@@ -256,6 +265,7 @@
               <div class="dform__field">
                 <label for="diet">Diet Style</label>
                 <select id="diet">
+                  <option>Choose a diet style</option>
                   <option>Vegetarian</option>
                   <option>Non-Vegetarian</option>
                   <option>Vegan</option>
@@ -389,6 +399,8 @@
               <span>How often we write to you</span>
             </div>
             <select class="dform__input" aria-label="Email frequency" style="width:150px">
+              <option>Daily</option>
+              <option>Twice a week</option>
               <option>Weekly digest</option>
               <option>Monthly</option>
               <option>Only important</option>

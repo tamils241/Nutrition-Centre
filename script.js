@@ -8,6 +8,15 @@
   const $$ = (s, c = document) => Array.from(c.querySelectorAll(s));
   const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  /* Local part may contain letters/digits; the domain must be
+     letters/hyphens only (so 123.com / 123ggb.com are rejected)
+     and must end in a real letters-only TLD. */
+  const EMAIL_RE = /^[A-Za-z0-9._%+\-]+@[A-Za-z][A-Za-z\-]*(?:\.[A-Za-z][A-Za-z\-]*)*\.[A-Za-z]{2,}$/;
+
+  /* Strong password: 8+ chars with lowercase, uppercase, a digit
+     and a special character. */
+  const STRONG_PASS_RE = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}$/;
+
   /* ---------- PRELOADER ---------- */
   window.addEventListener("load", () => {
     setTimeout(() => $("#preloader") && $("#preloader").classList.add("hide"), 450);
@@ -58,12 +67,19 @@
         if (pageFor[cur]) last = pageFor[cur];
       }
     });
+    /* Scroll-spy only drives the nav on the single-page home layout.
+       On every other page the current page link is handled by the
+       per-page active logic, so we must not clear it here. */
+    const singlePageSpy = sections.filter((s) => pageFor[s.id]).length >= 3;
     $$(".nav__link").forEach((l) => {
       const href = l.getAttribute("href") || "";
       if (href.startsWith("#")) {
         l.classList.toggle("active", href === "#" + cur);
-      } else {
-        l.classList.toggle("active", last === href.replace(".html", "") || (cur === "home" && href === "index.html"));
+      } else if (singlePageSpy) {
+        const isActive = last === href.replace(".html", "") || (cur === "home" && href === "index.html");
+        l.classList.toggle("active", isActive);
+        if (isActive) l.setAttribute("aria-current", "page");
+        else l.removeAttribute("aria-current");
       }
     });
   }
@@ -86,6 +102,21 @@
   }
 
   /* ---------- AUTH PAGES (LOGIN / REGISTER) ---------- */
+  const saveUser = (user, name) => {
+    try {
+      const map = JSON.parse(localStorage.getItem("nc_users") || "{}");
+      map[user.toLowerCase()] = name;
+      localStorage.setItem("nc_users", JSON.stringify(map));
+    } catch (_) {}
+  };
+  const getUserName = (user) => {
+    try {
+      const map = JSON.parse(localStorage.getItem("nc_users") || "{}");
+      if (map[user.toLowerCase()]) return map[user.toLowerCase()];
+    } catch (_) {}
+    return user.split("@")[0];
+  };
+
   $$(".auth__toggle").forEach((btn) => {
     btn.addEventListener("click", () => {
       const input = $(btn.dataset.toggle);
@@ -109,14 +140,34 @@
 
       if (!user || !pass) {
         note.classList.add("err");
-        note.textContent = "Please enter your email/phone and password.";
+        note.textContent = "Please enter your email and password.";
         return;
       }
-      if (pass.length < 6) {
+      if (!EMAIL_RE.test(user)) {
         note.classList.add("err");
-        note.textContent = "Password must be at least 6 characters.";
+        note.textContent = "Please enter a valid email address (e.g. sun@gmail.com).";
+        alert("Please enter a valid email address (e.g. sun@gmail.com).");
         return;
       }
+      if (!STRONG_PASS_RE.test(pass)) {
+        note.classList.add("err");
+        note.textContent = "Password must be 8+ characters with uppercase, lowercase, a number and a special character.";
+        alert("Please enter a strong password: at least 8 characters including uppercase, lowercase, a number and a special character.");
+        return;
+      }
+      const remember = $("#loginRemember");
+      if (remember && !remember.checked) {
+        note.classList.add("err");
+        note.textContent = "Please tick \u201cRemember me\u201d before logging in.";
+        alert("Please select the \u201cRemember me\u201d checkbox to log in.");
+        return;
+      }
+      const displayName = getUserName(user);
+      try {
+        localStorage.setItem("nc_name", displayName);
+        localStorage.setItem("nc_user", user);
+        localStorage.setItem("nc_role", roleName);
+      } catch (_) {}
       note.classList.remove("err");
       note.textContent = roleName === "admin"
         ? "Admin access granted! Redirecting…"
@@ -134,44 +185,96 @@
       e.preventDefault();
       const name = $("#regName").value.trim();
       const user = $("#regUser").value.trim();
+      const goal = $("#regGoal").value;
       const pass = $("#regPass").value;
       const terms = $("#regTerms").checked;
-      const role = $('input[name="role"]:checked');
-      const roleName = role ? role.value : "client";
 
       if (!name || !user || !pass) {
         note.classList.add("err");
         note.textContent = "Please fill in all the fields.";
         return;
       }
-      if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(user) && !/^[0-9+\-\s]{10,15}$/.test(user)) {
+      if (!goal) {
         note.classList.add("err");
-        note.textContent = "Enter a valid email or phone number.";
+        note.textContent = "Please select a goal.";
+        alert("Please select a goal from the dropdown.");
         return;
       }
-      if (pass.length < 6) {
+      if (!/^[A-Za-z]{1,16}$/.test(name)) {
         note.classList.add("err");
-        note.textContent = "Password must be at least 6 characters.";
+        note.textContent = "Full name can contain only letters, up to 16 characters.";
+        alert("Full name can contain only letters, up to 16 characters. Numbers, spaces and special characters are not allowed.");
+        return;
+      }
+      if (!EMAIL_RE.test(user)) {
+        note.classList.add("err");
+        note.textContent = "Please enter a valid email address (e.g. sun@gmail.com).";
+        alert("Please enter a valid email address (e.g. sun@gmail.com).");
+        return;
+      }
+      if (!STRONG_PASS_RE.test(pass)) {
+        note.classList.add("err");
+        note.textContent = "Password must be 8+ characters with uppercase, lowercase, a number and a special character.";
+        alert("Please enter a strong password: at least 8 characters including uppercase, lowercase, a number and a special character.");
         return;
       }
       const pass2 = $("#regPass2").value;
       if (pass2 !== pass) {
         note.classList.add("err");
         note.textContent = "Passwords do not match.";
+        alert("Passwords do not match. Please re-enter your password.");
         return;
       }
       if (!terms) {
         note.classList.add("err");
         note.textContent = "Please accept the Terms & Privacy Policy.";
+        alert("Please tick the Terms & Privacy Policy checkbox to continue.");
         return;
       }
+      saveUser(user, name);
       note.classList.remove("err");
-      note.textContent = (roleName === "admin" ? "Admin " : "Account ") + "created successfully! Redirecting…";
+      note.textContent = "Account created successfully! Redirecting to login…";
       setTimeout(() => {
-        window.location.href = roleName === "admin" ? "admin-dashboard.html" : "clients-dashboard.html";
+        window.location.href = "login.html";
       }, 1200);
     });
   }
+
+  /* ---------- DASHBOARD: SHOW LOGGED IN USER ---------- */
+  const welcomeName = $(".dash-welcome h1 span");
+  const dashUserName = $$(".dash-side__user b, .dash-top__profile b");
+  if (welcomeName || dashUserName.length) {
+    let stored = "", email = "";
+    try {
+      stored = localStorage.getItem("nc_name") || "";
+      email = localStorage.getItem("nc_user") || "";
+    } catch (_) {}
+    if (stored) {
+      const initials = stored
+        .split(/\s+/)
+        .filter(Boolean)
+        .slice(0, 2)
+        .map((p) => p[0].toUpperCase())
+        .join("");
+      dashUserName.forEach((el) => (el.textContent = stored));
+      $$(".dash-avatar").forEach((el) => { if (initials) el.textContent = initials; });
+      const emailEl = $(".dash-top__profile > div > span");
+      if (emailEl && email) emailEl.textContent = email;
+      if (welcomeName) welcomeName.textContent = stored + "!";
+    }
+  }
+
+  /* ---------- DASHBOARD: LOGOUT ---------- */
+  $$(".dash-logout").forEach((btn) =>
+    btn.addEventListener("click", () => {
+      try {
+        localStorage.removeItem("nc_name");
+        localStorage.removeItem("nc_user");
+        localStorage.removeItem("nc_role");
+      } catch (_) {}
+      window.location.href = "login.html";
+    })
+  );
 
   /* ---------- SCROLL ANIMATIONS (IntersectionObserver) ---------- */
   const animEls = $$("[data-anim]");
@@ -429,16 +532,75 @@
   const contactForm = $("#contactForm");
   const contactSuccess = $("#contactSuccess");
   if (contactForm) {
+    const goalInput = $("#contactGoal");
+    const goalValueText = $("#goalDropdown .custom-select__value");
+    const goalTrigger = $("#goalDropdown .custom-select__trigger");
+    const emailInput = $("#contactEmail");
+
+    if (emailInput) {
+      emailInput.addEventListener("input", () =>
+        emailInput.removeAttribute("aria-invalid")
+      );
+    }
+
     contactForm.addEventListener("submit", (e) => {
       e.preventDefault();
+
+      if (emailInput && !EMAIL_RE.test(emailInput.value.trim())) {
+        emailInput.setAttribute("aria-invalid", "true");
+        emailInput.focus();
+        alert("Please enter a valid email address (e.g. sun@gmail.com).");
+        return;
+      }
+
+      if (goalInput && !goalInput.value) {
+        if (goalTrigger) {
+          goalTrigger.focus();
+          goalTrigger.setAttribute("aria-invalid", "true");
+        }
+        return;
+      }
+
       const btn = contactForm.querySelector('button[type="submit"]');
       if (btn) { btn.disabled = true; btn.textContent = "Submitting…"; }
       setTimeout(() => {
         contactForm.reset();
+        if (goalInput) goalInput.value = "";
+        if (goalValueText) goalValueText.textContent = "Select your goal";
+        if (goalTrigger) goalTrigger.removeAttribute("aria-invalid");
+        if (emailInput) emailInput.removeAttribute("aria-invalid");
         if (contactSuccess) contactSuccess.classList.add("show");
         if (btn) { btn.disabled = false; btn.textContent = "Request My Free Call"; }
       }, 700);
     });
+  }
+
+  /* ---------- FULL NAME (letters only, max 16) ---------- */
+  const cleanNameField = (input) => {
+    if (!input) return;
+    const clean = () => {
+      const value = input.value
+        .replace(/[^A-Za-z]/g, "")
+        .slice(0, 16);
+      if (value !== input.value) input.value = value;
+    };
+    input.addEventListener("input", clean);
+    clean();
+  };
+  cleanNameField($("#contactName"));
+  cleanNameField($("#regName"));
+
+  /* ---------- CONTACT PHONE (digits only, max 10) ---------- */
+  const contactPhone = $("#contactPhone");
+  if (contactPhone) {
+    const cleanPhone = () => {
+      const clean = contactPhone.value
+        .replace(/[^0-9]/g, "")
+        .slice(0, 10);
+      if (clean !== contactPhone.value) contactPhone.value = clean;
+    };
+    contactPhone.addEventListener("input", cleanPhone);
+    cleanPhone();
   }
 
   /* ---------- FAQ (.faq__q / .faq__a) ---------- */
@@ -813,4 +975,96 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+});
+
+/* =========================================================
+   STACKLY CUSTOM SELECT (Primary Goal)
+   Mobile-friendly dropdown constrained to the form width.
+   ========================================================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+  const dropdown = document.getElementById("goalDropdown");
+  if (!dropdown) return;
+
+  const trigger = dropdown.querySelector(
+    ".custom-select__trigger"
+  );
+  const options = dropdown.querySelector(
+    ".custom-select__options"
+  );
+  const valueText = dropdown.querySelector(
+    ".custom-select__value"
+  );
+  const hiddenInput = document.getElementById("contactGoal");
+
+  function closeDropdown() {
+    dropdown.classList.remove("open");
+    options.hidden = true;
+    trigger.setAttribute("aria-expanded", "false");
+  }
+
+  trigger.addEventListener("click", () => {
+    const willOpen = options.hidden;
+    options.hidden = !willOpen;
+    dropdown.classList.toggle("open", willOpen);
+    trigger.setAttribute("aria-expanded", String(willOpen));
+  });
+
+  options.querySelectorAll("button").forEach(option => {
+    option.addEventListener("click", () => {
+      hiddenInput.value = option.dataset.value;
+      valueText.textContent = option.textContent.trim();
+      hiddenInput.dispatchEvent(
+        new Event("change", { bubbles: true })
+      );
+      closeDropdown();
+      trigger.focus();
+    });
+  });
+
+  document.addEventListener("click", event => {
+    if (!dropdown.contains(event.target)) closeDropdown();
+  });
+
+  dropdown.addEventListener("keydown", event => {
+    if (event.key === "Escape") {
+      closeDropdown();
+      trigger.focus();
+    }
+  });
+
+  const form = dropdown.closest("form");
+  form?.addEventListener("submit", event => {
+    if (!hiddenInput.value) {
+      event.preventDefault();
+      trigger.focus();
+      trigger.setAttribute("aria-invalid", "true");
+      return;
+    }
+    trigger.removeAttribute("aria-invalid");
+  });
+});
+
+/* =========================================================
+   STACKLY — AUTO-HIGHLIGHT CURRENT PAGE IN NAV
+   ========================================================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+  const currentPage =
+    window.location.pathname.split("/").pop() || "index.html";
+
+  document.querySelectorAll(".nav__link").forEach(link => {
+    const linkPage = new URL(link.href).pathname
+      .split("/").pop();
+
+    const isActive = linkPage === currentPage;
+
+    link.classList.toggle("active", isActive);
+
+    if (isActive) {
+      link.setAttribute("aria-current", "page");
+    } else {
+      link.removeAttribute("aria-current");
+    }
+  });
 });

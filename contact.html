@@ -86,11 +86,11 @@
       </p>
 
       <div class="hero__btns">
-        <a href="#contact-form" class="btn btn--primary">
+        <a href="404.html" class="btn btn--primary">
           Book Free Call
         </a>
 
-        <a href="tel:+919876543210" class="btn btn--outline">
+        <a href="404.html" class="btn btn--outline">
           Call Us
         </a>
       </div>
@@ -154,7 +154,7 @@
 
     <div class="contact-options__grid">
 
-      <a href="tel:+919876543210" class="contact-option" data-anim="fade-up">
+      <a href="404.html" class="contact-option" data-anim="fade-up">
         <div class="contact-option__icon">&#9742;</div>
         <span>CALL US</span>
         <h3>+91 98765 43210</h3>
@@ -164,7 +164,7 @@
         <strong>Call Now &#8594;</strong>
       </a>
 
-      <a href="mailto:care@stackly.in" class="contact-option" data-anim="fade-up" data-delay="80">
+      <a href="404.html" class="contact-option" data-anim="fade-up" data-delay="80">
         <div class="contact-option__icon">&#9993;</div>
         <span>EMAIL US</span>
         <h3>care@stackly.in</h3>
@@ -174,7 +174,7 @@
         <strong>Send Email &#8594;</strong>
       </a>
 
-      <a href="https://wa.me/919876543210" class="contact-option" data-anim="fade-up" data-delay="160">
+      <a href="404.html" class="contact-option" data-anim="fade-up" data-delay="160">
         <div class="contact-option__icon">&#9673;</div>
         <span>WHATSAPP</span>
         <h3>Chat With Us</h3>
@@ -262,6 +262,10 @@
               id="contactName"
               name="name"
               placeholder="Your full name"
+              maxlength="16"
+              pattern="[A-Za-z]{1,16}"
+              title="Only letters, up to 16 characters"
+              autocomplete="name"
               required
             >
           </div>
@@ -273,6 +277,11 @@
               id="contactPhone"
               name="phone"
               placeholder="+91"
+              maxlength="10"
+              pattern="[0-9]{10}"
+              inputmode="numeric"
+              title="Enter a 10-digit phone number"
+              autocomplete="tel"
               required
             >
           </div>
@@ -289,6 +298,8 @@
               id="contactEmail"
               name="email"
               placeholder="you@example.com"
+              inputmode="email"
+              autocomplete="email"
               required
             >
           </div>
@@ -296,16 +307,48 @@
           <div class="form-group">
             <label for="contactGoal">Primary Goal</label>
 
-            <select id="contactGoal" name="goal" required>
-              <option value="">Select your goal</option>
-              <option>Weight Management</option>
-              <option>Clinical Nutrition</option>
-              <option>Sports Nutrition</option>
-              <option>Family Nutrition</option>
-              <option>Women's Nutrition</option>
-              <option>General Healthy Eating</option>
-              <option>Other</option>
-            </select>
+            <div class="custom-select" id="goalDropdown">
+              <input type="hidden"
+                     id="contactGoal"
+                     name="goal"
+                     value="">
+
+              <button type="button"
+                      class="custom-select__trigger"
+                      aria-expanded="false"
+                      aria-controls="goalOptions">
+                <span class="custom-select__value">
+                  Select your goal
+                </span>
+                <span class="custom-select__arrow"></span>
+              </button>
+
+              <div class="custom-select__options"
+                   id="goalOptions"
+                   hidden>
+                <button type="button" data-value="Weight Management">
+                  Weight Management
+                </button>
+                <button type="button" data-value="Clinical Nutrition">
+                  Clinical Nutrition
+                </button>
+                <button type="button" data-value="Sports Nutrition">
+                  Sports Nutrition
+                </button>
+                <button type="button" data-value="Family Nutrition">
+                  Family Nutrition
+                </button>
+                <button type="button" data-value="Women's Nutrition">
+                  Women's Nutrition
+                </button>
+                <button type="button" data-value="General Healthy Eating">
+                  General Healthy Eating
+                </button>
+                <button type="button" data-value="Other">
+                  Other
+                </button>
+              </div>
+            </div>
           </div>
 
         </div>
